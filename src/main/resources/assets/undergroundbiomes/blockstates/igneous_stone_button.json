@@ -1,0 +1,85 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "button_inventory",
+    "uvlock": true
+	},
+	"variants": {
+		"facing": {
+			"up": {
+			},
+			"down": {
+				"x": 180
+			},
+			"east": {
+				"x": 90,
+				"y": 90
+			},
+			"west": {
+				"x": 90,
+				"y": 270
+			},
+			"south": {
+				"x": 90,
+				"y": 180
+			},
+			"north": {
+				"x": 90
+			}
+		},
+		"powered": {
+			"false": { "model": "button" },
+			"true": { "model": "button_pressed" }
+		},
+    "type": {
+      "red_granite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/red_granite"
+        }
+      }, 
+      "black_granite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/black_granite"
+        }
+      }, 
+      "rhyolite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/rhyolite"
+        }
+      }, 
+      "andesite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/andesite"
+        }
+      }, 
+      "gabbro": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/gabbro"
+        }
+      }, 
+      "basalt": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/basalt"
+        }
+      }, 
+      "komatiite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/komatiite"
+        }
+      }, 
+      "dacite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/dacite"
+        }
+      }
+		},
+    "type=red_granite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/red_granite" } }],
+    "type=black_granite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/black_granite" } }],
+    "type=rhyolite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/rhyolite" } }],
+    "type=andesite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/andesite" } }],
+    "type=gabbro": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/gabbro" } }],
+    "type=basalt": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/basalt" } }],
+    "type=komatiite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/komatiite" } }],
+    "type=dacite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/dacite" } }]
+	}
+}

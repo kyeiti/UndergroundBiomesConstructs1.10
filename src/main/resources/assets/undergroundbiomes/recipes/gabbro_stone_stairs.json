@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:igneous_stone",
+      "data": 4
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:igneous_stone_stairs",
+    "data": 4,
+    "count": 4
+  }
+}

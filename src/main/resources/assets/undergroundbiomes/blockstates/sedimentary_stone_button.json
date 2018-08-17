@@ -1,0 +1,85 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "button_inventory",
+    "uvlock": true
+	},
+	"variants": {
+		"facing": {
+			"up": {
+			},
+			"down": {
+				"x": 180
+			},
+			"east": {
+				"x": 90,
+				"y": 90
+			},
+			"west": {
+				"x": 90,
+				"y": 270
+			},
+			"south": {
+				"x": 90,
+				"y": 180
+			},
+			"north": {
+				"x": 90
+			}
+		},
+		"powered": {
+			"false": { "model": "button" },
+			"true": { "model": "button_pressed" }
+		},
+    "type": {
+      "limestone": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/limestone"
+        }
+      }, 
+      "chalk": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/chalk"
+        }
+      }, 
+      "shale": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/shale"
+        }
+      }, 
+      "siltstone": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/siltstone"
+        }
+      }, 
+      "lignite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/lignite"
+        }
+      }, 
+      "dolomite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/dolomite"
+        }
+      }, 
+      "greywacke": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/greywacke"
+        }
+      }, 
+      "chert": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/chert"
+        }
+      }
+		},
+    "type=limestone": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/limestone" } }],
+    "type=chalk": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/chalk" } }],
+    "type=shale": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/shale" } }],
+    "type=siltstone": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/siltstone" } }],
+    "type=lignite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/lignite" } }],
+    "type=dolomite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/dolomite" } }],
+    "type=greywacke": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/greywacke" } }],
+    "type=chert": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/chert" } }]
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:metamorphic_stone",
+      "data": 1
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:metamorphic_stone_halfslab",
+    "data": 1,
+    "count": 6
+  }
+}

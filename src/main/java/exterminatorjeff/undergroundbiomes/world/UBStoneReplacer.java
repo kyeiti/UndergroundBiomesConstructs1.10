@@ -13,16 +13,31 @@ import exterminatorjeff.undergroundbiomes.intermod.OresRegistry;
 import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
 import exterminatorjeff.undergroundbiomes.world.noise.NoiseGenerator;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.EnumPushReaction;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public abstract class UBStoneReplacer implements UBStrataColumnProvider {
 
@@ -85,6 +100,14 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                 if(strata.getBlock() instanceof UBStone) {
                   UBStone block = (UBStone) strata.getBlock();
                   storage.set(x, y, z, (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.COBBLE).getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
+                }
+                continue;
+              } else if (currentBlock.getRegistryName().toString().equals("biomesoplenty:grass") && currentBlockState.getProperties().toString().contains("=overgrown_stone") && API.SETTINGS.replaceOvergrown())  {
+                // Replace with UBified version. Not the best way to test the block... But at least does not require an API 
+                IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
+                if(strata.getBlock() instanceof UBStone) {
+                  UBStone block = (UBStone) strata.getBlock();
+                  storage.set(x, y, z, (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.OVERGROWN).getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
               } else {

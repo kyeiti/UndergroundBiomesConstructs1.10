@@ -1,0 +1,85 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "button_inventory",
+    "uvlock": true
+	},
+	"variants": {
+		"facing": {
+			"up": {
+			},
+			"down": {
+				"x": 180
+			},
+			"east": {
+				"x": 90,
+				"y": 90
+			},
+			"west": {
+				"x": 90,
+				"y": 270
+			},
+			"south": {
+				"x": 90,
+				"y": 180
+			},
+			"north": {
+				"x": 90
+			}
+		},
+		"powered": {
+			"false": { "model": "button" },
+			"true": { "model": "button_pressed" }
+		},
+    "type": {
+      "gneiss": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/gneiss_cobble"
+        }
+      }, 
+      "eclogite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/eclogite_cobble"
+        }
+      }, 
+      "marble": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/marble_cobble"
+        }
+      }, 
+      "quartzite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/quartzite_cobble"
+        }
+      }, 
+      "blueschist": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/blueschist_cobble"
+        }
+      }, 
+      "greenschist": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/greenschist_cobble"
+        }
+      }, 
+      "soapstone": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/soapstone_cobble"
+        }
+      }, 
+      "migmatite": {
+        "textures": {
+          "texture": "undergroundbiomes:blocks/migmatite_cobble"
+        }
+      }
+		},
+    "type=gneiss": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/gneiss_cobble" } }],
+    "type=eclogite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/eclogite_cobble" } }],
+    "type=marble": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/marble_cobble" } }],
+    "type=quartzite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/quartzite_cobble" } }],
+    "type=blueschist": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/blueschist_cobble" } }],
+    "type=greenschist": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/greenschist_cobble" } }],
+    "type=soapstone": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/soapstone_cobble" } }],
+    "type=migmatite": [{ "model": "button_inventory", "textures": { "texture": "undergroundbiomes:blocks/migmatite_cobble" } }]
+	}
+}

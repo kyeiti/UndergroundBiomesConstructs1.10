@@ -48,6 +48,8 @@ public interface UBSettings {
 
   boolean replaceCobblestone();
 
+  boolean replaceOvergrown();
+
   boolean buttonsOn();
 
   boolean igneousButtonsOn();

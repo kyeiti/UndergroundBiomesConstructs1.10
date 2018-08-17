@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:sedimentary_stone",
+      "data": 4
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:sedimentary_stone_button",
+    "data": 4
+  }
+}

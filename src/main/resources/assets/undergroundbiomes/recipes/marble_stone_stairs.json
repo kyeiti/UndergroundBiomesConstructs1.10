@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:metamorphic_stone",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:metamorphic_stone_stairs",
+    "data": 2,
+    "count": 4
+  }
+}

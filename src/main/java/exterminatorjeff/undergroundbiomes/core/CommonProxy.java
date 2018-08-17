@@ -146,11 +146,13 @@ public class CommonProxy {
     API.IGNEOUS_STONE.registerBlock(event, new IgneousStone());
     API.IGNEOUS_COBBLE.registerBlock(event, new IgneousCobble());
     API.IGNEOUS_BRICK.registerBlock(event, new IgneousBrick());
+    API.IGNEOUS_OVERGROWN.registerBlock(event, new IgneousOvergrown());
     API.METAMORPHIC_STONE.registerBlock(event, new MetamorphicStone());
     API.METAMORPHIC_COBBLE.registerBlock(event, new MetamorphicCobble());
     API.METAMORPHIC_BRICK.registerBlock(event, new MetamorphicBrick());
+    API.METAMORPHIC_OVERGROWN.registerBlock(event, new MetamorphicOvergrown());
     API.SEDIMENTARY_STONE.registerBlock(event, new SedimentaryStone());
-
+    API.SEDIMENTARY_OVERGROWN.registerBlock(event, new SedimentaryOvergrown());
     /*
      * Slabs
      */
@@ -264,6 +266,9 @@ public class CommonProxy {
     registry.register(API.IGNEOUS_BRICK.getItemBlock());
     registry.register(API.METAMORPHIC_BRICK.getItemBlock());
 
+    registry.register(API.IGNEOUS_OVERGROWN.getItemBlock());
+    registry.register(API.METAMORPHIC_OVERGROWN.getItemBlock());
+    registry.register(API.SEDIMENTARY_OVERGROWN.getItemBlock());
     /* Slabs */
 
     API.IGNEOUS_STONE_SLAB.registerItem(event, null);

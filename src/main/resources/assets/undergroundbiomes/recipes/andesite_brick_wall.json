@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:igneous_brick",
+      "data": 3
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:igneous_brick_wall",
+    "data": 3,
+    "count": 6
+  }
+}

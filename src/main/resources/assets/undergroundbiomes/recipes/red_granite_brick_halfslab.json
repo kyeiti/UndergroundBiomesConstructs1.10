@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:igneous_brick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:igneous_brick_halfslab",
+    "data": 0,
+    "count": 6
+  }
+}

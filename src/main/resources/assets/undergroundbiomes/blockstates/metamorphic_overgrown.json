@@ -1,0 +1,82 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "undergroundbiomes:overgrown"
+	},
+	"variants": {
+    "type": {
+      "gneiss": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/gneiss",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/gneiss",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "eclogite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/eclogite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/eclogite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "marble": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/marble",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/marble",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "quartzite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/quartzite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/quartzite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "blueschist": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/blueschist",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/blueschist",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "greenschist": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/greenschist",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/greenschist",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "soapstone": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/soapstone",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/soapstone",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "migmatite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/migmatite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/migmatite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:metamorphic_cobble",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:metamorphic_cobble_button",
+    "data": 2
+  }
+}

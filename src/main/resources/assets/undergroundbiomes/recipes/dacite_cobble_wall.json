@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:igneous_cobble",
+      "data": 7
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:igneous_cobble_wall",
+    "data": 7,
+    "count": 6
+  }
+}

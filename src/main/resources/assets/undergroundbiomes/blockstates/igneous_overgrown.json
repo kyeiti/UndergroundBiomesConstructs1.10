@@ -1,0 +1,83 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "undergroundbiomes:overgrown"
+	},
+	"variants": {
+    "type": {
+      "red_granite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/red_granite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/red_granite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "black_granite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/black_granite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/black_granite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "rhyolite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/rhyolite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/rhyolite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "andesite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/andesite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/andesite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "gabbro": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/gabbro",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/gabbro",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "basalt": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/basalt",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/basalt",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "komatiite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/komatiite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/komatiite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }, 
+      "dacite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/dacite",
+          "top": "blocks/grass_top",
+          "side": "undergroundbiomes:blocks/dacite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_side_overlay"
+        }
+      }
+}
+  }
+}
+

@@ -17,6 +17,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.world.biome.BiomeColorHelper;
+import net.minecraft.world.ColorizerGrass;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.block.state.IBlockState;
 
 /**
  * @author CurtisA, LouisDB
@@ -58,10 +65,13 @@ public final class ClientProxy extends CommonProxy {
     API.IGNEOUS_STONE.registerModel();
     API.IGNEOUS_COBBLE.registerModel();
     API.IGNEOUS_BRICK.registerModel();
+    API.IGNEOUS_OVERGROWN.registerModel();
     API.METAMORPHIC_STONE.registerModel();
     API.METAMORPHIC_COBBLE.registerModel();
     API.METAMORPHIC_BRICK.registerModel();
+    API.METAMORPHIC_OVERGROWN.registerModel();
     API.SEDIMENTARY_STONE.registerModel();
+    API.SEDIMENTARY_OVERGROWN.registerModel();
     // Slabs
     if (!UBConfig.SPECIFIC.alternativeSlabTextures()) {
       API.IGNEOUS_STONE_SLAB.registerModel(UBStateMappers.UBSLAB_STATE_MAPPER);
@@ -117,5 +127,23 @@ public final class ClientProxy extends CommonProxy {
         itemColors.registerItemColorHandler((stack, tintIndex) -> color, Item.getItemFromBlock(ore));
       }
     }
+    blockColors.registerBlockColorHandler(new IBlockColor(){
+      @Override
+      public int colorMultiplier(IBlockState state, IBlockAccess worldIn, BlockPos pos, int tintIndex) {
+        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D);
+      }
+    }, API.IGNEOUS_OVERGROWN.getBlock());
+    blockColors.registerBlockColorHandler(new IBlockColor(){
+      @Override
+      public int colorMultiplier(IBlockState state, IBlockAccess worldIn, BlockPos pos, int tintIndex) {
+        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D);
+      }
+    }, API.METAMORPHIC_OVERGROWN.getBlock());
+    blockColors.registerBlockColorHandler(new IBlockColor(){
+      @Override
+      public int colorMultiplier(IBlockState state, IBlockAccess worldIn, BlockPos pos, int tintIndex) {
+        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D);
+      }
+    }, API.SEDIMENTARY_OVERGROWN.getBlock());
   }
 }
