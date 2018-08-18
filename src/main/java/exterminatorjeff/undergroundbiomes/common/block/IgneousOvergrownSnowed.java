@@ -39,10 +39,10 @@ import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.*;
 /**
  * @author CurtisA, LouisDB
  */
-public class IgneousOvergrown extends IgneousStone {
-  public static final String internal_name = "igneous_overgrown";
+public class IgneousOvergrownSnowed extends IgneousStone {
+  public static final String internal_name = "igneous_overgrown_snowed";
 
-  public IgneousOvergrown() {
+  public IgneousOvergrownSnowed() {
     super();
     setDefaultState(blockState.getBaseState().withProperty(IGNEOUS_VARIANT_PROPERTY, RED_GRANITE));
   }
@@ -59,7 +59,7 @@ public class IgneousOvergrown extends IgneousStone {
 
   @Override
   public UBStoneStyle getStoneStyle() {
-    return UBStoneStyle.OVERGROWN;
+    return UBStoneStyle.OVERGROWN_SNOWED;
   }
 
   @Override

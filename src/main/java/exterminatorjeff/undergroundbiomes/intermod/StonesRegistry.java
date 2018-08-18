@@ -27,6 +27,8 @@ public enum StonesRegistry implements UBStonesRegistry {
             return API.IGNEOUS_BRICK;
           case OVERGROWN:
             return API.IGNEOUS_OVERGROWN;
+          case OVERGROWN_SNOWED:
+            return API.IGNEOUS_OVERGROWN_SNOWED;
         }
         break;
       case METAMORPHIC:
@@ -39,6 +41,8 @@ public enum StonesRegistry implements UBStonesRegistry {
             return API.METAMORPHIC_BRICK;
           case OVERGROWN:
             return API.METAMORPHIC_OVERGROWN;
+          case OVERGROWN_SNOWED:
+            return API.METAMORPHIC_OVERGROWN_SNOWED;
         }
         break;
       case SEDIMENTARY:
@@ -51,6 +55,8 @@ public enum StonesRegistry implements UBStonesRegistry {
             return API.SEDIMENTARY_STONE;
           case OVERGROWN:
             return API.SEDIMENTARY_OVERGROWN;
+          case OVERGROWN_SNOWED:
+            return API.SEDIMENTARY_OVERGROWN_SNOWED;
       }
     }
     return null;

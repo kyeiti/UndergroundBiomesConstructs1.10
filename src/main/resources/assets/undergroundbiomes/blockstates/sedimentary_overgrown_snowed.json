@@ -1,0 +1,82 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "undergroundbiomes:overgrown"
+	},
+	"variants": {
+    "type": {
+      "limestone": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/limestone",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/limestone",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "chalk": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/chalk",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/chalk",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "shale": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/shale",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/shale",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "siltstone": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/siltstone",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/siltstone",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "lignite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/lignite",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/lignite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "dolomite": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/dolomite",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/dolomite",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "greywacke": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/greywacke",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/greywacke",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }, 
+      "chert": {
+        "textures": {
+          "particle": "blocks/dirt",
+          "bottom": "undergroundbiomes:blocks/chert",
+          "top": "blocks/snow",
+          "side": "undergroundbiomes:blocks/chert",
+          "overlay": "undergroundbiomes:blocks/overlays/overgrown/overgrown_stone_snowed_side_overlay"
+        }
+      }
+		}
+	}
+}

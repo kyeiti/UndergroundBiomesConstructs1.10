@@ -104,10 +104,14 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                 continue;
               } else if (currentBlock.getRegistryName().toString().equals("biomesoplenty:grass") && currentBlockState.getProperties().toString().contains("=overgrown_stone") && API.SETTINGS.replaceOvergrown())  {
                 // Replace with UBified version. Not the best way to test the block... But at least does not require an API 
+                boolean snowy = currentBlockState.getProperties().toString().contains("{name=snowy, clazz=class java.lang.Boolean, values=[true, false]}=true");
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if(strata.getBlock() instanceof UBStone) {
                   UBStone block = (UBStone) strata.getBlock();
+                  if(snowy)
                   storage.set(x, y, z, (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.OVERGROWN).getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
+                  else
+                  storage.set(x, y, z, (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.OVERGROWN_SNOWED).getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
               } else {

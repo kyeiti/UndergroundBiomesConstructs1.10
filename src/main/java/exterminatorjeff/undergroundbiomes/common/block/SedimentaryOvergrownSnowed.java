@@ -26,7 +26,6 @@ import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.PropertyBool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,32 +33,22 @@ import java.util.Random;
 
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 
-import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.*;
+import static exterminatorjeff.undergroundbiomes.api.enums.SedimentaryVariant.*;
 
 /**
  * @author CurtisA, LouisDB
  */
-public class IgneousOvergrown extends IgneousStone {
-  public static final String internal_name = "igneous_overgrown";
-
-  public IgneousOvergrown() {
-    super();
-    setDefaultState(blockState.getBaseState().withProperty(IGNEOUS_VARIANT_PROPERTY, RED_GRANITE));
-  }
-
-  @Override
-  public BlockStateContainer createBlockState() {
-    return new BlockStateContainer(this, IGNEOUS_VARIANT_PROPERTY);
-  }
+public class SedimentaryOvergrownSnowed extends SedimentaryStone {
+  public static final String internal_name = "sedimentary_overgrown_snowed";
 
   @Override
   public String getInternalName() {
-     return internal_name;
+    return internal_name;
   }
 
   @Override
   public UBStoneStyle getStoneStyle() {
-    return UBStoneStyle.OVERGROWN;
+    return UBStoneStyle.OVERGROWN_SNOWED;
   }
 
   @Override

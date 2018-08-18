@@ -147,12 +147,15 @@ public class CommonProxy {
     API.IGNEOUS_COBBLE.registerBlock(event, new IgneousCobble());
     API.IGNEOUS_BRICK.registerBlock(event, new IgneousBrick());
     API.IGNEOUS_OVERGROWN.registerBlock(event, new IgneousOvergrown());
+    API.IGNEOUS_OVERGROWN_SNOWED.registerBlock(event, new IgneousOvergrownSnowed());
     API.METAMORPHIC_STONE.registerBlock(event, new MetamorphicStone());
     API.METAMORPHIC_COBBLE.registerBlock(event, new MetamorphicCobble());
     API.METAMORPHIC_BRICK.registerBlock(event, new MetamorphicBrick());
     API.METAMORPHIC_OVERGROWN.registerBlock(event, new MetamorphicOvergrown());
+    API.METAMORPHIC_OVERGROWN_SNOWED.registerBlock(event, new MetamorphicOvergrownSnowed());
     API.SEDIMENTARY_STONE.registerBlock(event, new SedimentaryStone());
     API.SEDIMENTARY_OVERGROWN.registerBlock(event, new SedimentaryOvergrown());
+    API.SEDIMENTARY_OVERGROWN_SNOWED.registerBlock(event, new SedimentaryOvergrownSnowed());
     /*
      * Slabs
      */
@@ -267,8 +270,11 @@ public class CommonProxy {
     registry.register(API.METAMORPHIC_BRICK.getItemBlock());
 
     registry.register(API.IGNEOUS_OVERGROWN.getItemBlock());
+    registry.register(API.IGNEOUS_OVERGROWN_SNOWED.getItemBlock());
     registry.register(API.METAMORPHIC_OVERGROWN.getItemBlock());
+    registry.register(API.METAMORPHIC_OVERGROWN_SNOWED.getItemBlock());
     registry.register(API.SEDIMENTARY_OVERGROWN.getItemBlock());
+    registry.register(API.SEDIMENTARY_OVERGROWN_SNOWED.getItemBlock());
     /* Slabs */
 
     API.IGNEOUS_STONE_SLAB.registerItem(event, null);
