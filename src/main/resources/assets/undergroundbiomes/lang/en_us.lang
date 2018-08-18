@@ -11,6 +11,24 @@ tile.igneous_stone.basalt.name=Basalt
 tile.igneous_stone.komatiite.name=Komatiite
 tile.igneous_stone.dacite.name=Dacite
 
+tile.igneous_overgrown.red_granite.name=Red Granite Overgrown Stone
+tile.igneous_overgrown.black_granite.name=Black Granite Overgrown Stone
+tile.igneous_overgrown.rhyolite.name=Rhyolite Overgrown Stone
+tile.igneous_overgrown.andesite.name=Andesite Overgrown Stone
+tile.igneous_overgrown.gabbro.name=Gabbro Overgrown Stone
+tile.igneous_overgrown.basalt.name=Basalt Overgrown Stone
+tile.igneous_overgrown.komatiite.name=Komatiite Overgrown Stone
+tile.igneous_overgrown.dacite.name=Dacite Overgrown Stone
+
+tile.igneous_overgrown_snowed.red_granite.name=Snowy Red Granite Overgrown Stone
+tile.igneous_overgrown_snowed.black_granite.name=Snowy Black Granite Overgrown Stone
+tile.igneous_overgrown_snowed.rhyolite.name=Snowy Rhyolite Overgrown Stone
+tile.igneous_overgrown_snowed.andesite.name=Snowy Andesite Overgrown Stone
+tile.igneous_overgrown_snowed.gabbro.name=Snowy Gabbro Overgrown Stone
+tile.igneous_overgrown_snowed.basalt.name=Snowy Basalt Overgrown Stone
+tile.igneous_overgrown_snowed.komatiite.name=Snowy Komatiite Overgrown Stone
+tile.igneous_overgrown_snowed.dacite.name=Snowy Dacite Overgrown Stone
+
 tile.igneous_cobble.red_granite.name=Red Granite Cobblestone
 tile.igneous_cobble.black_granite.name=Black Granite Cobblestone
 tile.igneous_cobble.rhyolite.name=Rhyolite Cobblestone
@@ -38,6 +56,24 @@ tile.metamorphic_stone.greenschist.name=Green Schist
 tile.metamorphic_stone.soapstone.name=Soapstone
 tile.metamorphic_stone.migmatite.name=Migmatite
 
+tile.metamorphic_overgrown.gneiss.name=Gneiss Overgrown Stone
+tile.metamorphic_overgrown.eclogite.name=Eclogite Overgrown Stone
+tile.metamorphic_overgrown.marble.name=Marble Overgrown Stone
+tile.metamorphic_overgrown.quartzite.name=Quartzite Overgrown Stone
+tile.metamorphic_overgrown.blueschist.name=Blue Schist Overgrown Stone
+tile.metamorphic_overgrown.greenschist.name=Green Schist Overgrown Stone
+tile.metamorphic_overgrown.soapstone.name=Soapstone Overgrown Stone
+tile.metamorphic_overgrown.migmatite.name=Migmatite Overgrown Stone
+
+tile.metamorphic_overgrown_snowed.gneiss.name=Snowy Gneiss Overgrown Stone
+tile.metamorphic_overgrown_snowed.eclogite.name=Snowy Eclogite Overgrown Stone
+tile.metamorphic_overgrown_snowed.marble.name=Snowy Marble Overgrown Stone
+tile.metamorphic_overgrown_snowed.quartzite.name=Snowy Quartzite Overgrown Stone
+tile.metamorphic_overgrown_snowed.blueschist.name=Snowy Blue Schist Overgrown Stone
+tile.metamorphic_overgrown_snowed.greenschist.name=Snowy Green Schist Overgrown Stone
+tile.metamorphic_overgrown_snowed.soapstone.name=Snowy Soapstone Overgrown Stone
+tile.metamorphic_overgrown_snowed.migmatite.name=Snowy Migmatite Overgrown Stone
+
 tile.metamorphic_cobble.gneiss.name=Gneiss Cobblestone
 tile.metamorphic_cobble.eclogite.name=Eclogite Cobblestone
 tile.metamorphic_cobble.marble.name=Marble Cobblestone
@@ -64,6 +100,24 @@ tile.sedimentary_stone.lignite.name=Lignite Block
 tile.sedimentary_stone.dolomite.name=Dolomite
 tile.sedimentary_stone.greywacke.name=Greywacke
 tile.sedimentary_stone.chert.name=Chert
+
+tile.sedimentary_overgrown.limestone.name=Limestone Overgrown Stone
+tile.sedimentary_overgrown.chalk.name=Chalk Overgrown Stone
+tile.sedimentary_overgrown.shale.name=Shale Overgrown Stone
+tile.sedimentary_overgrown.siltstone.name=Siltstone Overgrown Stone
+tile.sedimentary_overgrown.lignite.name=Lignite Block Overgrown Stone
+tile.sedimentary_overgrown.dolomite.name=Dolomite Overgrown Stone
+tile.sedimentary_overgrown.greywacke.name=Greywacke Overgrown Stone
+tile.sedimentary_overgrown.chert.name=Chert Overgrown Stone
+
+tile.sedimentary_overgrown_snowed.limestone.name=Snowy Limestone Overgrown Stone
+tile.sedimentary_overgrown_snowed.chalk.name=Snowy Chalk Overgrown Stone
+tile.sedimentary_overgrown_snowed.shale.name=Snowy Shale Overgrown Stone
+tile.sedimentary_overgrown_snowed.siltstone.name=Snowy Siltstone Overgrown Stone
+tile.sedimentary_overgrown_snowed.lignite.name=Snowy Lignite Block Overgrown Stone
+tile.sedimentary_overgrown_snowed.dolomite.name=Snowy Dolomite Overgrown Stone
+tile.sedimentary_overgrown_snowed.greywacke.name=Snowy Greywacke Overgrown Stone
+tile.sedimentary_overgrown_snowed.chert.name=Snowy Chert Overgrown Stone
 
 # Slabs
 
