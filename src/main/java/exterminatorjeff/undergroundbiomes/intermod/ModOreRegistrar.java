@@ -67,6 +67,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private void createDefaults() {
     writeDefaults(getMinecraftOres(), "minecraft.json");
+    writeDefaults(getNuclearcraftOres(), "nuclearcraft.json");
     writeDefaults(getGrowthcraftOres(), "growthcraft.json");
     writeDefaults(getActuallyAdditionsOres(), "actuallyadditions.json");
     writeDefaults(getAppliedEnergisticsOres(), "appliedenergistics2.json");
@@ -172,6 +173,19 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getGrowthcraftOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("growthcraft:salt_ore", ModInfo.MODID + ":blocks/overlays/growthcraft/salt_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getNuclearcraftOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("nuclearcraft:ore", 0, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_copper"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 1, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_tin"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 2, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_lead"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 3, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_thorium"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 4, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_uranium"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 5, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_boron"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 6, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_lithium"));
+    ores.add(new UBOreConfig("nuclearcraft:ore", 7, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_magnesium"));
     return ores;
   }
 
