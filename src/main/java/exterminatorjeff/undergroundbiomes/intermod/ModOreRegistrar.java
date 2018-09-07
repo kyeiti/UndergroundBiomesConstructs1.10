@@ -67,7 +67,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private void createDefaults() {
     writeDefaults(getMinecraftOres(), "minecraft.json");
-
+    writeDefaults(getGrowthcraftOres(), "growthcraft.json");
     writeDefaults(getActuallyAdditionsOres(), "actuallyadditions.json");
     writeDefaults(getAppliedEnergisticsOres(), "appliedenergistics2.json");
     writeDefaults(getBaseMetalsOres(), "basemetals.json");
@@ -166,6 +166,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("appliedenergistics2:quartz_ore", "appliedenergistics2:blocks/charged_quartz_ore_light"));
     ores.add(new UBOreConfig("appliedenergistics2:charged_quartz_ore", "appliedenergistics2:blocks/charged_quartz_ore_light"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getGrowthcraftOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("growthcraft:salt_ore", ModInfo.MODID + ":blocks/overlays/growthcraft/salt_ore"));
     return ores;
   }
 
