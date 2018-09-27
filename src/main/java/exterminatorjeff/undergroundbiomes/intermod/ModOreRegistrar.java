@@ -207,7 +207,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getBaseMineralsOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("baseminerals:lithium_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/lithium"));
-    ores.add(new UBOreConfig("baseminerals:nither_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/nither"));
+    ores.add(new UBOreConfig("baseminerals:niter_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/niter"));
     ores.add(new UBOreConfig("baseminerals:phosphorus_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/phosphorus"));
     ores.add(new UBOreConfig("baseminerals:potash_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/potash"));
     ores.add(new UBOreConfig("baseminerals:salt_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/salt"));
