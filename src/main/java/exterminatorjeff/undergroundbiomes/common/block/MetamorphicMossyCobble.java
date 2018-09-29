@@ -8,6 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import java.util.Random;
 import net.minecraft.item.Item;
+import net.minecraft.util.BlockRenderLayer;
 
 /**
  * @author CurtisA, LouisDB
@@ -39,4 +40,10 @@ public class MetamorphicMossyCobble extends MetamorphicStone {
   public Item getItemDropped(IBlockState state, Random rand, int fortune) {
       return super.getItemDropped(state, rand, fortune);
   }
+
+  @Override
+  public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.CUTOUT_MIPPED;
+    }
 }

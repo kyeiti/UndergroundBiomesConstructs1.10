@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
+import net.minecraft.util.BlockRenderLayer;
 import static exterminatorjeff.undergroundbiomes.api.enums.SedimentaryVariant.*;
 
 /**
@@ -106,4 +107,10 @@ public class SedimentaryMossyCobble extends UBStone {
   public UBStone baseStone() {
     return this;
   }
+
+  @Override
+  public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.CUTOUT_MIPPED;
+    }
 }

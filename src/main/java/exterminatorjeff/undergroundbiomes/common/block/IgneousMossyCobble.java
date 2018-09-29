@@ -9,7 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.item.Item;
 import java.util.Random;
-
+import net.minecraft.util.BlockRenderLayer;
 import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.IGNEOUS_VARIANT_PROPERTY;
 import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.RED_GRANITE;
 
@@ -43,4 +43,10 @@ public class IgneousMossyCobble extends IgneousStone {
   public Item getItemDropped(IBlockState state, Random rand, int fortune) {
       return super.getItemDropped(state, rand, fortune);
   }
+
+  @Override
+  public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.CUTOUT_MIPPED;
+    }
 }

@@ -65,6 +65,7 @@ public final class ClientProxy extends CommonProxy {
     API.IGNEOUS_STONE.registerModel();
     API.IGNEOUS_COBBLE.registerModel();
     API.IGNEOUS_BRICK.registerModel();
+    API.IGNEOUS_MOSSY_COBBLE.registerModel();
     API.IGNEOUS_OVERGROWN.registerModel();
     API.IGNEOUS_OVERGROWN_SNOWED.registerModel();
     API.METAMORPHIC_STONE.registerModel();
@@ -72,9 +73,11 @@ public final class ClientProxy extends CommonProxy {
     API.METAMORPHIC_BRICK.registerModel();
     API.METAMORPHIC_OVERGROWN.registerModel();
     API.METAMORPHIC_OVERGROWN_SNOWED.registerModel();
+    API.IGNEOUS_MOSSY_COBBLE.registerModel();
     API.SEDIMENTARY_STONE.registerModel();
     API.SEDIMENTARY_OVERGROWN.registerModel();
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerModel();
+    API.SEDIMENTARY_MOSSY_COBBLE.registerModel();
     // Slabs
     if (!UBConfig.SPECIFIC.alternativeSlabTextures()) {
       API.IGNEOUS_STONE_SLAB.registerModel(UBStateMappers.UBSLAB_STATE_MAPPER);
