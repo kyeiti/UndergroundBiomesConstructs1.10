@@ -31,6 +31,7 @@ import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Level;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 
 /**
  * @author CurtisA, LouisDB
@@ -80,7 +81,7 @@ public final class WorldGenManager implements UBStrataColumnProvider {
   }
 
 
-  @SubscribeEvent
+  @SubscribeEvent(priority = EventPriority.LOWEST)
   public void onPopulateChunkPost(PopulateChunkEvent.Post event) {
     if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
       Chunk chunk = event.getWorld().getChunkFromChunkCoords(event.getChunkX(), event.getChunkZ());
