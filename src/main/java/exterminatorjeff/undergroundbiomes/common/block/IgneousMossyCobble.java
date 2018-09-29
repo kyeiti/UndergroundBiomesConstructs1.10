@@ -7,6 +7,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.item.Item;
+import java.util.Random;
 
 import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.IGNEOUS_VARIANT_PROPERTY;
 import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.RED_GRANITE;
@@ -14,8 +16,8 @@ import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.RED_GR
 /**
  * @author CurtisA, LouisDB
  */
-public class IgneousCobble extends IgneousStone {
-  public static final String internal_name = "igneous_cobble";
+public class IgneousMossyCobble extends IgneousStone {
+  public static final String internal_name = "igneous_mossy_cobble";
 
   @Override
   public String getInternalName() {
@@ -24,7 +26,7 @@ public class IgneousCobble extends IgneousStone {
 
   @Override
   public UBStoneStyle getStoneStyle() {
-    return UBStoneStyle.COBBLE;
+    return UBStoneStyle.MOSSY_COBBLE;
   }
 
   @Override
@@ -35,5 +37,10 @@ public class IgneousCobble extends IgneousStone {
   @Override
   public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
     return false;
+  }
+
+  @Override
+  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+      return super.getItemDropped(state, rand, fortune);
   }
 }
