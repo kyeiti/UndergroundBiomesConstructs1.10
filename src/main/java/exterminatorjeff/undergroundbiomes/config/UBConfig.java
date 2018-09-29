@@ -65,6 +65,7 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting ubifyVillages = new BooleanSetting(CATEGORY_GENERATION, "UBifyVillages");
   public final BooleanSetting replaceCobblestone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceCobblestone");
   public final BooleanSetting replaceOvergrown = new BooleanSetting(CATEGORY_GENERATION, "ReplaceOvergrown");
+  public final BooleanSetting replaceMossyCobblestone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceMossyCobble");
 
   private static final String CATEGORY_VISUAL = "Visual";
   public final BooleanSetting plainSlabTextures = new BooleanSetting(CATEGORY_VISUAL, "PlainSlabTextures");
@@ -156,6 +157,7 @@ public class UBConfig implements UBSettings {
     ubifyVillages.initProperty(configuration, true, "Use UB stones in villages structures");
     replaceCobblestone.initProperty(configuration, true, "Replace vanilla cobblestone with UB variants, helps with RTG mountains compat for example, or with any world gen mod");
     replaceOvergrown.initProperty(configuration, true, "Replace BOP's Overgrown Stone with UB variants, helps with BOP compatibility");
+    replaceMossyCobblestone.initProperty(configuration, true, "Replace mossy cobblestone with UB variants, great for dungeons !");
 
     plainSlabTextures.initProperty(configuration, false, "Use normal stone textures for slabs");
 
@@ -395,6 +397,11 @@ public class UBConfig implements UBSettings {
   @Override
   public boolean replaceCobblestone() {
     return replaceCobblestone.getValue();
+  }
+
+  @Override
+  public boolean replaceMossyCobblestone() {
+    return replaceMossyCobblestone.getValue();
   }
 
   @Override

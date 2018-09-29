@@ -115,7 +115,15 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                   storage.set(x, y, z, (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.OVERGROWN_SNOWED).getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
-              } else {
+              } else if (currentBlock == Blocks.MOSSY_COBBLESTONE && API.SETTINGS.replaceMossyCobblestone())  {
+                // Replace with UBified version
+                IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
+                if(strata.getBlock() instanceof UBStone) {
+                  UBStone block = (UBStone) strata.getBlock();
+                  storage.set(x, y, z, (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.MOSSY_COBBLE).getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
+                }
+                continue;
+                } else {
                 /*
                  * Ore
                  */
