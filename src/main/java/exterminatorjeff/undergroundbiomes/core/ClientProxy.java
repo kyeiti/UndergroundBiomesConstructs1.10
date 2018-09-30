@@ -73,6 +73,7 @@ public final class ClientProxy extends CommonProxy {
     API.METAMORPHIC_BRICK.registerModel();
     API.METAMORPHIC_OVERGROWN.registerModel();
     API.METAMORPHIC_OVERGROWN_SNOWED.registerModel();
+    API.METAMORPHIC_MOSSY_COBBLE.registerModel();
     API.IGNEOUS_MOSSY_COBBLE.registerModel();
     API.SEDIMENTARY_STONE.registerModel();
     API.SEDIMENTARY_OVERGROWN.registerModel();
