@@ -9,7 +9,7 @@
       "data": ${meta}
     },
     "^": {
-      "item": "minecraft:vines",
+      "item": "minecraft:vine",
       "data": 0
     }
   },
