@@ -385,6 +385,9 @@ public class CommonProxy {
       OreDictionary.registerOre("fossilPiece", new ItemStack(API.METAMORPHIC_BRICK.getItemBlock(), 1, i));
     }
     OresRegistry.INSTANCE.copyOreDictionaries();
+    OreDictionary.registerOre("quartz", new ItemStack(API.METAMORPHIC_STONE.getItemBlock(), 1, 2));
+    OreDictionary.registerOre("limestone", new ItemStack(API.SEDIMENTARY_STONE.getItemBlock(), 1, 0));
+    OreDictionary.registerOre("basalt", new ItemStack(API.IGNEOUS_STONE.getItemBlock(), 1, 5));
   }
 
   public void createRecipes(RegistryEvent.Register<IRecipe> event) {
