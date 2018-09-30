@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#^"
+  ],
+  "key": {
+    "#": {
+      "item": "undergroundbiomes:${input}",
+      "data": ${meta}
+    },
+    "^": {
+      "item": "minecraft:vines",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "undergroundbiomes:${output}",
+    "data": ${meta}
+  }
+}

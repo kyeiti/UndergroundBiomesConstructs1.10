@@ -7,21 +7,21 @@ def stones = [
   sedimentary: [
     variants  : ["stone"],
     create    : ["fullslab", "halfslab", "wall", "stairs"],
-    create_for: ["stone": ["button"]],
+    create_for: ["stone": ["button", "mossy"]],
     types     : ["limestone", "chalk", "shale", "siltstone", "lignite", "dolomite", "greywacke", "chert"]
   ],
   metamorphic: [
     variants  : ["brick", "cobble", "stone"],
     create    : ["fullslab", "halfslab", "wall", "stairs"],
     create_for: ["stone" : ["button", "halfslab_alt", "fullslab_alt"],
-                 "cobble": ["button"]],
+                 "cobble": ["button", "mossy"]],
     types     : ["gneiss", "eclogite", "marble", "quartzite", "blueschist", "greenschist", "soapstone", "migmatite"]
   ],
   igneous    : [
     variants  : ["brick", "cobble", "stone"],
     create    : ["fullslab", "halfslab", "wall", "stairs"],
     create_for: ["stone" : ["button", "halfslab_alt", "fullslab_alt"],
-                 "cobble": ["button"]],
+                 "cobble": ["button", "mossy"]],
     types     : ["red_granite", "black_granite", "rhyolite", "andesite", "gabbro", "basalt", "komatiite", "dacite"]
   ]
 ]

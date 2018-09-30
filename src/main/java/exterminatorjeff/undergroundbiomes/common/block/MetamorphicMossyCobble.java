@@ -14,7 +14,7 @@ import net.minecraft.util.BlockRenderLayer;
  * @author CurtisA, LouisDB
  */
 public class MetamorphicMossyCobble extends MetamorphicStone {
-  public static final String internal_name = "metamorphic_mossy_cobble";
+  public static final String internal_name = "metamorphic_cobble_mossy";
 
   @Override
   public String getInternalName() {

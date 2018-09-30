@@ -39,7 +39,7 @@ import static exterminatorjeff.undergroundbiomes.api.enums.SedimentaryVariant.*;
  * @author CurtisA, LouisDB
  */
 public class SedimentaryMossyCobble extends SedimentaryStone {
-  public static final String internal_name = "sedimentary_mossy_cobble";
+  public static final String internal_name = "sedimentary_stone_mossy";
 
   @Override
   public String getInternalName() {
