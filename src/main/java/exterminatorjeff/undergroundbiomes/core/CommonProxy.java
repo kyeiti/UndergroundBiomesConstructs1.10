@@ -400,6 +400,9 @@ public class CommonProxy {
     if (UBConfig.SPECIFIC.buttonsOn()) {
       modRegistry.remove(new ResourceLocation("minecraft:stone_button"));
     }
+    if (API.SETTINGS.replaceMossyCobblestone()) {
+      modRegistry.remove(new ResourceLocation("minecraft:mossy_cobblestone"));
+    }
 
     RegularStoneRecipe regularCobblestoneRecipe = new RegularStoneRecipe();
     modRegistry.register(regularCobblestoneRecipe);
