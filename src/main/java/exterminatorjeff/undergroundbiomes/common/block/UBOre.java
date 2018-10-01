@@ -195,7 +195,9 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SuppressWarnings("deprecation")
   @Override
   public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
+    if(baseOre.getUnlocalizedName().contains("nuclearcraft"))
     return baseOre.getBlockHardness(baseOre.getDefaultState(), worldIn, pos);
+    else return baseOre.getBlockHardness(baseOreState, worldIn, pos);
   }
 
   @Override
