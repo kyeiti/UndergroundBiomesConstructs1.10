@@ -58,7 +58,7 @@ public abstract class UBStoneSlab extends BlockSlab implements UBSubBlock {
   @Override
   public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
     int numberDropped = isDouble() ? 2 : 1;
-    ItemStack dropped = new ItemStack(itemBlock, numberDropped, damageDropped(state));
+    ItemStack dropped = new ItemStack(itemBlock, numberDropped, damageDropped(this.getDefaultState()));
     List<ItemStack> result = new ArrayList(1);
     result.add(dropped);
     return result;
