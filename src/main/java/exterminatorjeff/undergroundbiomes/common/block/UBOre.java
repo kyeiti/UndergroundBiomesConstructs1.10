@@ -62,7 +62,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
   public final IUBOreConfig config;
 
   public UBOre(Block baseOre, IUBOreConfig config) {
-    super(Material.ROCK);
+    super(baseOre.getMaterial(baseOre.getDefaultState()));
     setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
     setCreativeTab(UBCreativeTab.UB_ORES_TAB);
     this.itemBlock = new UBItemOre(this);
@@ -206,7 +206,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Override
   public boolean canHarvestBlock(IBlockAccess world, BlockPos pos, EntityPlayer player) {
-    return true;
+    return player.getHeldItemMainhand().canHarvestBlock(baseOreState);
   }
 
   @Override
