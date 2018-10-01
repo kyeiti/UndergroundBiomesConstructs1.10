@@ -195,7 +195,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SuppressWarnings("deprecation")
   @Override
   public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
-    return baseOre.getBlockHardness(baseOreState, worldIn, pos);
+    return baseOre.getBlockHardness(baseOre.getDefaultState(), worldIn, pos);
   }
 
   @Override
