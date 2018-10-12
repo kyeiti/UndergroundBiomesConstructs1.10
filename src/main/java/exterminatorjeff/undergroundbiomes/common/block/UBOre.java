@@ -30,7 +30,7 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
+import tyra314.toolprogression.config.BlockOverwriteConfig;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,8 +63,9 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   public UBOre(Block baseOre, IUBOreConfig config) {
     super(baseOre.getMaterial(baseOre.getDefaultState()));
-    if(API.SETTINGS.customOreBlockHardnes().contains(this.getItemBlock().getUnlocalizedName())){
-       //Maybe?
+    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())){
+
+       blockHardness = 
    } else setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
     setCreativeTab(UBCreativeTab.UB_ORES_TAB);
     this.itemBlock = new UBItemOre(this);
@@ -197,7 +198,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SuppressWarnings("deprecation")
   @Override
   public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
-    if(API.SETTINGS.customOreBlockHardnes().contains(this.getItemBlock().getUnlocalizedName())){
+    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())){
        return blockHardness;
     } else
     return baseOre.getBlockHardness(baseOreState, worldIn, pos);

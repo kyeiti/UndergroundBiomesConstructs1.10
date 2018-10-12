@@ -53,7 +53,7 @@ dependencies {
   //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
 
   // the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
-  //provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+  provided files('libs/toolprogression.jar')
 
   // the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
   // except that these dependencies get remapped to your current MCP mappings
