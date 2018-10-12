@@ -90,6 +90,7 @@ public class UBConfig implements UBSettings {
   public final StringSetting tooltipModNameFormatting = new StringSetting(CATEGORY_MISCELLANEOUS, "OreTooltipOreModNameFormatting");
   public final StringSetting tooltipModNamePostText = new StringSetting(CATEGORY_MISCELLANEOUS, "OreTooltipTextAfter");
   public final StringSetting tooltipModNamePostTextFormatting = new StringSetting(CATEGORY_MISCELLANEOUS, "OreTooltipTextAfterFormatting");
+  public final StringSetting customOreBlockHardness = new StringSetting(CATEGORY_MISCELLANEOUS, "CustomOreHardness");
 
   /*
    *
@@ -179,6 +180,7 @@ public class UBConfig implements UBSettings {
     tooltipModNameFormatting.initProperty(configuration, "gold italic", "Formatting for the mod's name");
     tooltipModNamePostText.initProperty(configuration, "", "Text to display after the mod's name");
     tooltipModNamePostTextFormatting.initProperty(configuration, "gray", "Formatting for the text after the mod's name");
+    customOreBlockHardness.initProperty(configuration, "null", "Allow custom block hardness using like Tool Progression to work on the listed ores. List them using tile.{item_name} name, separated by a comma. Here's an exemple : \"tile.sedimentary_stone_coal_ore,tile.igneous_stone_coal_ore\"");
     for (HashMap<Integer, BooleanSetting> blockActivations : stoneGenerationSettings.values()) {
       for (BooleanSetting setting : blockActivations.values()) {
         setting.initProperty(configuration, Boolean.TRUE, "");
@@ -615,6 +617,11 @@ public class UBConfig implements UBSettings {
   public String getTooltipModNamePostTextFormatting() {
     return parseFormatting(tooltipModNamePostTextFormatting.getValue());
   }
+
+@Override
+public String customOreBlockHardnes(){
+  return customOreBlockHardness.getValue();
+}
 
   private String parseFormatting(String readableFormat) {
     String format = "";

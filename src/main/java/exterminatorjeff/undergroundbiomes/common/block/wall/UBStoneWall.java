@@ -9,7 +9,7 @@ import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
+import net.minecraft.client.resources.LanguageManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -20,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.util.text.translation.I18n;
 
 /**
  * @author CurtisA, LouisDB
@@ -72,7 +73,7 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
 
   @Override
   public String getLocalizedName() {
-    return I18n.format(this.getUnlocalizedName() + ".name");
+    return I18n.translateToLocal(this.getUnlocalizedName() + ".name");
   }
 
   private boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {

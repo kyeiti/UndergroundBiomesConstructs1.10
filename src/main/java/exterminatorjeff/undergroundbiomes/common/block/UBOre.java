@@ -63,7 +63,9 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   public UBOre(Block baseOre, IUBOreConfig config) {
     super(baseOre.getMaterial(baseOre.getDefaultState()));
-    setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
+    if(API.SETTINGS.customOreBlockHardnes().contains(this.getItemBlock().getUnlocalizedName())){
+       //Maybe?
+   } else setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
     setCreativeTab(UBCreativeTab.UB_ORES_TAB);
     this.itemBlock = new UBItemOre(this);
     this.baseOre = baseOre;
@@ -195,6 +197,9 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SuppressWarnings("deprecation")
   @Override
   public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
+    if(API.SETTINGS.customOreBlockHardnes().contains(this.getItemBlock().getUnlocalizedName())){
+       return blockHardness;
+    } else
     return baseOre.getBlockHardness(baseOreState, worldIn, pos);
   }
 

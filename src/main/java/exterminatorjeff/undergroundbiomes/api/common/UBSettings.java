@@ -98,6 +98,8 @@ public interface UBSettings {
 
   boolean disableVanillaStoneVariants();
 
+  String customOreBlockHardnes();
+
   /*
    * Client
    */
