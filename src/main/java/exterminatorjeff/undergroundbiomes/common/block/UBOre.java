@@ -28,14 +28,21 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import tyra314.toolprogression.config.BlockOverwriteConfig;
+import tyra314.toolprogression.api.OverwrittenContent;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemTool;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Base class to create UBified version of vanilla and modded ores.<br>
@@ -64,9 +71,12 @@ public abstract class UBOre extends Block implements UBSubBlock {
   public UBOre(Block baseOre, IUBOreConfig config) {
     super(baseOre.getMaterial(baseOre.getDefaultState()));
     if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())){
-
-       blockHardness = 
-   } else setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
+      blockHardness = OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
+      String toolClass = OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
+      int harvestLevel = OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
+      setHarvestLevel(toolClass, harvestLevel);
+   } else 
+    setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
     setCreativeTab(UBCreativeTab.UB_ORES_TAB);
     this.itemBlock = new UBItemOre(this);
     this.baseOre = baseOre;
@@ -144,10 +154,16 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Nullable
   public String getHarvestTool(IBlockState state) {
+    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())&&OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())){
+      return OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
+   } else 
     return baseOre.getHarvestTool(baseOreState);
   }
 
   public int getHarvestLevel(IBlockState state) {
+    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())&&OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())){
+      return OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
+   } else 
     return baseOre.getHarvestLevel(baseOreState);
   }
 
@@ -198,9 +214,6 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SuppressWarnings("deprecation")
   @Override
   public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
-    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())){
-       return blockHardness;
-    } else
     return baseOre.getBlockHardness(baseOreState, worldIn, pos);
   }
 
@@ -290,5 +303,4 @@ public abstract class UBOre extends Block implements UBSubBlock {
     }
 
   }
-
 }
