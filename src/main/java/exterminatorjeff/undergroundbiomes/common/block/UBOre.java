@@ -70,13 +70,15 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   public UBOre(Block baseOre, IUBOreConfig config) {
     super(baseOre.getMaterial(baseOre.getDefaultState()));
-    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())){
-      blockHardness = OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
-      String toolClass = OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
-      int harvestLevel = OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
-      setHarvestLevel(toolClass, harvestLevel);
-   } else 
-    setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
+    if (Loader.isModLoaded("toolprogression")) {
+      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())) {
+        String toolClass = OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
+        int harvestLevel = OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
+        setHarvestLevel(toolClass, harvestLevel);
+      }
+    } else
+      setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()),
+          baseOre.getHarvestLevel(baseOre.getDefaultState()));
     setCreativeTab(UBCreativeTab.UB_ORES_TAB);
     this.itemBlock = new UBItemOre(this);
     this.baseOre = baseOre;
@@ -87,7 +89,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Override
   public int getLightValue(IBlockState state, IBlockAccess access, BlockPos pos) {
-    if(config.getLightValue() > -1) {
+    if (config.getLightValue() > -1) {
       return config.getLightValue();
     }
     return baseOre.getLightValue(baseOreState, access, pos);
@@ -154,21 +156,28 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Nullable
   public String getHarvestTool(IBlockState state) {
-    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())&&OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())){
-      return OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
-   } else 
-    return baseOre.getHarvestTool(baseOreState);
+    if (Loader.isModLoaded("toolprogression")) {
+      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())&&API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())) {
+        return OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
+      } else
+        return baseOre.getHarvestTool(baseOreState);
+    } else
+      return baseOre.getHarvestTool(baseOreState);
   }
 
   public int getHarvestLevel(IBlockState state) {
-    if(API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())&&OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())){
-      return OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
-   } else 
-    return baseOre.getHarvestLevel(baseOreState);
+    if (Loader.isModLoaded("toolprogression")) {
+      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())&&API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())) {
+        return OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
+      } else
+        return baseOre.getHarvestLevel(baseOreState);
+    } else
+      return baseOre.getHarvestLevel(baseOreState);
   }
 
   @Override
-  public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
+  public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player,
+      boolean willHarvest) {
     return baseOre.removedByPlayer(baseOreState, world, pos, player, willHarvest);
   }
 
@@ -234,29 +243,22 @@ public abstract class UBOre extends Block implements UBSubBlock {
   }
 
   @Override
-  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
+      EntityPlayer player) {
     return new ItemStack(itemBlock, 1, getMetaFromState(world.getBlockState(pos)));
   }
 
   @Override
   public void addInformation(ItemStack stack, @Nullable World world, List<String> infos, ITooltipFlag tooltipFlag) {
-    if(API.SETTINGS.displayTooltipModName()) {
+    if (API.SETTINGS.displayTooltipModName()) {
       Map<String, ModContainer> indexedModList = Loader.instance().getIndexedModList();
       String modName = indexedModList.get(baseOre.getRegistryName().getResourceDomain()).getName();
-      infos.add(
-        API.SETTINGS.getTooltipModNamePreTextFormatting() +
-          API.SETTINGS.getTooltipModNamePreText() +
-          "\u00A7r " +
-          API.SETTINGS.getTooltipModNameFormatting() +
-          modName +
-          "\u00A7r " +
-          API.SETTINGS.getTooltipModNamePostTextFormatting() +
-          API.SETTINGS.getTooltipModNamePostText()
-      );
+      infos.add(API.SETTINGS.getTooltipModNamePreTextFormatting() + API.SETTINGS.getTooltipModNamePreText() + "\u00A7r "
+          + API.SETTINGS.getTooltipModNameFormatting() + modName + "\u00A7r "
+          + API.SETTINGS.getTooltipModNamePostTextFormatting() + API.SETTINGS.getTooltipModNamePostText());
     }
     super.addInformation(stack, world, infos, tooltipFlag);
   }
-
 
   /**
    * @author CurtisA, LouisDB
@@ -279,7 +281,6 @@ public abstract class UBOre extends Block implements UBSubBlock {
       return stack.getMetadata();
     }
 
-
     @SideOnly(Side.CLIENT)
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
@@ -289,13 +290,16 @@ public abstract class UBOre extends Block implements UBSubBlock {
       try {
 
         if (baseOreMeta == NO_METADATA) {
-          return I18n.format(baseStone().getItemBlock().getUnlocalizedName(stack) + ".name") + " " + I18n.format(baseOre.getUnlocalizedName() + ".name");
+          return I18n.format(baseStone().getItemBlock().getUnlocalizedName(stack) + ".name") + " "
+              + I18n.format(baseOre.getUnlocalizedName() + ".name");
         }
         ItemStack baseStack = new ItemStack(baseOre, 1, baseOreMeta);
-        return I18n.format(baseStone().getItemBlock().getUnlocalizedName(stack) + ".name") + " " + baseStack.getDisplayName();
+        return I18n.format(baseStone().getItemBlock().getUnlocalizedName(stack) + ".name") + " "
+            + baseStack.getDisplayName();
       } catch (Error error) {
         if (baseOreMeta == NO_METADATA) {
-          return baseStone().getItemBlock().getUnlocalizedName(stack) + ".name" + " " + baseOre.getUnlocalizedName() + ".name";
+          return baseStone().getItemBlock().getUnlocalizedName(stack) + ".name" + " " + baseOre.getUnlocalizedName()
+              + ".name";
         }
         ItemStack baseStack = new ItemStack(baseOre, 1, baseOreMeta);
         return baseStone().getItemBlock().getUnlocalizedName(stack) + ".name" + " " + baseStack.getDisplayName();
