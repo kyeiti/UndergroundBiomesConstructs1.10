@@ -116,6 +116,7 @@ public abstract class UBStone extends Block implements UBBlock {
     return getMetaFromState(state);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
     List<ItemStack> drops = super.getDrops(world, pos, state, fortune);

@@ -11,8 +11,6 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import org.apache.logging.log4j.Level;
 
 /**
  * Common superclass for all type of entries.<br>

@@ -6,8 +6,6 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 
-import java.util.ArrayList;
-
 /**
  * Allows mods to UBifiy their ores.<br>
  * <br>

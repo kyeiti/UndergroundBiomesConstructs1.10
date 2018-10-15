@@ -92,7 +92,7 @@ public class MetamorphicStone extends UBStone {
     Item cobbleBlock = API.METAMORPHIC_COBBLE.getItemBlock();
     int meta = state.getBlock().getMetaFromState(state);
     ItemStack itemStack = new ItemStack(cobbleBlock, 1, meta);
-    List<ItemStack> result = new ArrayList();
+    List<ItemStack> result = new ArrayList<ItemStack>();
     result.add(itemStack);
     DropsRegistry.INSTANCE.addDrops(result, this, world, pos, state, fortune);
     return result;

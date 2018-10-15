@@ -64,7 +64,7 @@ final class StrataLayers {
 
   private StrataLayer[] cleanedLayers(StrataLayer[] toClean) {
     // removes disallowed layers
-    ArrayList<StrataLayer> kept = new ArrayList();
+    ArrayList<StrataLayer> kept = new ArrayList<StrataLayer>();
     for (int i = 0; i < toClean.length; i++) {
       if (UBConfig.SPECIFIC.generationAllowed(toClean[i].filler)) {
         kept.add(toClean[i]);

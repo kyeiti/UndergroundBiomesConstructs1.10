@@ -11,7 +11,6 @@ import exterminatorjeff.undergroundbiomes.common.block.slab.UBStoneSlab;
 import exterminatorjeff.undergroundbiomes.common.block.stairs.UBStoneStairs;
 import exterminatorjeff.undergroundbiomes.config.UBConfig;
 import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
-import exterminatorjeff.undergroundbiomes.world.noise.SimplexNoiseGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.BlockSlab.EnumBlockHalf;
 import net.minecraft.block.state.IBlockState;

@@ -1,11 +1,9 @@
 package exterminatorjeff.undergroundbiomes.common.item;
 
-import exterminatorjeff.undergroundbiomes.api.ModInfo;
 import exterminatorjeff.undergroundbiomes.api.common.UBItem;
 import exterminatorjeff.undergroundbiomes.api.common.Variable;
 import exterminatorjeff.undergroundbiomes.api.enums.FossilVariant;
 import exterminatorjeff.undergroundbiomes.client.UBCreativeTab;
-import exterminatorjeff.undergroundbiomes.core.UndergroundBiomes;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

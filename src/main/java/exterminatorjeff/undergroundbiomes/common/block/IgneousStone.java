@@ -2,7 +2,6 @@ package exterminatorjeff.undergroundbiomes.common.block;
 
 import com.google.common.base.Predicate;
 import exterminatorjeff.undergroundbiomes.api.API;
-import exterminatorjeff.undergroundbiomes.api.ModInfo;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneType;
 import exterminatorjeff.undergroundbiomes.intermod.DropsRegistry;
@@ -17,11 +16,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.block.properties.PropertyBool;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.*;
 
@@ -81,7 +78,7 @@ public class IgneousStone extends UBStone {
     Item cobbleBlock = API.IGNEOUS_COBBLE.getItemBlock();
     int meta = state.getBlock().getMetaFromState(state);
     ItemStack itemStack = new ItemStack(cobbleBlock, 1, meta);
-    List<ItemStack> result = new ArrayList();
+    List<ItemStack> result = new ArrayList<ItemStack>();
     result.add(itemStack);
     DropsRegistry.INSTANCE.addDrops(result, this, world, pos, state, fortune);
     return result;

@@ -20,7 +20,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraft.world.ColorizerGrass;
 import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.block.state.IBlockState;

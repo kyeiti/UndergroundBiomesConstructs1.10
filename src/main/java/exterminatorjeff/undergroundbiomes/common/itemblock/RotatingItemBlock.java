@@ -89,6 +89,7 @@ abstract class RotatingItemBlock extends ItemBlock implements UBItem, Variable {
     }
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
     IBlockState stateHere = worldIn.getBlockState(pos);

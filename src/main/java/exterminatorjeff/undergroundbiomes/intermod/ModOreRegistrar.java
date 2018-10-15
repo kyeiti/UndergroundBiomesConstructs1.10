@@ -7,9 +7,7 @@ import exterminatorjeff.undergroundbiomes.api.API;
 import exterminatorjeff.undergroundbiomes.api.ModInfo;
 import exterminatorjeff.undergroundbiomes.api.common.UBLogger;
 import exterminatorjeff.undergroundbiomes.api.common.UBModOreRegistrar;
-import exterminatorjeff.undergroundbiomes.common.block.UBOre;
 import net.minecraft.block.Block;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -18,7 +16,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.logging.log4j.Level;
 
-import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.charset.Charset;

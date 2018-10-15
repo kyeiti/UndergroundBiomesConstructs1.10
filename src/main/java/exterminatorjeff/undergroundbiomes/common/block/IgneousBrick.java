@@ -39,7 +39,7 @@ public class IgneousBrick extends IgneousStone {
     Block cobbleBlock = API.IGNEOUS_BRICK.getBlock();
     int meta = state.getBlock().getMetaFromState(state);
     ItemStack itemStack = new ItemStack(cobbleBlock, 1, meta);
-    List<ItemStack> result = new ArrayList();
+    List<ItemStack> result = new ArrayList<ItemStack>();
     result.add(itemStack);
     return result;
   }

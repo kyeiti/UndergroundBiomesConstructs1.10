@@ -21,7 +21,6 @@ import exterminatorjeff.undergroundbiomes.config.ConfigManager;
 import exterminatorjeff.undergroundbiomes.config.UBConfig;
 import exterminatorjeff.undergroundbiomes.intermod.*;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -65,6 +64,7 @@ public class CommonProxy {
     API.STRATA_COLUMN_PROVIDER = dimensionManager;
   }
 
+  @SuppressWarnings("deprecation")
   public void init(FMLInitializationEvent e) {
     DropsRegistry.INSTANCE.init();
 
@@ -77,6 +77,7 @@ public class CommonProxy {
     API.ORES_REGISTRY.registerRecipes(null);
   }
 
+  @SuppressWarnings("unused")
   public void serverLoad(FMLServerAboutToStartEvent event) {
     //logger.info("server starting");
     File worldSaveDirectory = null;

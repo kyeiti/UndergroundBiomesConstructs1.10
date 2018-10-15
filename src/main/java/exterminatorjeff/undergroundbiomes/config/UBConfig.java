@@ -35,7 +35,7 @@ public class UBConfig implements UBSettings {
 
   private Configuration configuration;
   private final HashMap<BlockAccess, HashMap<Integer, BooleanSetting>> stoneGenerationSettings =
-    new HashMap();
+    new HashMap<BlockAccess, HashMap<Integer, BooleanSetting>>();
 
   // TODO ImposeUBStone (Highlands)
   // TODO Translate config, add more comments and add GUI config
@@ -107,7 +107,7 @@ public class UBConfig implements UBSettings {
   }
 
   private void setActivations(BlockEntry block, String type, IStringSerializable[] names) {
-    HashMap<Integer, BooleanSetting> blockActivations = new HashMap();
+    HashMap<Integer, BooleanSetting> blockActivations = new HashMap<Integer, BooleanSetting>();
     this.stoneGenerationSettings.put(block, blockActivations);
     for (int i = 0; i < names.length; i++) {
       BooleanSetting generationConfig = new BooleanSetting(CATEGORY_GENERATION, "Generate " + type +
@@ -117,7 +117,7 @@ public class UBConfig implements UBSettings {
   }
 
   private void setActivation(Block block, int metadata) {
-    HashMap<Integer, BooleanSetting> blockActivations = new HashMap();
+    HashMap<Integer, BooleanSetting> blockActivations = new HashMap<Integer, BooleanSetting>();
     this.stoneGenerationSettings.put(new VanillaBlockAccess(block), blockActivations);
     BooleanSetting generationConfig = new BooleanSetting(CATEGORY_GENERATION, "Generate " + block.getUnlocalizedName() + ", metadata " + metadata);
     blockActivations.put(metadata, generationConfig);

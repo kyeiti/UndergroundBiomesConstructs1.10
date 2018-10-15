@@ -5,15 +5,11 @@ import exterminatorjeff.undergroundbiomes.api.common.IUBOreConfig;
 import exterminatorjeff.undergroundbiomes.client.UBCreativeTab;
 import exterminatorjeff.undergroundbiomes.common.UBSubBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -23,26 +19,17 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import tyra314.toolprogression.api.OverwrittenContent;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemTool;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 /**
  * Base class to create UBified version of vanilla and modded ores.<br>
@@ -68,6 +55,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
   protected final ItemBlock itemBlock;
   public final IUBOreConfig config;
 
+  @SuppressWarnings("deprecation")
   public UBOre(Block baseOre, IUBOreConfig config) {
     super(baseOre.getMaterial(baseOre.getDefaultState()));
     if (Loader.isModLoaded("toolprogression")) {
@@ -157,7 +145,8 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @Nullable
   public String getHarvestTool(IBlockState state) {
     if (Loader.isModLoaded("toolprogression")) {
-      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())&&API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())) {
+      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())
+          && API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())) {
         return OverwrittenContent.blocks.get(this.getUnlocalizedName()).toolclass;
       } else
         return baseOre.getHarvestTool(baseOreState);
@@ -167,7 +156,8 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   public int getHarvestLevel(IBlockState state) {
     if (Loader.isModLoaded("toolprogression")) {
-      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())&&API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())) {
+      if (OverwrittenContent.blocks.containsKey(this.getUnlocalizedName())
+          && API.SETTINGS.customOreBlockHardnes().contains(this.getUnlocalizedName())) {
         return OverwrittenContent.blocks.get(this.getUnlocalizedName()).level;
       } else
         return baseOre.getHarvestLevel(baseOreState);
@@ -181,11 +171,13 @@ public abstract class UBOre extends Block implements UBSubBlock {
     return baseOre.removedByPlayer(baseOreState, world, pos, player, willHarvest);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public boolean canProvidePower(IBlockState state) {
     return baseOre.canProvidePower(baseOreState);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public int getWeakPower(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
     return baseOre.getWeakPower(baseOreState, world, pos, side);
@@ -210,6 +202,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
     }
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
     return baseOre.getDrops(world, pos, baseOreState, fortune);

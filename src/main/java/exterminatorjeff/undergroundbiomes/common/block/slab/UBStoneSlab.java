@@ -59,7 +59,7 @@ public abstract class UBStoneSlab extends BlockSlab implements UBSubBlock {
   public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
     int numberDropped = isDouble() ? 2 : 1;
     ItemStack dropped = new ItemStack(itemBlock, numberDropped, damageDropped(this.getDefaultState()));
-    List<ItemStack> result = new ArrayList(1);
+    List<ItemStack> result = new ArrayList<ItemStack>(1);
     result.add(dropped);
     return result;
   }
@@ -129,6 +129,7 @@ public abstract class UBStoneSlab extends BlockSlab implements UBSubBlock {
     return baseStone().getBlockHardness(blockState, worldIn, pos);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public float getExplosionResistance(Entity exploder) {
     return baseStone().getExplosionResistance(exploder);

@@ -1,7 +1,6 @@
 package exterminatorjeff.undergroundbiomes.intermod;
 
 import exterminatorjeff.undergroundbiomes.api.names.Entry;
-import exterminatorjeff.undergroundbiomes.api.names.ItemEntry;
 import exterminatorjeff.undergroundbiomes.client.UBOreModelResourceLocation;
 import exterminatorjeff.undergroundbiomes.common.block.UBOre;
 import net.minecraft.block.Block;

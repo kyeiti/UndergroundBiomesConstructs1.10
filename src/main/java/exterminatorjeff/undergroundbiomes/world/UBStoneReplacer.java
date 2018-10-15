@@ -5,43 +5,23 @@ package exterminatorjeff.undergroundbiomes.world;
 
 import exterminatorjeff.undergroundbiomes.api.*;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
-import exterminatorjeff.undergroundbiomes.common.block.IgneousStone;
-import exterminatorjeff.undergroundbiomes.common.block.MetamorphicStone;
 import exterminatorjeff.undergroundbiomes.common.block.UBStone;
 import exterminatorjeff.undergroundbiomes.config.UBConfig;
 import exterminatorjeff.undergroundbiomes.intermod.OresRegistry;
 import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
 import exterminatorjeff.undergroundbiomes.world.noise.NoiseGenerator;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.EnumPushReaction;
-import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.block.state.BlockFaceShape;
-import net.minecraft.block.state.BlockStateBase;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.village.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public abstract class UBStoneReplacer implements UBStrataColumnProvider {
 
@@ -57,6 +37,7 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
 
   public abstract int[] getBiomeValues(Chunk chunk);
 
+  @SuppressWarnings("deprecation")
   public void replaceStoneInChunk(Chunk chunk) {
     int[] biomeValues = getBiomeValues(chunk);
     int xPos = chunk.getPos().x * 16;
@@ -183,6 +164,7 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
     }
   }
 
+  @SuppressWarnings("deprecation")
   private UBStrataColumn strataColumn(
     final StrataLayer[] strata,
     final IBlockState fillerBlockCodes,

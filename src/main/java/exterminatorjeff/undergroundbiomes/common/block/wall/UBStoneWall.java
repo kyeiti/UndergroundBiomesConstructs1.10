@@ -9,10 +9,8 @@ import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.LanguageManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -71,6 +69,7 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
     return getMetaFromState(state);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public String getLocalizedName() {
     return I18n.translateToLocal(this.getUnlocalizedName() + ".name");

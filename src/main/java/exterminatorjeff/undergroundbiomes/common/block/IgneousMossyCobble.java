@@ -1,7 +1,6 @@
 package exterminatorjeff.undergroundbiomes.common.block;
 
 import com.google.common.base.Predicate;
-import exterminatorjeff.undergroundbiomes.api.ModInfo;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -10,8 +9,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.item.Item;
 import java.util.Random;
 import net.minecraft.util.BlockRenderLayer;
-import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.IGNEOUS_VARIANT_PROPERTY;
-import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.RED_GRANITE;
 
 /**
  * @author CurtisA, LouisDB

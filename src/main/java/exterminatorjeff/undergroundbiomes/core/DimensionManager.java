@@ -29,7 +29,7 @@ import java.util.HashMap;
  * @author Zeno410
  */
 public class DimensionManager implements UBDimensionalStrataColumnProvider {
-  public HashMap<Integer, WorldGenManager> managers = new HashMap();
+  public HashMap<Integer, WorldGenManager> managers = new HashMap<Integer, WorldGenManager>();
   private boolean villageRegistered = false;
   private boolean oreRegistered = false;
   private ConfigManager configManager;
@@ -39,7 +39,7 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
   }
 
   public void refreshManagers() {
-    managers = new HashMap();
+    managers = new HashMap<Integer, WorldGenManager>();
 
     if (UBConfig.SPECIFIC.ubifyVillages() && !villageRegistered) {
       MinecraftForge.TERRAIN_GEN_BUS.register(this);
@@ -63,11 +63,9 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
       WorldGenManager manager = new WorldGenManager(dimensionID);
       managers.put(dimensionID, manager);
     });
-    if (1 < 0)
-      throw new RuntimeException("" + managers.size() + " " + ((UBConfig) (UBConfig.SPECIFIC)).includedDimensions +
-        ((UBConfig) (UBConfig.SPECIFIC)).getUBifiedDimensions().size());
   }
 
+  @SuppressWarnings("unused")
   public void serverLoad(MinecraftServer server) {
     if (server == null) return;
     //logger.info("server starting");
@@ -131,7 +129,7 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
   }
 
   public void clearWorldManagers() {
-    managers = new HashMap();
+    managers = new HashMap<Integer, WorldGenManager>();
   }
 
   @Override

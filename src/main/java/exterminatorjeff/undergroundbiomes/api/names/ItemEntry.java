@@ -3,8 +3,6 @@ package exterminatorjeff.undergroundbiomes.api.names;
 import exterminatorjeff.undergroundbiomes.api.common.UBItem;
 import exterminatorjeff.undergroundbiomes.api.common.Variable;
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.ItemMeshDefinition;
-import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
