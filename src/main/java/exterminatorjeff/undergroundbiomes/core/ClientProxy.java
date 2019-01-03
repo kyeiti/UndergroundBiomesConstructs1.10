@@ -62,12 +62,14 @@ public final class ClientProxy extends CommonProxy {
   private final void registerBlocksModels() {
     // Stones
     API.IGNEOUS_STONE.registerModel();
+    API.IGNEOUS_MONSTER_STONE.registerModel();
     API.IGNEOUS_COBBLE.registerModel();
     API.IGNEOUS_BRICK.registerModel();
     API.IGNEOUS_MOSSY_COBBLE.registerModel();
     API.IGNEOUS_OVERGROWN.registerModel();
     API.IGNEOUS_OVERGROWN_SNOWED.registerModel();
     API.METAMORPHIC_STONE.registerModel();
+    API.METAMORPHIC_MONSTER_STONE.registerModel();
     API.METAMORPHIC_COBBLE.registerModel();
     API.METAMORPHIC_BRICK.registerModel();
     API.METAMORPHIC_OVERGROWN.registerModel();
@@ -75,6 +77,7 @@ public final class ClientProxy extends CommonProxy {
     API.METAMORPHIC_MOSSY_COBBLE.registerModel();
     API.IGNEOUS_MOSSY_COBBLE.registerModel();
     API.SEDIMENTARY_STONE.registerModel();
+    API.SEDIMENTARY_MONSTER_STONE.registerModel();
     API.SEDIMENTARY_OVERGROWN.registerModel();
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerModel();
     API.SEDIMENTARY_MOSSY_COBBLE.registerModel();

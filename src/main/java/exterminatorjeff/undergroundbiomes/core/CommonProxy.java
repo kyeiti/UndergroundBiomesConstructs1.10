@@ -145,18 +145,21 @@ public class CommonProxy {
     LOGGER.debug("Start registering blocks");
 
     API.IGNEOUS_STONE.registerBlock(event, new IgneousStone());
+    API.IGNEOUS_MONSTER_STONE.registerBlock(event, new IgneousMonsterStone());
     API.IGNEOUS_COBBLE.registerBlock(event, new IgneousCobble());
     API.IGNEOUS_BRICK.registerBlock(event, new IgneousBrick());
     API.IGNEOUS_OVERGROWN.registerBlock(event, new IgneousOvergrown());
     API.IGNEOUS_OVERGROWN_SNOWED.registerBlock(event, new IgneousOvergrownSnowed());
     API.IGNEOUS_MOSSY_COBBLE.registerBlock(event, new IgneousMossyCobble());
     API.METAMORPHIC_STONE.registerBlock(event, new MetamorphicStone());
+    API.METAMORPHIC_MONSTER_STONE.registerBlock(event, new MetamorphicMonsterStone());
     API.METAMORPHIC_COBBLE.registerBlock(event, new MetamorphicCobble());
     API.METAMORPHIC_BRICK.registerBlock(event, new MetamorphicBrick());
     API.METAMORPHIC_OVERGROWN.registerBlock(event, new MetamorphicOvergrown());
     API.METAMORPHIC_OVERGROWN_SNOWED.registerBlock(event, new MetamorphicOvergrownSnowed());
     API.METAMORPHIC_MOSSY_COBBLE.registerBlock(event, new MetamorphicMossyCobble());
     API.SEDIMENTARY_STONE.registerBlock(event, new SedimentaryStone());
+    API.SEDIMENTARY_MONSTER_STONE.registerBlock(event, new SedimentaryMonsterStone());
     API.SEDIMENTARY_OVERGROWN.registerBlock(event, new SedimentaryOvergrown());
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerBlock(event, new SedimentaryOvergrownSnowed());
     API.SEDIMENTARY_MOSSY_COBBLE.registerBlock(event, new SedimentaryMossyCobble());
@@ -266,6 +269,10 @@ public class CommonProxy {
     registry.register(API.IGNEOUS_STONE.getItemBlock());
     registry.register(API.METAMORPHIC_STONE.getItemBlock());
     registry.register(API.SEDIMENTARY_STONE.getItemBlock());
+
+    registry.register(API.IGNEOUS_MONSTER_STONE.getItemBlock());
+    registry.register(API.METAMORPHIC_MONSTER_STONE.getItemBlock());
+    registry.register(API.SEDIMENTARY_MONSTER_STONE.getItemBlock());
 
     registry.register(API.IGNEOUS_COBBLE.getItemBlock());
     registry.register(API.METAMORPHIC_COBBLE.getItemBlock());

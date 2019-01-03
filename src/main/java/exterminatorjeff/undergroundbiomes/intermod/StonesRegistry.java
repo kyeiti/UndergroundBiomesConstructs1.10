@@ -17,52 +17,58 @@ public enum StonesRegistry implements UBStonesRegistry {
 
   private StoneEntry getStoneEntry(UBStoneType type, UBStoneStyle style) {
     switch (type) {
-      case IGNEOUS:
-        switch (style) {
-          case STONE:
-            return API.IGNEOUS_STONE;
-          case COBBLE:
-            return API.IGNEOUS_COBBLE;
-          case BRICK:
-            return API.IGNEOUS_BRICK;
-          case OVERGROWN:
-            return API.IGNEOUS_OVERGROWN;
-          case OVERGROWN_SNOWED:
-            return API.IGNEOUS_OVERGROWN_SNOWED;
-          case MOSSY_COBBLE:
-            return API.IGNEOUS_MOSSY_COBBLE;
-        }
-        break;
-      case METAMORPHIC:
-        switch (style) {
-          case STONE:
-            return API.METAMORPHIC_STONE;
-          case COBBLE:
-            return API.METAMORPHIC_COBBLE;
-          case BRICK:
-            return API.METAMORPHIC_BRICK;
-          case OVERGROWN:
-            return API.METAMORPHIC_OVERGROWN;
-          case OVERGROWN_SNOWED:
-            return API.METAMORPHIC_OVERGROWN_SNOWED;
-          case MOSSY_COBBLE:
-            return API.METAMORPHIC_MOSSY_COBBLE;
-        }
-        break;
-      case SEDIMENTARY:
-        switch (style) {
-          case STONE:
-            return API.SEDIMENTARY_STONE;
-          case COBBLE:
-            return API.SEDIMENTARY_STONE;
-          case BRICK:
-            return API.SEDIMENTARY_STONE;
-          case OVERGROWN:
-            return API.SEDIMENTARY_OVERGROWN;
-          case OVERGROWN_SNOWED:
-            return API.SEDIMENTARY_OVERGROWN_SNOWED;
-          case MOSSY_COBBLE:
-            return API.SEDIMENTARY_MOSSY_COBBLE;
+    case IGNEOUS:
+      switch (style) {
+      case STONE:
+        return API.IGNEOUS_STONE;
+      case COBBLE:
+        return API.IGNEOUS_COBBLE;
+      case BRICK:
+        return API.IGNEOUS_BRICK;
+      case OVERGROWN:
+        return API.IGNEOUS_OVERGROWN;
+      case OVERGROWN_SNOWED:
+        return API.IGNEOUS_OVERGROWN_SNOWED;
+      case MOSSY_COBBLE:
+        return API.IGNEOUS_MOSSY_COBBLE;
+      case MONSTER_STONE:
+        return API.IGNEOUS_MONSTER_STONE;
+      }
+      break;
+    case METAMORPHIC:
+      switch (style) {
+      case STONE:
+        return API.METAMORPHIC_STONE;
+      case COBBLE:
+        return API.METAMORPHIC_COBBLE;
+      case BRICK:
+        return API.METAMORPHIC_BRICK;
+      case OVERGROWN:
+        return API.METAMORPHIC_OVERGROWN;
+      case OVERGROWN_SNOWED:
+        return API.METAMORPHIC_OVERGROWN_SNOWED;
+      case MOSSY_COBBLE:
+        return API.METAMORPHIC_MOSSY_COBBLE;
+      case MONSTER_STONE:
+        return API.METAMORPHIC_MONSTER_STONE;
+      }
+      break;
+    case SEDIMENTARY:
+      switch (style) {
+      case STONE:
+        return API.SEDIMENTARY_STONE;
+      case COBBLE:
+        return API.SEDIMENTARY_STONE;
+      case BRICK:
+        return API.SEDIMENTARY_STONE;
+      case OVERGROWN:
+        return API.SEDIMENTARY_OVERGROWN;
+      case OVERGROWN_SNOWED:
+        return API.SEDIMENTARY_OVERGROWN_SNOWED;
+      case MOSSY_COBBLE:
+        return API.SEDIMENTARY_MOSSY_COBBLE;
+      case MONSTER_STONE:
+        return API.SEDIMENTARY_MONSTER_STONE;
       }
     }
     return null;

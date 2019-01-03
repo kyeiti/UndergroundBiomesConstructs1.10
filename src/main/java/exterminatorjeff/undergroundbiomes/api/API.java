@@ -29,18 +29,21 @@ public final class API {
    */
 
   public static final StoneEntry IGNEOUS_STONE = new StoneEntry("igneous_stone");
+  public static final StoneEntry IGNEOUS_MONSTER_STONE = new StoneEntry("igneous_monster_stone");
   public static final StoneEntry IGNEOUS_COBBLE = new StoneEntry("igneous_cobble");
   public static final StoneEntry IGNEOUS_BRICK = new StoneEntry("igneous_brick");
   public static final StoneEntry IGNEOUS_OVERGROWN = new StoneEntry("igneous_overgrown");
   public static final StoneEntry IGNEOUS_OVERGROWN_SNOWED = new StoneEntry("igneous_overgrown_snowed");
   public static final StoneEntry IGNEOUS_MOSSY_COBBLE = new StoneEntry("igneous_cobble_mossy");
   public static final StoneEntry METAMORPHIC_STONE = new StoneEntry("metamorphic_stone");
+  public static final StoneEntry METAMORPHIC_MONSTER_STONE = new StoneEntry("metamorphic_monster_stone");
   public static final StoneEntry METAMORPHIC_COBBLE = new StoneEntry("metamorphic_cobble");
   public static final StoneEntry METAMORPHIC_OVERGROWN = new StoneEntry("metamorphic_overgrown");
   public static final StoneEntry METAMORPHIC_OVERGROWN_SNOWED = new StoneEntry("metamorphic_overgrown_snowed");
   public static final StoneEntry METAMORPHIC_BRICK = new StoneEntry("metamorphic_brick");
   public static final StoneEntry METAMORPHIC_MOSSY_COBBLE = new StoneEntry("metamorphic_cobble_mossy");
   public static final StoneEntry SEDIMENTARY_STONE = new StoneEntry("sedimentary_stone");
+  public static final StoneEntry SEDIMENTARY_MONSTER_STONE = new StoneEntry("sedimentary_monster_stone");
   public static final StoneEntry SEDIMENTARY_OVERGROWN = new StoneEntry("sedimentary_overgrown");
   public static final StoneEntry SEDIMENTARY_OVERGROWN_SNOWED = new StoneEntry("sedimentary_overgrown_snowed");
   public static final StoneEntry SEDIMENTARY_MOSSY_COBBLE = new StoneEntry("sedimentary_stone_mossy");

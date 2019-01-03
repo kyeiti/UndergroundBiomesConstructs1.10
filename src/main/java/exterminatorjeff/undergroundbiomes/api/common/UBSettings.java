@@ -48,6 +48,8 @@ public interface UBSettings {
 
   boolean replaceCobblestone();
 
+  boolean replaceMonsterStone();
+
   boolean replaceOvergrown();
 
   boolean replaceMossyCobblestone();

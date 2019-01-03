@@ -11,6 +11,15 @@ tile.igneous_stone.basalt.name=Basalt
 tile.igneous_stone.komatiite.name=Komatiite
 tile.igneous_stone.dacite.name=Dacite
 
+tile.igneous_monster_stone.red_granite.name=Red Granite Monster Egg
+tile.igneous_monster_stone.black_granite.name=Black Granite Monster Egg
+tile.igneous_monster_stone.rhyolite.name=Rhyolite Monster Egg
+tile.igneous_monster_stone.andesite.name=Andesite Monster Egg
+tile.igneous_monster_stone.gabbro.name=Gabbro Monster Egg
+tile.igneous_monster_stone.basalt.name=Basalt Monster Egg
+tile.igneous_monster_stone.komatiite.name=Komatiite Monster Egg
+tile.igneous_monster_stone.dacite.name=Dacite Monster Egg
+
 tile.igneous_overgrown.red_granite.name=Red Granite Overgrown Stone
 tile.igneous_overgrown.black_granite.name=Black Granite Overgrown Stone
 tile.igneous_overgrown.rhyolite.name=Rhyolite Overgrown Stone
@@ -65,6 +74,15 @@ tile.metamorphic_stone.greenschist.name=Green Schist
 tile.metamorphic_stone.soapstone.name=Soapstone
 tile.metamorphic_stone.migmatite.name=Migmatite
 
+tile.metamorphic_monster_stone.gneiss.name=Gneiss Monster Egg
+tile.metamorphic_monster_stone.eclogite.name=Eclogite Monster Egg
+tile.metamorphic_monster_stone.marble.name=Marble Monster Egg
+tile.metamorphic_monster_stone.quartzite.name=Quartzite Monster Egg
+tile.metamorphic_monster_stone.blueschist.name=Blue Schist Monster Egg
+tile.metamorphic_monster_stone.greenschist.name=Green Schist Monster Egg
+tile.metamorphic_monster_stone.soapstone.name=Soapstone Monster Egg
+tile.metamorphic_monster_stone.migmatite.name=Migmatite Monster Egg
+
 tile.metamorphic_overgrown.gneiss.name=Gneiss Overgrown Stone
 tile.metamorphic_overgrown.eclogite.name=Eclogite Overgrown Stone
 tile.metamorphic_overgrown.marble.name=Marble Overgrown Stone
@@ -118,6 +136,15 @@ tile.sedimentary_stone.lignite.name=Lignite Block
 tile.sedimentary_stone.dolomite.name=Dolomite
 tile.sedimentary_stone.greywacke.name=Greywacke
 tile.sedimentary_stone.chert.name=Chert
+
+tile.sedimentary_monster_stone.limestone.name=Limestone Monster Egg
+tile.sedimentary_monster_stone.chalk.name=Chalk Monster Egg
+tile.sedimentary_monster_stone.shale.name=Shale Monster Egg
+tile.sedimentary_monster_stone.siltstone.name=Siltstone Monster Egg
+tile.sedimentary_monster_stone.lignite.name=Lignite Block Monster Egg
+tile.sedimentary_monster_stone.dolomite.name=Dolomite Monster Egg
+tile.sedimentary_monster_stone.greywacke.name=Greywacke Monster Egg
+tile.sedimentary_monster_stone.chert.name=Chert Monster Egg
 
 tile.sedimentary_stone_mossy.limestone.name=Mossy Limestone
 tile.sedimentary_stone_mossy.chalk.name=Mossy Chalk

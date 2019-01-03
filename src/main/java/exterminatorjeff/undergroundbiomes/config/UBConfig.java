@@ -66,6 +66,7 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting replaceCobblestone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceCobblestone");
   public final BooleanSetting replaceOvergrown = new BooleanSetting(CATEGORY_GENERATION, "ReplaceOvergrown");
   public final BooleanSetting replaceMossyCobblestone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceMossyCobble");
+  public final BooleanSetting replaceMonsterStone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceMonsterStone");
 
   private static final String CATEGORY_VISUAL = "Visual";
   public final BooleanSetting plainSlabTextures = new BooleanSetting(CATEGORY_VISUAL, "PlainSlabTextures");
@@ -157,6 +158,7 @@ public class UBConfig implements UBSettings {
     dimensionSpecificSeeds.initProperty(configuration, false, "Use a different seed for each dimensions");
     ubifyVillages.initProperty(configuration, true, "Use UB stones in villages structures");
     replaceCobblestone.initProperty(configuration, true, "Replace vanilla cobblestone with UB variants, helps with RTG mountains compat for example, or with any world gen mod");
+    replaceMonsterStone.initProperty(configuration, true, "Replace monster eggs with UBC variants.");
     replaceOvergrown.initProperty(configuration, true, "Replace BOP's Overgrown Stone with UB variants, helps with BOP compatibility");
     replaceMossyCobblestone.initProperty(configuration, true, "Replace mossy cobblestone with UB variants, great for dungeons !");
 
@@ -399,6 +401,11 @@ public class UBConfig implements UBSettings {
   @Override
   public boolean replaceCobblestone() {
     return replaceCobblestone.getValue();
+  }
+
+  @Override
+  public boolean replaceMonsterStone() {
+    return replaceMonsterStone.getValue();
   }
 
   @Override
