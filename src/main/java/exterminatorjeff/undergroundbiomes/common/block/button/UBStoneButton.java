@@ -108,18 +108,21 @@ public abstract class UBStoneButton extends BlockButtonStone implements UBSubBlo
   }
 
   @Override
-  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
+      EntityPlayer player) {
     return new ItemStack(itemBlock, 1, state.getBlock().getMetaFromState(state));
   }
 
   /**
-   * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the
-   * IBlockstate
+   * Called by ItemBlocks just before a block is actually set in the world, to
+   * allow for adjustments to the IBlockstate
    */
   @Override
-  public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
+  public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY,
+      float hitZ, int meta, EntityLivingBase placer) {
     IBlockState state = getStateFromMeta(meta);
-    return canPlaceBlock(worldIn, pos, facing) ? state.withProperty(FACING, facing) : state.withProperty(FACING, EnumFacing.DOWN);
+    return canPlaceBlock(worldIn, pos, facing) ? state.withProperty(FACING, facing)
+        : state.withProperty(FACING, EnumFacing.DOWN);
   }
 
 }

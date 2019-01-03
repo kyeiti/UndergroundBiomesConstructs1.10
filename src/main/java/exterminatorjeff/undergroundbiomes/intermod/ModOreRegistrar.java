@@ -186,6 +186,30 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     return ores;
   }
 
+  private ArrayList<UBOreConfig> getGeolosysOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("geolosys:ore", 0, ModInfo.MODID + ":blocks/overlays/geolosys/hematite"));
+    ores.add(new UBOreConfig("geolosys:ore", 1, ModInfo.MODID + ":blocks/overlays/geolosys/limonite"));
+    ores.add(new UBOreConfig("geolosys:ore", 2, ModInfo.MODID + ":blocks/overlays/geolosys/malachite"));
+    ores.add(new UBOreConfig("geolosys:ore", 3, ModInfo.MODID + ":blocks/overlays/geolosys/azurite"));
+    ores.add(new UBOreConfig("geolosys:ore", 4, ModInfo.MODID + ":blocks/overlays/geolosys/cassiterite"));
+    ores.add(new UBOreConfig("geolosys:ore", 5, ModInfo.MODID + ":blocks/overlays/geolosys/teallite"));
+    ores.add(new UBOreConfig("geolosys:ore", 6, ModInfo.MODID + ":blocks/overlays/geolosys/galena"));
+    ores.add(new UBOreConfig("geolosys:ore", 7, ModInfo.MODID + ":blocks/overlays/geolosys/bauxite"));
+    ores.add(new UBOreConfig("geolosys:ore", 8, ModInfo.MODID + ":blocks/overlays/geolosys/platinum"));
+    ores.add(new UBOreConfig("geolosys:ore", 9, ModInfo.MODID + ":blocks/overlays/geolosys/autunite"));
+    ores.add(new UBOreConfig("geolosys:ore", 10, ModInfo.MODID + ":blocks/overlays/geolosys/sphalerite"));
+
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 0, ModInfo.MODID + ":blocks/overlays/geolosys/coal"));
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 1, ModInfo.MODID + ":blocks/overlays/geolosys/cinnabar"));
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 2, ModInfo.MODID + ":blocks/overlays/geolosys/gold"));
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 3, ModInfo.MODID + ":blocks/overlays/geolosys/lapis"));
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 4, ModInfo.MODID + ":blocks/overlays/geolosys/quartz"));
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 5, ModInfo.MODID + ":blocks/overlays/geolosys/kimberlite"));
+    ores.add(new UBOreConfig("geolosys:ore_vanilla", 6, ModInfo.MODID + ":blocks/overlays/geolosys/beryl"));
+    return ores;
+  }
+
   private ArrayList<UBOreConfig> getBaseMetalsOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("basemetals:antimony_ore", ModInfo.MODID + ":blocks/overlays/basemetals/antimony"));
