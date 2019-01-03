@@ -62,7 +62,7 @@ public final class RegularStoneRecipe extends IForgeRegistryEntry.Impl<IRecipe> 
   @Override
   public boolean matches(InventoryCrafting inv, World worldIn)
   {
-    LOGGER.debug("Matching stone recipe: " + recipe.matches(inv, worldIn));
+    //LOGGER.debug("Matching stone recipe: " + recipe.matches(inv, worldIn));
     return recipe.matches(inv, worldIn);
   }
 
