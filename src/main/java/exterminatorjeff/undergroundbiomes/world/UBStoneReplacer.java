@@ -19,9 +19,17 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraft.block.properties.PropertyBool;
-
+import vazkii.quark.world.block.BlockSpeleothem;
 import java.util.ArrayList;
 import java.util.HashMap;
+import exterminatorjeff.undergroundbiomes.common.block.*;
+import exterminatorjeff.undergroundbiomes.api.enums.UBStoneType;
+import exterminatorjeff.undergroundbiomes.api.names.*;
+import exterminatorjeff.undergroundbiomes.api.API;
+import exterminatorjeff.undergroundbiomes.api.common.UBStonesRegistry;
+import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
+import exterminatorjeff.undergroundbiomes.api.enums.UBStoneType;
+import exterminatorjeff.undergroundbiomes.api.names.*;
 
 public abstract class UBStoneReplacer implements UBStrataColumnProvider {
 
@@ -128,6 +136,19 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                   storage.set(x, y, z,
                       (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.MOSSY_COBBLE).getBlock())
                           .getStateFromMeta(block.getMetaFromState(strata)));
+                }
+                continue;
+              } else if (currentBlock instanceof BlockSpeleothem /*&& API.SETTINGS.replaceMonsterStone()*/) {
+                // Replace with UBified version
+                IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
+                if (strata.getBlock() instanceof UBStone) {
+                  UBStone block = (UBStone) strata.getBlock();
+                  if(block.getStoneType() == UBStoneType.IGNEOUS)
+                  storage.set(x, y, z,(StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock()).getStateFromMeta(block.getMetaFromState(strata)).withProperty(IgneousSpeleothem.SIZE, IgneousSpeleothem.EnumSize.values()[Math.max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
+                  if(block.getStoneType() == UBStoneType.METAMORPHIC)
+                  storage.set(x, y, z,(StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock()).getStateFromMeta(block.getMetaFromState(strata)).withProperty(MetamorphicSpeleothem.SIZE, MetamorphicSpeleothem.EnumSize.values()[Math.max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
+                  if(block.getStoneType() == UBStoneType.SEDIMENTARY)
+                  storage.set(x, y, z,(StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock()).getStateFromMeta(block.getMetaFromState(strata)).withProperty(SedimentarySpeleothem.SIZE, SedimentarySpeleothem.EnumSize.values()[Math.max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
                 }
                 continue;
               } else {

@@ -33,6 +33,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.IGNEOUS_MOSSY_COBBLE;
       case MONSTER_STONE:
         return API.IGNEOUS_MONSTER_STONE;
+      case SPELEOTHEM:
+        return API.IGNEOUS_SPELEOTHEM;
       }
       break;
     case METAMORPHIC:
@@ -51,6 +53,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.METAMORPHIC_MOSSY_COBBLE;
       case MONSTER_STONE:
         return API.METAMORPHIC_MONSTER_STONE;
+      case SPELEOTHEM:
+        return API.METAMORPHIC_SPELEOTHEM;
       }
       break;
     case SEDIMENTARY:
@@ -69,6 +73,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.SEDIMENTARY_MOSSY_COBBLE;
       case MONSTER_STONE:
         return API.SEDIMENTARY_MONSTER_STONE;
+      case SPELEOTHEM:
+        return API.SEDIMENTARY_SPELEOTHEM;
       }
     }
     return null;
