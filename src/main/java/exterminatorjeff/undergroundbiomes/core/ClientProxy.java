@@ -83,6 +83,8 @@ public final class ClientProxy extends CommonProxy {
     API.SEDIMENTARY_MOSSY_COBBLE.registerModel();
 
     API.IGNEOUS_SPELEOTHEM.registerModel();
+    API.METAMORPHIC_SPELEOTHEM.registerModel();
+    API.SEDIMENTARY_SPELEOTHEM.registerModel();
     // Slabs
     if (!UBConfig.SPECIFIC.alternativeSlabTextures()) {
       API.IGNEOUS_STONE_SLAB.registerModel(UBStateMappers.UBSLAB_STATE_MAPPER);
@@ -131,29 +133,32 @@ public final class ClientProxy extends CommonProxy {
   public void colorizeOres() {
     BlockColors blockColors = Minecraft.getMinecraft().getBlockColors();
     ItemColors itemColors = Minecraft.getMinecraft().getItemColors();
-    for(UBOre ore : API.REGISTERED_ORES){
-      if(ore.config.getColor() != null) {
+    for (UBOre ore : API.REGISTERED_ORES) {
+      if (ore.config.getColor() != null) {
         int color = Integer.decode(ore.config.getColor());
         blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> color, ore);
         itemColors.registerItemColorHandler((stack, tintIndex) -> color, Item.getItemFromBlock(ore));
       }
     }
-    blockColors.registerBlockColorHandler(new IBlockColor(){
+    blockColors.registerBlockColorHandler(new IBlockColor() {
       @Override
       public int colorMultiplier(IBlockState state, IBlockAccess worldIn, BlockPos pos, int tintIndex) {
-        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D);
+        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos)
+            : ColorizerGrass.getGrassColor(0.5D, 1.0D);
       }
     }, API.IGNEOUS_OVERGROWN.getBlock());
-    blockColors.registerBlockColorHandler(new IBlockColor(){
+    blockColors.registerBlockColorHandler(new IBlockColor() {
       @Override
       public int colorMultiplier(IBlockState state, IBlockAccess worldIn, BlockPos pos, int tintIndex) {
-        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D);
+        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos)
+            : ColorizerGrass.getGrassColor(0.5D, 1.0D);
       }
     }, API.METAMORPHIC_OVERGROWN.getBlock());
-    blockColors.registerBlockColorHandler(new IBlockColor(){
+    blockColors.registerBlockColorHandler(new IBlockColor() {
       @Override
       public int colorMultiplier(IBlockState state, IBlockAccess worldIn, BlockPos pos, int tintIndex) {
-        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D);
+        return worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos)
+            : ColorizerGrass.getGrassColor(0.5D, 1.0D);
       }
     }, API.SEDIMENTARY_OVERGROWN.getBlock());
   }

@@ -41,7 +41,6 @@ import org.apache.logging.log4j.Level;
 import java.io.File;
 import java.util.ArrayList;
 
-
 /**
  * @author CurtisA, LouisDB
  */
@@ -79,7 +78,7 @@ public class CommonProxy {
 
   @SuppressWarnings("unused")
   public void serverLoad(FMLServerAboutToStartEvent event) {
-    //logger.info("server starting");
+    // logger.info("server starting");
     File worldSaveDirectory = null;
     String worldName = event.getServer().getFolderName();
     if (event.getServer().isSinglePlayer()) {
@@ -93,7 +92,8 @@ public class CommonProxy {
     try {
       WorldServer server = event.getServer().getWorld(0);
       File worldLocation = server.getChunkSaveLocation();
-      //UndergroundBiomes.logger.info(world.toString() + " " +worldLocation.getAbsolutePath());
+      // UndergroundBiomes.logger.info(world.toString() + " "
+      // +worldLocation.getAbsolutePath());
       configManager.setWorldFile(worldLocation);
     } catch (NullPointerException e) {
       throw e;
@@ -102,7 +102,8 @@ public class CommonProxy {
   }
 
   public void onServerStopped(FMLServerStoppedEvent event) {
-    // for some reason onWorldLoad is running before any of the ServerStartxxx events
+    // for some reason onWorldLoad is running before any of the ServerStartxxx
+    // events
     // so I'm having to use a clunky workaround.
     dimensionManager.clearWorldManagers();
     OresRegistry.INSTANCE.recheckPile();
@@ -135,11 +136,11 @@ public class CommonProxy {
     /*
      * Blocks
      */
-//    new ActuallyAdditionsRegistrar().register(event);
-//    new ForestryRegistrar().register(event);
-//    new IC2Registrar().register(event);
-//    new ImmersiveEngineeringRegistrar().register(event);
-//    new ThermalFoundationRegistrar().register(event);
+    // new ActuallyAdditionsRegistrar().register(event);
+    // new ForestryRegistrar().register(event);
+    // new IC2Registrar().register(event);
+    // new ImmersiveEngineeringRegistrar().register(event);
+    // new ThermalFoundationRegistrar().register(event);
     API.MOD_ORE_REGISTRAR.requestOreSetups(event);
 
     LOGGER.debug("Start registering blocks");
@@ -165,17 +166,26 @@ public class CommonProxy {
     API.SEDIMENTARY_MOSSY_COBBLE.registerBlock(event, new SedimentaryMossyCobble());
 
     API.IGNEOUS_SPELEOTHEM.registerBlock(event, new IgneousSpeleothem());
+    API.METAMORPHIC_SPELEOTHEM.registerBlock(event, new MetamorphicSpeleothem());
+    API.SEDIMENTARY_SPELEOTHEM.registerBlock(event, new SedimentarySpeleothem());
     /*
      * Slabs
      */
 
-    API.IGNEOUS_BRICK_SLAB.registerBlock(event, new SlabItemBlock(new UBIgneousBrickSlabHalf(), new UBIgneousBrickSlabDouble()));
-    API.METAMORPHIC_BRICK_SLAB.registerBlock(event, new SlabItemBlock(new UBMetamorphicBrickSlabHalf(), new UBMetamorphicBrickSlabDouble()));
-    API.IGNEOUS_STONE_SLAB.registerBlock(event, new SlabItemBlock(new UBIgneousStoneSlabHalf(), new UBIgneousStoneSlabDouble()));
-    API.METAMORPHIC_STONE_SLAB.registerBlock(event, new SlabItemBlock(new UBMetamorphicStoneSlabHalf(), new UBMetamorphicStoneSlabDouble()));
-    API.IGNEOUS_COBBLE_SLAB.registerBlock(event, new SlabItemBlock(new UBIgneousCobbleSlabHalf(), new UBIgneousCobbleSlabDouble()));
-    API.METAMORPHIC_COBBLE_SLAB.registerBlock(event, new SlabItemBlock(new UBMetamorphicCobbleSlabHalf(), new UBMetamorphicCobbleSlabDouble()));
-    API.SEDIMENTARY_STONE_SLAB.registerBlock(event, new SlabItemBlock(new UBSedimentaryStoneSlabHalf(), new UBSedimentaryStoneSlabDouble()));
+    API.IGNEOUS_BRICK_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBIgneousBrickSlabHalf(), new UBIgneousBrickSlabDouble()));
+    API.METAMORPHIC_BRICK_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBMetamorphicBrickSlabHalf(), new UBMetamorphicBrickSlabDouble()));
+    API.IGNEOUS_STONE_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBIgneousStoneSlabHalf(), new UBIgneousStoneSlabDouble()));
+    API.METAMORPHIC_STONE_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBMetamorphicStoneSlabHalf(), new UBMetamorphicStoneSlabDouble()));
+    API.IGNEOUS_COBBLE_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBIgneousCobbleSlabHalf(), new UBIgneousCobbleSlabDouble()));
+    API.METAMORPHIC_COBBLE_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBMetamorphicCobbleSlabHalf(), new UBMetamorphicCobbleSlabDouble()));
+    API.SEDIMENTARY_STONE_SLAB.registerBlock(event,
+        new SlabItemBlock(new UBSedimentaryStoneSlabHalf(), new UBSedimentaryStoneSlabDouble()));
 
     /*
      * Buttons
@@ -187,23 +197,28 @@ public class CommonProxy {
           API.IGNEOUS_STONE_BUTTON.registerBlock(event, new ButtonItemBlock(API.IGNEOUS_STONE, UBButtonIgneous.class));
         }
         if (UBConfig.SPECIFIC.cobbleButtonsOn()) {
-          API.IGNEOUS_COBBLE_BUTTON.registerBlock(event, new ButtonItemBlock(API.IGNEOUS_COBBLE, UBButtonIgneousCobble.class));
+          API.IGNEOUS_COBBLE_BUTTON.registerBlock(event,
+              new ButtonItemBlock(API.IGNEOUS_COBBLE, UBButtonIgneousCobble.class));
         }
         if (UBConfig.SPECIFIC.brickButtonsOn())
-          API.IGNEOUS_BRICK_BUTTON.registerBlock(event, new ButtonItemBlock(API.IGNEOUS_BRICK, UBButtonIgneousBrick.class));
+          API.IGNEOUS_BRICK_BUTTON.registerBlock(event,
+              new ButtonItemBlock(API.IGNEOUS_BRICK, UBButtonIgneousBrick.class));
       }
       if (UBConfig.SPECIFIC.metamorphicButtonsOn()) {
         if (UBConfig.SPECIFIC.stoneButtonsOn())
-          API.METAMORPHIC_STONE_BUTTON.registerBlock(event, new ButtonItemBlock(API.METAMORPHIC_STONE, UBButtonMetamorphic.class));
+          API.METAMORPHIC_STONE_BUTTON.registerBlock(event,
+              new ButtonItemBlock(API.METAMORPHIC_STONE, UBButtonMetamorphic.class));
         if (UBConfig.SPECIFIC.cobbleButtonsOn())
-          API.METAMORPHIC_COBBLE_BUTTON.registerBlock(event, new ButtonItemBlock(API.METAMORPHIC_COBBLE, UBButtonMetamorphicCobble.class));
+          API.METAMORPHIC_COBBLE_BUTTON.registerBlock(event,
+              new ButtonItemBlock(API.METAMORPHIC_COBBLE, UBButtonMetamorphicCobble.class));
         if (UBConfig.SPECIFIC.brickButtonsOn())
-          API.METAMORPHIC_BRICK_BUTTON.registerBlock(event, new ButtonItemBlock(API.METAMORPHIC_BRICK, UBButtonMetamorphicBrick.class));
+          API.METAMORPHIC_BRICK_BUTTON.registerBlock(event,
+              new ButtonItemBlock(API.METAMORPHIC_BRICK, UBButtonMetamorphicBrick.class));
       }
       if (UBConfig.SPECIFIC.sedimentaryButtonsOn())
-        API.SEDIMENTARY_STONE_BUTTON.registerBlock(event, new ButtonItemBlock(API.SEDIMENTARY_STONE, UBButtonSedimentary.class));
+        API.SEDIMENTARY_STONE_BUTTON.registerBlock(event,
+            new ButtonItemBlock(API.SEDIMENTARY_STONE, UBButtonSedimentary.class));
     }
-
 
     /*
      * Walls
@@ -239,27 +254,32 @@ public class CommonProxy {
         if (UBConfig.SPECIFIC.stoneStairsOn())
           API.IGNEOUS_STONE_STAIRS.registerBlock(event, new StairsItemBlock(API.IGNEOUS_STONE, UBStairsIgneous.class));
         if (UBConfig.SPECIFIC.cobbleStairsOn())
-          API.IGNEOUS_COBBLE_STAIRS.registerBlock(event, new StairsItemBlock(API.IGNEOUS_COBBLE, UBStairsIgneousCobble.class));
+          API.IGNEOUS_COBBLE_STAIRS.registerBlock(event,
+              new StairsItemBlock(API.IGNEOUS_COBBLE, UBStairsIgneousCobble.class));
         if (UBConfig.SPECIFIC.brickStairsOn())
-          API.IGNEOUS_BRICK_STAIRS.registerBlock(event, new StairsItemBlock(API.IGNEOUS_BRICK, UBStairsIgneousBrick.class));
+          API.IGNEOUS_BRICK_STAIRS.registerBlock(event,
+              new StairsItemBlock(API.IGNEOUS_BRICK, UBStairsIgneousBrick.class));
       }
       if (UBConfig.SPECIFIC.metamorphicStairsOn()) {
         if (UBConfig.SPECIFIC.stoneStairsOn())
-          API.METAMORPHIC_STONE_STAIRS.registerBlock(event, new StairsItemBlock(API.METAMORPHIC_STONE, UBStairsMetamorphic.class));
+          API.METAMORPHIC_STONE_STAIRS.registerBlock(event,
+              new StairsItemBlock(API.METAMORPHIC_STONE, UBStairsMetamorphic.class));
         if (UBConfig.SPECIFIC.cobbleStairsOn())
-          API.METAMORPHIC_COBBLE_STAIRS.registerBlock(event, new StairsItemBlock(API.METAMORPHIC_COBBLE, UBStairsMetamorphicCobble.class));
+          API.METAMORPHIC_COBBLE_STAIRS.registerBlock(event,
+              new StairsItemBlock(API.METAMORPHIC_COBBLE, UBStairsMetamorphicCobble.class));
         if (UBConfig.SPECIFIC.brickStairsOn())
-          API.METAMORPHIC_BRICK_STAIRS.registerBlock(event, new StairsItemBlock(API.METAMORPHIC_BRICK, UBStairsMetamorphicBrick.class));
+          API.METAMORPHIC_BRICK_STAIRS.registerBlock(event,
+              new StairsItemBlock(API.METAMORPHIC_BRICK, UBStairsMetamorphicBrick.class));
       }
       if (UBConfig.SPECIFIC.sedimentaryStairsOn())
-        API.SEDIMENTARY_STONE_STAIRS.registerBlock(event, new StairsItemBlock(API.SEDIMENTARY_STONE, UBStairsSedimentary.class));
+        API.SEDIMENTARY_STONE_STAIRS.registerBlock(event,
+            new StairsItemBlock(API.SEDIMENTARY_STONE, UBStairsSedimentary.class));
     }
     OresRegistry.INSTANCE.registerBlocks(event);
   }
 
   @SubscribeEvent
   public void registerItems(RegistryEvent.Register<Item> event) {
-
 
     LOGGER.debug("Start registering items");
     API.LIGNITE_COAL.registerItem(event, new ItemLigniteCoal());
@@ -294,6 +314,8 @@ public class CommonProxy {
     registry.register(API.SEDIMENTARY_MOSSY_COBBLE.getItemBlock());
 
     registry.register(API.IGNEOUS_SPELEOTHEM.getItemBlock());
+    registry.register(API.METAMORPHIC_SPELEOTHEM.getItemBlock());
+    registry.register(API.SEDIMENTARY_SPELEOTHEM.getItemBlock());
     /* Slabs */
 
     API.IGNEOUS_STONE_SLAB.registerItem(event, null);
@@ -331,7 +353,6 @@ public class CommonProxy {
         registry.register(API.SEDIMENTARY_STONE_BUTTON.getItemBlock());
     }
 
-
     /*
      * Walls
      */
@@ -366,20 +387,26 @@ public class CommonProxy {
         if (UBConfig.SPECIFIC.stoneStairsOn())
           API.IGNEOUS_STONE_STAIRS.registerItem(event, new StairsItemBlock(API.IGNEOUS_STONE, UBStairsIgneous.class));
         if (UBConfig.SPECIFIC.cobbleStairsOn())
-          API.IGNEOUS_COBBLE_STAIRS.registerItem(event, new StairsItemBlock(API.IGNEOUS_COBBLE, UBStairsIgneousCobble.class));
+          API.IGNEOUS_COBBLE_STAIRS.registerItem(event,
+              new StairsItemBlock(API.IGNEOUS_COBBLE, UBStairsIgneousCobble.class));
         if (UBConfig.SPECIFIC.brickStairsOn())
-          API.IGNEOUS_BRICK_STAIRS.registerItem(event, new StairsItemBlock(API.IGNEOUS_BRICK, UBStairsIgneousBrick.class));
+          API.IGNEOUS_BRICK_STAIRS.registerItem(event,
+              new StairsItemBlock(API.IGNEOUS_BRICK, UBStairsIgneousBrick.class));
       }
       if (UBConfig.SPECIFIC.metamorphicStairsOn()) {
         if (UBConfig.SPECIFIC.stoneStairsOn())
-          API.METAMORPHIC_STONE_STAIRS.registerItem(event, new StairsItemBlock(API.METAMORPHIC_STONE, UBStairsMetamorphic.class));
+          API.METAMORPHIC_STONE_STAIRS.registerItem(event,
+              new StairsItemBlock(API.METAMORPHIC_STONE, UBStairsMetamorphic.class));
         if (UBConfig.SPECIFIC.cobbleStairsOn())
-          API.METAMORPHIC_COBBLE_STAIRS.registerItem(event, new StairsItemBlock(API.METAMORPHIC_COBBLE, UBStairsMetamorphicCobble.class));
+          API.METAMORPHIC_COBBLE_STAIRS.registerItem(event,
+              new StairsItemBlock(API.METAMORPHIC_COBBLE, UBStairsMetamorphicCobble.class));
         if (UBConfig.SPECIFIC.brickStairsOn())
-          API.METAMORPHIC_BRICK_STAIRS.registerItem(event, new StairsItemBlock(API.METAMORPHIC_BRICK, UBStairsMetamorphicBrick.class));
+          API.METAMORPHIC_BRICK_STAIRS.registerItem(event,
+              new StairsItemBlock(API.METAMORPHIC_BRICK, UBStairsMetamorphicBrick.class));
       }
       if (UBConfig.SPECIFIC.sedimentaryStairsOn())
-        API.SEDIMENTARY_STONE_STAIRS.registerItem(event, new StairsItemBlock(API.SEDIMENTARY_STONE, UBStairsSedimentary.class));
+        API.SEDIMENTARY_STONE_STAIRS.registerItem(event,
+            new StairsItemBlock(API.SEDIMENTARY_STONE, UBStairsSedimentary.class));
     }
     OresRegistry.INSTANCE.registerItems(event);
   }
@@ -406,10 +433,12 @@ public class CommonProxy {
     IForgeRegistryModifiable modRegistry = (IForgeRegistryModifiable) event.getRegistry();
 
     for (int i = 0; i < IgneousVariant.NB_VARIANTS; ++i) {
-      GameRegistry.addSmelting(new ItemStack(API.IGNEOUS_COBBLE.getItemBlock(), 1, i), new ItemStack(API.IGNEOUS_STONE.getItemBlock(), 1, i), 0.1f);
+      GameRegistry.addSmelting(new ItemStack(API.IGNEOUS_COBBLE.getItemBlock(), 1, i),
+          new ItemStack(API.IGNEOUS_STONE.getItemBlock(), 1, i), 0.1f);
     }
     for (int i = 0; i < MetamorphicVariant.NB_VARIANTS; ++i) {
-      GameRegistry.addSmelting(new ItemStack(API.METAMORPHIC_COBBLE.getItemBlock(), 1, i), new ItemStack(API.METAMORPHIC_STONE.getItemBlock(), 1, i), 0.1f);
+      GameRegistry.addSmelting(new ItemStack(API.METAMORPHIC_COBBLE.getItemBlock(), 1, i),
+          new ItemStack(API.METAMORPHIC_STONE.getItemBlock(), 1, i), 0.1f);
     }
 
     if (UBConfig.SPECIFIC.buttonsOn()) {
@@ -424,7 +453,7 @@ public class CommonProxy {
     ((UBConfig) (UBConfig.SPECIFIC)).regularStoneCrafting.addTrackerAndUpdate(regularCobblestoneRecipe);
     ((UBConfig) (UBConfig.SPECIFIC)).changeButtonRecipe.addTrackerAndUpdate(new ButtonRecipe());
     // This will probably be needed here in 1.13
-    //API.ORES_REGISTRY.registerRecipes(event);
+    // API.ORES_REGISTRY.registerRecipes(event);
   }
 
 }

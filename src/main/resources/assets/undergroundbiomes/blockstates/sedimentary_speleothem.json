@@ -1,0 +1,64 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_all",
+        "uvlock": true,
+        "transform": "forge:default-block",
+        "model": "quark:speleothem_medium"
+    },
+    "variants": {
+        "type": {
+            "limestone": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/limestone"
+                }
+            },
+            "chalk": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/chalk"
+                }
+            },
+            "shale": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/shale"
+                }
+            },
+            "siltstone": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/siltstone"
+                }
+            },
+            "lignite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/lignite"
+                }
+            },
+            "dolomite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/dolomite"
+                }
+            },
+            "greywacke": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/greywacke"
+                }
+            },
+            "chert": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/chert"
+                }
+            }
+        },
+        "size": {
+            "small": {
+                "model": "quark:speleothem_small"
+            },
+            "medium": {
+                "model": "quark:speleothem_medium"
+            },
+            "big": {
+                "model": "quark:speleothem_big"
+            }
+        }
+    }
+}

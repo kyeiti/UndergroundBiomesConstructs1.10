@@ -1,0 +1,64 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_all",
+        "uvlock": true,
+        "transform": "forge:default-block",
+        "model": "quark:speleothem_medium"
+    },
+    "variants": {
+        "type": {
+            "gneiss": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/gneiss"
+                }
+            },
+            "eclogite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/eclogite"
+                }
+            },
+            "marble": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/marble"
+                }
+            },
+            "quartzite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/quartzite"
+                }
+            },
+            "blueschist": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/blueschist"
+                }
+            },
+            "greenschist": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/greenschist"
+                }
+            },
+            "soapstone": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/soapstone"
+                }
+            },
+            "migmatite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/migmatite"
+                }
+            }
+        },
+        "size": {
+            "small": {
+                "model": "quark:speleothem_small"
+            },
+            "medium": {
+                "model": "quark:speleothem_medium"
+            },
+            "big": {
+                "model": "quark:speleothem_big"
+            }
+        }
+    }
+}

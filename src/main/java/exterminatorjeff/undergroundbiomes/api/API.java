@@ -51,8 +51,8 @@ public final class API {
    * Speleothems
    */
   public static final StoneEntry IGNEOUS_SPELEOTHEM = new StoneEntry("igneous_speleothem");
-  //public static final StoneEntry METAMORPHIC_SPELEOTHEM = new StoneEntry("metamorphic_speleothem");
-  //public static final StoneEntry SEDIMENTARY_SPELEOTHEM = new StoneEntry("sedimentary_speleothem");
+  public static final StoneEntry METAMORPHIC_SPELEOTHEM = new StoneEntry("metamorphic_speleothem");
+  public static final StoneEntry SEDIMENTARY_SPELEOTHEM = new StoneEntry("sedimentary_speleothem");
 
   /*
    * Slabs
