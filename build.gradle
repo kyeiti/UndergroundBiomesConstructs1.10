@@ -54,7 +54,7 @@ dependencies {
 
   // the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
   provided files('libs/toolprogression.jar')
-
+  provided files('libs/quark.jar')
   // the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
   // except that these dependencies get remapped to your current MCP mappings
   //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
