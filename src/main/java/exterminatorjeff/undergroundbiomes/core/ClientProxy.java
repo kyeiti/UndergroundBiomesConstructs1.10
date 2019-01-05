@@ -81,6 +81,8 @@ public final class ClientProxy extends CommonProxy {
     API.SEDIMENTARY_OVERGROWN.registerModel();
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerModel();
     API.SEDIMENTARY_MOSSY_COBBLE.registerModel();
+
+    API.IGNEOUS_SPELEOTHEM.registerModel();
     // Slabs
     if (!UBConfig.SPECIFIC.alternativeSlabTextures()) {
       API.IGNEOUS_STONE_SLAB.registerModel(UBStateMappers.UBSLAB_STATE_MAPPER);

@@ -1,0 +1,64 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_all",
+        "uvlock": true,
+        "transform": "forge:default-block",
+        "model": "quark:speleothem_medium"
+    },
+    "variants": {
+        "type": {
+            "red_granite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/red_granite"
+                }
+            },
+            "black_granite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/black_granite"
+                }
+            },
+            "rhyolite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/rhyolite"
+                }
+            },
+            "andesite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/andesite"
+                }
+            },
+            "gabbro": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/gabbro"
+                }
+            },
+            "basalt": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/basalt"
+                }
+            },
+            "komatiite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/komatiite"
+                }
+            },
+            "dacite": {
+                "textures": {
+                    "block": "undergroundbiomes:blocks/dacite"
+                }
+            }
+        },
+        "size": {
+            "small": {
+                "model": "quark:speleothem_small"
+            },
+            "medium": {
+                "model": "quark:speleothem_medium"
+            },
+            "big": {
+                "model": "quark:speleothem_big"
+            }
+        }
+    }
+}

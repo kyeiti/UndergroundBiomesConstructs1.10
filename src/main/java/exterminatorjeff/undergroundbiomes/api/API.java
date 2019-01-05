@@ -48,6 +48,13 @@ public final class API {
   public static final StoneEntry SEDIMENTARY_OVERGROWN_SNOWED = new StoneEntry("sedimentary_overgrown_snowed");
   public static final StoneEntry SEDIMENTARY_MOSSY_COBBLE = new StoneEntry("sedimentary_stone_mossy");
   /*
+   * Speleothems
+   */
+  public static final StoneEntry IGNEOUS_SPELEOTHEM = new StoneEntry("igneous_speleothem");
+  //public static final StoneEntry METAMORPHIC_SPELEOTHEM = new StoneEntry("metamorphic_speleothem");
+  //public static final StoneEntry SEDIMENTARY_SPELEOTHEM = new StoneEntry("sedimentary_speleothem");
+
+  /*
    * Slabs
    */
 
