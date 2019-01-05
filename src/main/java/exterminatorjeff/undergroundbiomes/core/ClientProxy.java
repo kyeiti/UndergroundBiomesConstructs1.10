@@ -23,6 +23,7 @@ import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.block.state.IBlockState;
+import net.minecraftforge.fml.common.Loader;
 
 /**
  * @author CurtisA, LouisDB
@@ -82,9 +83,11 @@ public final class ClientProxy extends CommonProxy {
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerModel();
     API.SEDIMENTARY_MOSSY_COBBLE.registerModel();
 
-    API.IGNEOUS_SPELEOTHEM.registerModel();
-    API.METAMORPHIC_SPELEOTHEM.registerModel();
-    API.SEDIMENTARY_SPELEOTHEM.registerModel();
+    if (Loader.isModLoaded("quark")) {
+      API.IGNEOUS_SPELEOTHEM.registerModel();
+      API.METAMORPHIC_SPELEOTHEM.registerModel();
+      API.SEDIMENTARY_SPELEOTHEM.registerModel();
+    }
     // Slabs
     if (!UBConfig.SPECIFIC.alternativeSlabTextures()) {
       API.IGNEOUS_STONE_SLAB.registerModel(UBStateMappers.UBSLAB_STATE_MAPPER);

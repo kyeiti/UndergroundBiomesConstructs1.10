@@ -37,9 +37,9 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
 import org.apache.logging.log4j.Level;
-
 import java.io.File;
 import java.util.ArrayList;
+import net.minecraftforge.fml.common.Loader;
 
 /**
  * @author CurtisA, LouisDB
@@ -165,9 +165,11 @@ public class CommonProxy {
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerBlock(event, new SedimentaryOvergrownSnowed());
     API.SEDIMENTARY_MOSSY_COBBLE.registerBlock(event, new SedimentaryMossyCobble());
 
-    API.IGNEOUS_SPELEOTHEM.registerBlock(event, new IgneousSpeleothem());
-    API.METAMORPHIC_SPELEOTHEM.registerBlock(event, new MetamorphicSpeleothem());
-    API.SEDIMENTARY_SPELEOTHEM.registerBlock(event, new SedimentarySpeleothem());
+    if (Loader.isModLoaded("quark")) {
+      API.IGNEOUS_SPELEOTHEM.registerBlock(event, new IgneousSpeleothem());
+      API.METAMORPHIC_SPELEOTHEM.registerBlock(event, new MetamorphicSpeleothem());
+      API.SEDIMENTARY_SPELEOTHEM.registerBlock(event, new SedimentarySpeleothem());
+    }
     /*
      * Slabs
      */
@@ -313,9 +315,11 @@ public class CommonProxy {
     registry.register(API.IGNEOUS_MOSSY_COBBLE.getItemBlock());
     registry.register(API.SEDIMENTARY_MOSSY_COBBLE.getItemBlock());
 
-    registry.register(API.IGNEOUS_SPELEOTHEM.getItemBlock());
-    registry.register(API.METAMORPHIC_SPELEOTHEM.getItemBlock());
-    registry.register(API.SEDIMENTARY_SPELEOTHEM.getItemBlock());
+    if (Loader.isModLoaded("quark")) {
+      registry.register(API.IGNEOUS_SPELEOTHEM.getItemBlock());
+      registry.register(API.METAMORPHIC_SPELEOTHEM.getItemBlock());
+      registry.register(API.SEDIMENTARY_SPELEOTHEM.getItemBlock());
+    }
     /* Slabs */
 
     API.IGNEOUS_STONE_SLAB.registerItem(event, null);

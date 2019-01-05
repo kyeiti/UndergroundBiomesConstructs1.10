@@ -96,6 +96,8 @@ public interface UBSettings {
 
   boolean brickWallsOn();
 
+  boolean replaceSpeleothems();
+
   int buttonRecipeResult();
 
   boolean disableVanillaStoneVariants();
