@@ -84,7 +84,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getTechRebornOres(), "techreborn.json");
     writeDefaults(getThermalFoundationOres(), "thermalfoundation.json");
     writeDefaults(getThaumcraftOres(), "thaumcraft.json");
-    writeDefaults(getThaumcraftOres(), "geolosys.json");
+    writeDefaults(getGeolosysOres(), "geolosys.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
