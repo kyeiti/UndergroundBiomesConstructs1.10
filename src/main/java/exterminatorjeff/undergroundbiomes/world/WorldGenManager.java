@@ -83,7 +83,7 @@ public final class WorldGenManager implements UBStrataColumnProvider {
   @SubscribeEvent(priority = EventPriority.LOWEST)
   public void onPopulateChunkPost(PopulateChunkEvent.Post event) {
     if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
-      Chunk chunk = event.getWorld().getChunkFromChunkCoords(event.getChunkX(), event.getChunkZ());
+      Chunk chunk = event.getWorld().getChunk(event.getChunkX(), event.getChunkZ());
       this.stoneReplacer.replaceStoneInChunk(chunk);
       stoneReplacer.redoOres(event.getWorld());
     }

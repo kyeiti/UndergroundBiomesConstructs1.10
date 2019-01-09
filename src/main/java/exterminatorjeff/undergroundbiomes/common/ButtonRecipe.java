@@ -40,8 +40,8 @@ public final class ButtonRecipe implements SettingTracker<Integer> {
           (StonesRegistry.INSTANCE.allButtons().contains(item)) || //
           (item != null &&
             item.getRegistryName() != null &&
-            item.getRegistryName().getResourcePath() != null &&
-            item.getRegistryName().getResourcePath().contains("button")) //
+            item.getRegistryName().getPath() != null &&
+            item.getRegistryName().getPath().contains("button")) //
         ) {
         recipe.getRecipeOutput().setCount(n);
         LOGGER.debug(String.format("%s for '%s' modified", recipe.getClass().getSimpleName(), recipe.getRecipeOutput().getItem().getRegistryName()));

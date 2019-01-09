@@ -72,7 +72,7 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
   @SuppressWarnings("deprecation")
   @Override
   public String getLocalizedName() {
-    return I18n.translateToLocal(this.getUnlocalizedName() + ".name");
+    return I18n.translateToLocal(this.getTranslationKey() + ".name");
   }
 
   private boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
@@ -129,8 +129,8 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-      return super.getUnlocalizedName(stack) + "." + getVariantName(stack.getMetadata());
+    public String getUnlocalizedNameInefficiently(ItemStack stack) {
+      return super.getUnlocalizedNameInefficiently(stack) + "." + getVariantName(stack.getMetadata());
     }
 
   }

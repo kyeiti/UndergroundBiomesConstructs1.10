@@ -116,7 +116,7 @@ public class StairsItemBlock extends RotatingItemBlock implements UBStairs {
         return true;
       }
     }
-    throw new RuntimeException(state.getBlock().getUnlocalizedName());
+    throw new RuntimeException(state.getBlock().getTranslationKey());
     //return true;
   }
 

@@ -24,7 +24,7 @@ public class UBOreModelLoader implements ICustomModelLoader {
 
   @Override
   public IModel loadModel(ResourceLocation modelLocation) {
-    String modelName = modelLocation.getResourcePath();
+    String modelName = modelLocation.getPath();
     if (modelName.contains(UBOreModel.UBORE_MODEL_NAME))
       return new UBOreModel((UBOreModelResourceLocation) modelLocation);
     throw new RuntimeException("A builtin model '" + modelName + "' is not defined.");

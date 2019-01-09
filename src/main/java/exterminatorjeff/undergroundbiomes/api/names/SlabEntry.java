@@ -44,10 +44,10 @@ public final class SlabEntry extends Entry<UBSlab> {
   @Override
   protected void doRegisterBlock(IForgeRegistry<Block> registry) {
     String name = internalName + "_halfslab";
-    getHalfSlab().setUnlocalizedName(name);
+    getHalfSlab().setTranslationKey(name);
     registry.register(getHalfSlab().setRegistryName(name));
     name = internalName + "_fullslab";
-    getFullSlab().setUnlocalizedName(name);
+    getFullSlab().setTranslationKey(name);
     registry.register(getFullSlab().setRegistryName(name));
   }
 

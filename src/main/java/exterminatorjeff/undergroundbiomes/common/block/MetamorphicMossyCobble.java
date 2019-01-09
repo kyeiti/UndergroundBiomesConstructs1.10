@@ -42,7 +42,7 @@ public class MetamorphicMossyCobble extends MetamorphicStone {
   }
 
   @Override
-  public BlockRenderLayer getBlockLayer()
+  public BlockRenderLayer getRenderLayer()
     {
         return BlockRenderLayer.CUTOUT_MIPPED;
     }

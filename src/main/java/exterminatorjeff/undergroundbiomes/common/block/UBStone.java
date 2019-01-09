@@ -44,7 +44,7 @@ public abstract class UBStone extends Block implements UBBlock {
     setHardness(UBConfig.SPECIFIC.hardnessModifier());
     setResistance(UBConfig.SPECIFIC.resistanceModifier());
     setHarvestLevel("pickaxe", 0);
-    setUnlocalizedName(this.getInternalName());
+    setTranslationKey(this.getInternalName());
     setRegistryName(ModInfo.MODID,this.getInternalName());
     ((UBConfig) (UBConfig.SPECIFIC)).hardnessModifier.addTracker(hardness -> setHardness(hardness));
     ((UBConfig) (UBConfig.SPECIFIC)).resistanceModifier.addTracker(resistance -> setResistance(resistance));
@@ -156,7 +156,7 @@ public abstract class UBStone extends Block implements UBBlock {
     public UBItemBlockStone(UBStone block) {
       super(block);
       setMaxDamage(0);
-      setUnlocalizedName(block.getUnlocalizedName());
+      setTranslationKey(block.getTranslationKey());
       setRegistryName(block.getRegistryName());
       setHasSubtypes(true);
     }
@@ -167,8 +167,8 @@ public abstract class UBStone extends Block implements UBBlock {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-      return super.getUnlocalizedName() + "." + getVariantName(stack.getMetadata());
+    public String getUnlocalizedNameInefficiently(ItemStack stack) {
+      return super.getTranslationKey() + "." + getVariantName(stack.getMetadata());
     }
 
   }

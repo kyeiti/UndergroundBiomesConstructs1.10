@@ -29,7 +29,7 @@ public class MetamorphicOvergrownSnowed extends MetamorphicStone {
   }
 
   @Override
-  public BlockRenderLayer getBlockLayer()
+  public BlockRenderLayer getRenderLayer()
     {
         return BlockRenderLayer.CUTOUT_MIPPED;
     }

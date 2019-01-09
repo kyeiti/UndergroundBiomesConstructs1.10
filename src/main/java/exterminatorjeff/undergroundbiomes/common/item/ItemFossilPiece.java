@@ -35,8 +35,8 @@ public class ItemFossilPiece extends Item implements UBItem, Variable {
   }
 
   @Override
-  public String getUnlocalizedName(ItemStack stack) {
-    return getUnlocalizedName() + "." + getVariantName(stack.getMetadata()).replaceAll("2", "");
+  public String getUnlocalizedNameInefficiently(ItemStack stack) {
+    return getTranslationKey() + "." + getVariantName(stack.getMetadata()).replaceAll("2", "");
   }
 
   @Override

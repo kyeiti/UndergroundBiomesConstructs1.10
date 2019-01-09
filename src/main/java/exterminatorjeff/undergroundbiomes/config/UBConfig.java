@@ -127,7 +127,7 @@ public class UBConfig implements UBSettings {
     HashMap<Integer, BooleanSetting> blockActivations = new HashMap<Integer, BooleanSetting>();
     this.stoneGenerationSettings.put(new VanillaBlockAccess(block), blockActivations);
     BooleanSetting generationConfig = new BooleanSetting(CATEGORY_GENERATION,
-        "Generate " + block.getUnlocalizedName() + ", metadata " + metadata);
+        "Generate " + block.getTranslationKey() + ", metadata " + metadata);
     blockActivations.put(metadata, generationConfig);
   }
 

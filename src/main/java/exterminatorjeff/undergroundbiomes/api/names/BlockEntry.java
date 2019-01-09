@@ -19,7 +19,7 @@ public abstract class BlockEntry extends Entry<UBBlock> implements BlockAccess {
   }
 
   public BlockEntry(Block block) {
-    super(block.getUnlocalizedName());
+    super(block.getTranslationKey());
     // sanitize inputs
     if (getBlock() == null) throw new RuntimeException();
   }

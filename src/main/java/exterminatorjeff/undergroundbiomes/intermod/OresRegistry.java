@@ -120,7 +120,7 @@ public enum OresRegistry implements UBOresRegistry {
     for (UBifyRequest request : requests) {
       Block baseOre = request.baseOre;
       int baseOreMeta = request.baseOreMeta;
-      LOGGER.info("Registering ore: " + baseOre.getUnlocalizedName());
+      LOGGER.info("Registering ore: " + baseOre.getTranslationKey());
       request.getIgneousOreEntry().registerBlock(event, new UBOreIgneous(baseOre, request.config));
       request.getMetamorphicOreEntry().registerBlock(event, new UBOreMetamorphic(baseOre, request.config));
       request.getSedimentraryOreEntry().registerBlock(event, new UBOreSedimentary(baseOre, request.config));

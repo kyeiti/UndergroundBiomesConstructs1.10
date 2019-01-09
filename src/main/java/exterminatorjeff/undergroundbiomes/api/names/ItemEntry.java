@@ -24,7 +24,7 @@ public class ItemEntry extends Entry<UBItem> {
 
   @Override
   protected void doRegisterItem(IForgeRegistry<Item> registry) {
-    getItem().setUnlocalizedName(internalName);
+    getItem().setTranslationKey(internalName);
     registry.register(getItem().setRegistryName(internalName));
   }
 

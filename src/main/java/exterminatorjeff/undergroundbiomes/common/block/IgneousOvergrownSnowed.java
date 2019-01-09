@@ -41,7 +41,7 @@ public class IgneousOvergrownSnowed extends IgneousStone {
   }
 
   @Override
-  public BlockRenderLayer getBlockLayer()
+  public BlockRenderLayer getRenderLayer()
     {
         return BlockRenderLayer.CUTOUT_MIPPED;
     }

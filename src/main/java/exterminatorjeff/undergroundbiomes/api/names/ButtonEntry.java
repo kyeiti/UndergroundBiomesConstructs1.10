@@ -34,19 +34,19 @@ public final class ButtonEntry extends Entry<UBButton> {
 
   @Override
   protected void doRegisterItem(IForgeRegistry<Item> registry) {
-    getItemBlock().setUnlocalizedName(internalName);
+    getItemBlock().setTranslationKey(internalName);
     getItemBlock().setRegistryName(internalName);
     registry.register(getItemBlock());
   }
 
   @Override
   protected void doRegisterBlock(IForgeRegistry<Block> registry) {
-    getItemBlock().setUnlocalizedName(internalName);
+    getItemBlock().setTranslationKey(internalName);
     getItemBlock().setRegistryName(internalName);
     for (EnumFacing facing : EnumFacing.VALUES) {
       String name = internalName + "_" + facing;
       Block block = getBlock(facing);
-      block.setUnlocalizedName(name);
+      block.setTranslationKey(name);
       registry.register(block.setRegistryName(name));
     }
   }

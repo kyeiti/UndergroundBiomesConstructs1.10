@@ -77,8 +77,8 @@ abstract class RotatingItemBlock extends ItemBlock implements UBItem, Variable {
   }
 
   @Override
-  public String getUnlocalizedName(ItemStack stack) {
-    return StringUtils.substringBeforeLast(blocks.get(EnumFacing.NORTH).getUnlocalizedName(), "_") + "." + getVariantName(stack.getMetadata());
+  public String getUnlocalizedNameInefficiently(ItemStack stack) {
+    return StringUtils.substringBeforeLast(blocks.get(EnumFacing.NORTH).getTranslationKey(), "_") + "." + getVariantName(stack.getMetadata());
   }
 
   @SideOnly(Side.CLIENT)

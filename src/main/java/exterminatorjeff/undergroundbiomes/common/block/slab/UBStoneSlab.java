@@ -70,8 +70,8 @@ public abstract class UBStoneSlab extends BlockSlab implements UBSubBlock {
   }
 
   @Override
-  public String getUnlocalizedName(int meta) {
-    return super.getUnlocalizedName() + "." + getVariantName(meta);
+  public String getTranslationKey(int meta) {
+    return super.getTranslationKey() + "." + getVariantName(meta);
   }
 
   @Override
