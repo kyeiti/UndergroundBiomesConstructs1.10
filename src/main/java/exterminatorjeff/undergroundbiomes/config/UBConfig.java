@@ -31,7 +31,7 @@ import java.util.Set;
 public class UBConfig implements UBSettings {
   public static UBSettings SPECIFIC;
 
-  static final UBLogger LOGGER = new UBLogger(UBConfig.class, Level.DEBUG);
+  static final UBLogger LOGGER = new UBLogger(UBConfig.class, Level.INFO);
 
   private Configuration configuration;
   private final HashMap<BlockAccess, HashMap<Integer, BooleanSetting>> stoneGenerationSettings = new HashMap<BlockAccess, HashMap<Integer, BooleanSetting>>();

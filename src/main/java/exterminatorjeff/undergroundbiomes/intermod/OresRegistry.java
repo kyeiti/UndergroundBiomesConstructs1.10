@@ -120,7 +120,7 @@ public enum OresRegistry implements UBOresRegistry {
     for (UBifyRequest request : requests) {
       Block baseOre = request.baseOre;
       int baseOreMeta = request.baseOreMeta;
-      LOGGER.info("Registering ore: " + baseOre.getTranslationKey());
+      //LOGGER.info("Registering ore: " + baseOre.getTranslationKey());
       request.getIgneousOreEntry().registerBlock(event, new UBOreIgneous(baseOre, request.config));
       request.getMetamorphicOreEntry().registerBlock(event, new UBOreMetamorphic(baseOre, request.config));
       request.getSedimentraryOreEntry().registerBlock(event, new UBOreSedimentary(baseOre, request.config));
@@ -221,8 +221,8 @@ public enum OresRegistry implements UBOresRegistry {
     ResourceLocation location = oresToOverlays.get(key);
     if (location == null)
       LOGGER.error("There is no registered overlay for '" + key + "'!");
-    else
-      LOGGER.debug("Found overlay for '" + key + "': " + location);
+    //else
+      //LOGGER.debug("Found overlay for '" + key + "': " + location);
     return location;
   }
 
@@ -237,7 +237,7 @@ public enum OresRegistry implements UBOresRegistry {
   private void registerOreOverlay(String key, ResourceLocation overlayLocation) {
     if (!oresToOverlays.containsKey(key)) {
       oresToOverlays.put(key, overlayLocation);
-      LOGGER.debug("Overlay for '" + key + "' registered.");
+      //LOGGER.debug("Overlay for '" + key + "' registered.");
     } else
       LOGGER.warn("An overlay for '" + key + "' has already been registered!");
   }
@@ -261,7 +261,7 @@ public enum OresRegistry implements UBOresRegistry {
 
   public void copyOreDictionaries() {
     for (OreEntry oreEntry : ubifiedOres.values()) {
-      LOGGER.info("Copying ore dictionaries");
+      //LOGGER.info("Copying ore dictionaries");
       copyOreDictionary(oreEntry);
     }
   }
@@ -279,7 +279,7 @@ public enum OresRegistry implements UBOresRegistry {
     int[] registrationIDs = OreDictionary.getOreIDs(baseOreStack);
     for (int i = 0; i < registrationIDs.length; i++) {
       String registrationName = OreDictionary.getOreName(registrationIDs[i]);
-      LOGGER.info(baseOre.getLocalizedName() + " " + registrationName + " " + block.getLocalizedName());
+      //LOGGER.info(baseOre.getLocalizedName() + " " + registrationName + " " + block.getLocalizedName());
       registerOreDirctionary(registrationName, block);
     }
     for(String oreDictionary : oreEntry.ore().config.getOreDirectories()){
