@@ -1,7 +1,7 @@
 {
 	"forge_marker": 1,
   "defaults": {
-		"model": "undergroundbiomes:mossy_cobble"
+    "model": "undergroundbiomes:mossy_cobble"
 	},
 	"variants": {
     "type": {
