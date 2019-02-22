@@ -35,13 +35,14 @@ public final class ButtonRecipe implements SettingTracker<Integer> {
       Item item = output.getItem();
       Block block = Block.getBlockFromItem(item);
 
+      //System.out.println(item.getRegistryName());
       if ( //
-        (block != null && (block == Blocks.STONE_BUTTON || block == Blocks.WOODEN_BUTTON)) || //
+        (block != null && (/*block == Blocks.STONE_BUTTON || */block == Blocks.WOODEN_BUTTON)) || //
           (StonesRegistry.INSTANCE.allButtons().contains(item)) || //
-          (item != null &&
+          (item != null && block != Blocks.STONE_BUTTON &&
             item.getRegistryName() != null &&
-            item.getRegistryName().getPath() != null &&
-            item.getRegistryName().getPath().contains("button")) //
+            item.getRegistryName().getPath() != null ) &&
+            item.getRegistryName().getPath().contains("button")
         ) {
         recipe.getRecipeOutput().setCount(n);
         LOGGER.debug(String.format("%s for '%s' modified", recipe.getClass().getSimpleName(), recipe.getRecipeOutput().getItem().getRegistryName()));

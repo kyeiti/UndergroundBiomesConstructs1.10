@@ -20,10 +20,13 @@ import exterminatorjeff.undergroundbiomes.common.itemblock.StairsItemBlock;
 import exterminatorjeff.undergroundbiomes.config.ConfigManager;
 import exterminatorjeff.undergroundbiomes.config.UBConfig;
 import exterminatorjeff.undergroundbiomes.intermod.*;
+import net.minecraft.advancements.AdvancementManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.server.dedicated.PropertyManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.WorldServer;
@@ -40,6 +43,8 @@ import org.apache.logging.log4j.Level;
 import java.io.File;
 import java.util.ArrayList;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 
 /**
  * @author CurtisA, LouisDB
