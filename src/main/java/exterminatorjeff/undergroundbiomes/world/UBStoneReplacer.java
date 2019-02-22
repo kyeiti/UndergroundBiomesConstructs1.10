@@ -45,6 +45,7 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
 
   @SuppressWarnings("deprecation")
   public void replaceStoneInChunk(Chunk chunk) {
+    boolean quarkpresent = Loader.isModLoaded("quark");
     int[] biomeValues = getBiomeValues(chunk);
     int xPos = chunk.getPos().x * 16;
     int zPos = chunk.getPos().z * 16;
@@ -134,31 +135,29 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                           .getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
-              } else if (Loader.isModLoaded("quark") && API.SETTINGS.replaceSpeleothems()) {
-                if (currentBlock instanceof BlockSpeleothem) {
-                  // Replace with UBified version
-                  IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
-                  if (strata.getBlock() instanceof UBStone) {
-                    UBStone block = (UBStone) strata.getBlock();
-                    if (block.getStoneType() == UBStoneType.IGNEOUS)
-                      storage.set(x, y, z,
-                          (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock())
-                              .getStateFromMeta(block.getMetaFromState(strata))
-                              .withProperty(IgneousSpeleothem.SIZE, IgneousSpeleothem.EnumSize.values()[Math.max(0,
-                                  currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
-                    if (block.getStoneType() == UBStoneType.METAMORPHIC)
-                      storage.set(x, y, z,
-                          (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock())
-                              .getStateFromMeta(block.getMetaFromState(strata))
-                              .withProperty(MetamorphicSpeleothem.SIZE, MetamorphicSpeleothem.EnumSize.values()[Math
-                                  .max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
-                    if (block.getStoneType() == UBStoneType.SEDIMENTARY)
-                      storage.set(x, y, z,
-                          (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock())
-                              .getStateFromMeta(block.getMetaFromState(strata))
-                              .withProperty(SedimentarySpeleothem.SIZE, SedimentarySpeleothem.EnumSize.values()[Math
-                                  .max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
-                  }
+              } else if (quarkpresent && API.SETTINGS.replaceSpeleothems() && currentBlock instanceof BlockSpeleothem) {
+                // Replace with UBified version
+                IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
+                if (strata.getBlock() instanceof UBStone) {
+                  UBStone block = (UBStone) strata.getBlock();
+                  if (block.getStoneType() == UBStoneType.IGNEOUS)
+                    storage.set(x, y, z,
+                        (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock())
+                            .getStateFromMeta(block.getMetaFromState(strata))
+                            .withProperty(IgneousSpeleothem.SIZE, IgneousSpeleothem.EnumSize.values()[Math.max(0,
+                                currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
+                  if (block.getStoneType() == UBStoneType.METAMORPHIC)
+                    storage.set(x, y, z,
+                        (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock())
+                            .getStateFromMeta(block.getMetaFromState(strata))
+                            .withProperty(MetamorphicSpeleothem.SIZE, MetamorphicSpeleothem.EnumSize.values()[Math
+                                .max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
+                  if (block.getStoneType() == UBStoneType.SEDIMENTARY)
+                    storage.set(x, y, z,
+                        (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SPELEOTHEM).getBlock())
+                            .getStateFromMeta(block.getMetaFromState(strata))
+                            .withProperty(SedimentarySpeleothem.SIZE, SedimentarySpeleothem.EnumSize.values()[Math
+                                .max(0, currentBlockState.getValue(BlockSpeleothem.SIZE).ordinal())]));
                 }
                 continue;
               } else {
