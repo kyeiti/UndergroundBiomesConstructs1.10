@@ -89,6 +89,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getMatterOverdriveLegacyOres(), "matteroverdrivelegacy.json");
     writeDefaults(getTaigaOres(), "taiga.json");
     writeDefaults(getMetallurgy4Ores(), "metallurgy4.json");
+    writeDefaults(getProjectRedOres(), "projectred.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -155,6 +156,18 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("minecraft:redstone_ore", ModInfo.MODID + ":blocks/overlays/minecraft/redstone"));
     ores.add(new UBOreConfig("minecraft:gold_ore", ModInfo.MODID + ":blocks/overlays/minecraft/gold"));
     ores.add(new UBOreConfig("minecraft:emerald_ore", ModInfo.MODID + ":blocks/overlays/minecraft/emerald"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getProjectRedOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("projectred-exploration:ore", 0, ModInfo.MODID + ":blocks/overlays/projectred/ruby_ore"));
+    ores.add(new UBOreConfig("projectred-exploration:ore", 1, ModInfo.MODID + ":blocks/overlays/projectred/sapphire_ore"));
+    ores.add(new UBOreConfig("projectred-exploration:ore", 2, ModInfo.MODID + ":blocks/overlays/projectred/peridot_ore"));
+    ores.add(new UBOreConfig("projectred-exploration:ore", 3, ModInfo.MODID + ":blocks/overlays/projectred/copper_ore"));
+    ores.add(new UBOreConfig("projectred-exploration:ore", 4, ModInfo.MODID + ":blocks/overlays/projectred/tin_ore"));
+    ores.add(new UBOreConfig("projectred-exploration:ore", 5, ModInfo.MODID + ":blocks/overlays/projectred/silver_ore"));
+    ores.add(new UBOreConfig("projectred-exploration:ore", 6, ModInfo.MODID + ":blocks/overlays/projectred/electrotine_ore"));
     return ores;
   }
 
