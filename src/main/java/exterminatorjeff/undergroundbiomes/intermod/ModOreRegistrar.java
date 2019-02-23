@@ -88,6 +88,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getMysticalAgricultureOres(), "mysticalagriculture.json");
     writeDefaults(getMatterOverdriveLegacyOres(), "matteroverdrivelegacy.json");
     writeDefaults(getTaigaOres(), "taiga.json");
+    writeDefaults(getMetallurgy4Ores(), "metallurgy4.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -174,6 +175,36 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getGrowthcraftOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("growthcraft:salt_ore", ModInfo.MODID + ":blocks/overlays/growthcraft/salt_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getMetallurgy4Ores() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("metallurgy:adamantine_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/adamantine_ore"));
+    ores.add(new UBOreConfig("metallurgy:astral_silver_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/astral_silver_ore"));
+    ores.add(new UBOreConfig("metallurgy:atlarus_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/atlarus_ore"));
+    ores.add(new UBOreConfig("metallurgy:bitumen_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/bitumen_ore"));
+    ores.add(new UBOreConfig("metallurgy:carmot_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/carmot_ore"));
+    ores.add(new UBOreConfig("metallurgy:copper_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/copper_ore"));
+    ores.add(new UBOreConfig("metallurgy:deep_iron_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/deep_iron_ore"));
+    ores.add(new UBOreConfig("metallurgy:infuscolium_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/infuscolium_ore"));
+    ores.add(new UBOreConfig("metallurgy:lutetium_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/lutetium_ore"));
+    ores.add(new UBOreConfig("metallurgy:magnesium_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/magnesium_ore"));
+    ores.add(new UBOreConfig("metallurgy:manganese_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/manganese_ore"));
+    ores.add(new UBOreConfig("metallurgy:mithril_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/mithril_ore"));
+    ores.add(new UBOreConfig("metallurgy:orichalcum_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/orichalcum_ore"));
+    ores.add(new UBOreConfig("metallurgy:osmium_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/osmium_ore"));
+    ores.add(new UBOreConfig("metallurgy:oureclase_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/oureclase_ore"));
+    ores.add(new UBOreConfig("metallurgy:phosporite_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/phosphorite_ore"));
+    ores.add(new UBOreConfig("metallurgy:platinum_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/platinum_ore"));
+    ores.add(new UBOreConfig("metallurgy:potash_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/potash_ore"));
+    ores.add(new UBOreConfig("metallurgy:prometheum_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/prometheum_ore"));
+    ores.add(new UBOreConfig("metallurgy:rubracium_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/rubracium_ore"));
+    ores.add(new UBOreConfig("metallurgy:salpeter_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/salpeter_ore"));
+    ores.add(new UBOreConfig("metallurgy:silver_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/silver_ore"));
+    ores.add(new UBOreConfig("metallurgy:sulfur_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/sulfur_ore"));
+    ores.add(new UBOreConfig("metallurgy:tin_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/tin_ore"));
+    ores.add(new UBOreConfig("metallurgy:zinc_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/zinc_ore"));
     return ores;
   }
 
