@@ -86,6 +86,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getThaumcraftOres(), "thaumcraft.json");
     writeDefaults(getGeolosysOres(), "geolosys.json");
     writeDefaults(getMysticalAgricultureOres(), "mysticalagriculture.json");
+    writeDefaults(getMatterOverdriveLegacyOres(), "matteroverdrivelegacy.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -185,6 +186,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("nuclearcraft:ore", 5, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_boron"));
     ores.add(new UBOreConfig("nuclearcraft:ore", 6, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_lithium"));
     ores.add(new UBOreConfig("nuclearcraft:ore", 7, ModInfo.MODID + ":blocks/overlays/nuclearcraft/ore_magnesium"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getMatterOverdriveLegacyOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("matteroverdrive:dilithium_ore", 0, ModInfo.MODID + ":blocks/overlays/matteroverdrivelegacy/dilithium_ore"));
+    ores.add(new UBOreConfig("matteroverdrive:tritanium_ore", 0, ModInfo.MODID + ":blocks/overlays/matteroverdrivelegacy/tritanium_ore"));
     return ores;
   }
 
