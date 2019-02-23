@@ -85,6 +85,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getThermalFoundationOres(), "thermalfoundation.json");
     writeDefaults(getThaumcraftOres(), "thaumcraft.json");
     writeDefaults(getGeolosysOres(), "geolosys.json");
+    writeDefaults(getMysticalAgricultureOres(), "mysticalagriculture.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -235,6 +236,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("baseminerals:salt_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/salt"));
     ores.add(new UBOreConfig("baseminerals:saltpeter_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/saltpeter"));
     ores.add(new UBOreConfig("baseminerals:sulfur_ore", ModInfo.MODID + ":blocks/overlays/baseminerals/sulfur"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getMysticalAgricultureOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("mysticalagriculture:inferium_ore", "mysticalagriculture:blocks/inferium_ore"));
+    ores.add(new UBOreConfig("mysticalagriculture:prosperity_ore", "mysticalagriculture:blocks/prosperity_ore"));
     return ores;
   }
 
