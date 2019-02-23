@@ -87,6 +87,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getGeolosysOres(), "geolosys.json");
     writeDefaults(getMysticalAgricultureOres(), "mysticalagriculture.json");
     writeDefaults(getMatterOverdriveLegacyOres(), "matteroverdrivelegacy.json");
+    writeDefaults(getTaigaOres(), "taiga.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -193,6 +194,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("matteroverdrive:dilithium_ore", 0, ModInfo.MODID + ":blocks/overlays/matteroverdrivelegacy/dilithium_ore"));
     ores.add(new UBOreConfig("matteroverdrive:tritanium_ore", 0, ModInfo.MODID + ":blocks/overlays/matteroverdrivelegacy/tritanium_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getTaigaOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("taiga:dilithium_ore", 0, ModInfo.MODID + ":blocks/overlays/taiga/dilithium"));
+    ores.add(new UBOreConfig("taiga:vibranium_ore", 0, ModInfo.MODID + ":blocks/overlays/taiga/vibranium"));
     return ores;
   }
 
