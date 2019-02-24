@@ -15,6 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
@@ -96,7 +97,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SideOnly(Side.CLIENT)
   @Override
   public BlockRenderLayer getRenderLayer() {
-    return BlockRenderLayer.CUTOUT_MIPPED;
+    return BlockRenderLayer.TRANSLUCENT;
   }
 
   @Override
@@ -291,11 +292,12 @@ public abstract class UBOre extends Block implements UBSubBlock {
             + baseStack.getDisplayName();
       } catch (Error error) {
         if (baseOreMeta == NO_METADATA) {
-          return baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name" + " " + baseOre.getTranslationKey()
-              + ".name";
+          return baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name" + " "
+              + baseOre.getTranslationKey() + ".name";
         }
         ItemStack baseStack = new ItemStack(baseOre, 1, baseOreMeta);
-        return baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name" + " " + baseStack.getDisplayName();
+        return baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name" + " "
+            + baseStack.getDisplayName();
       }
     }
 
