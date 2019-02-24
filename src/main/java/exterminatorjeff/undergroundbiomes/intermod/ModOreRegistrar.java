@@ -425,7 +425,9 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private ArrayList<UBOreConfig> getThaumcraftOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
-    ores.add(new UBOreConfig("thaumcraft:ore_cinnabar", ModInfo.MODID + ":blocks/overlays/custom/cinnabar"));
+    ores.add(new UBOreConfig("thaumcraft:ore_cinnabar", ModInfo.MODID + ":blocks/overlays/thaumcraft/ore_cinnabar"));
+    ores.add(new UBOreConfig("thaumcraft:ore_amber", ModInfo.MODID + ":blocks/overlays/thaumcraft/ore_amber"));
+    ores.add(new UBOreConfig("thaumcraft:ore_quartz", ModInfo.MODID + ":blocks/overlays/thaumcraft/ore_quartz"));
     return ores;
   }
 
