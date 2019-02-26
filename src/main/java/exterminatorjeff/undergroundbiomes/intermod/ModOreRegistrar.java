@@ -90,6 +90,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getTaigaOres(), "taiga.json");
     writeDefaults(getMetallurgy4Ores(), "metallurgy4.json");
     writeDefaults(getProjectRedOres(), "projectred.json");
+    writeDefaults(getPoorMetalsOres(), "poormetals.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -218,6 +219,40 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("metallurgy:sulfur_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/sulfur_ore"));
     ores.add(new UBOreConfig("metallurgy:tin_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/tin_ore"));
     ores.add(new UBOreConfig("metallurgy:zinc_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/zinc_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getPoorMetalsOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("poormetals:poor_aluminum_ore", 0, "poormetals:blocks/overworld/poor_aluminum_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_antimony_ore", 0, "poormetals:blocks/overworld/poor_antimony_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_beryllium_ore", 0, "poormetals:blocks/overworld/poor_beryllium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_bismuth_ore", 0, "poormetals:blocks/overworld/poor_bismuth_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_boron_ore", 0, "poormetals:blocks/overworld/poor_boron_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_cadmium_ore", 0, "poormetals:blocks/overworld/poor_cadmium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_chromium_ore", 0, "poormetals:blocks/overworld/poor_chromium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_copper_ore", 0, "poormetals:blocks/overworld/poor_copper_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_gold_ore", 0, "poormetals:blocks/overworld/poor_gold_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_iridium_ore", 0, "poormetals:blocks/overworld/poor_iridium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_iron_ore", 0, "poormetals:blocks/overworld/poor_iron_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_lead_ore", 0, "poormetals:blocks/overworld/poor_lead_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_maganese_ore", 0, "poormetals:blocks/overworld/poor_maganese_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_magnesium_ore", 0, "poormetals:blocks/overworld/poor_magnesium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_mercury_ore", 0, "poormetals:blocks/overworld/poor_mercury_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_nickel_ore", 0, "poormetals:blocks/overworld/poor_nickel_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_osmium_ore", 0, "poormetals:blocks/overworld/poor_osmium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_platinum_ore", 0, "poormetals:blocks/overworld/poor_platinum_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_plutonium_ore", 0, "poormetals:blocks/overworld/poor_plutonium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_rutile_ore", 0, "poormetals:blocks/overworld/poor_rutile_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_silver_ore", 0, "poormetals:blocks/overworld/poor_silver_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_tantalum_ore", 0, "poormetals:blocks/overworld/poor_tantalum_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_thorium_ore", 0, "poormetals:blocks/overworld/poor_thorium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_tin_ore", 0, "poormetals:blocks/overworld/poor_tin_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_titanium_ore", 0, "poormetals:blocks/overworld/poor_titanium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_tungsten_ore", 0, "poormetals:blocks/overworld/poor_tungsten_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_uranium_ore", 0, "poormetals:blocks/overworld/poor_uranium_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_zinc_ore", 0, "poormetals:blocks/overworld/poor_zinc_ore"));
+    ores.add(new UBOreConfig("poormetals:poor_zirconium_ore", 0, "poormetals:blocks/overworld/poor_zirconium_ore"));
     return ores;
   }
 
