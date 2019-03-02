@@ -91,6 +91,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getMetallurgy4Ores(), "metallurgy4.json");
     writeDefaults(getProjectRedOres(), "projectred.json");
     writeDefaults(getPoorMetalsOres(), "poormetals.json");
+    writeDefaults(getDenseMetalsOres(), "densemetals.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -369,6 +370,28 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getEnderOreOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("enderore:ore_ender", ModInfo.MODID + ":blocks/overlays/enderore/ender"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getDenseMetalsOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("densemetals:dense_antimony_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_antimony_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_bismuth_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_bismuth_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_coal_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_coal_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_copper_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_copper_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_diamond_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_diamond_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_emerald_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_emerald_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_gold_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_gold_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_iron_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_iron_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_lapis_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_lapis_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_lead_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_lead_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_mercury_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_mercury_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_nickel_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_nickel_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_platinum_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_platinum_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_redstone_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_redstone_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_silver_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_silver_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_tin_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_tin_ore"));
+    ores.add(new UBOreConfig("densemetals:dense_zinc_ore", ModInfo.MODID + ":blocks/overlays/densemetals/dense_zinc_ore"));
     return ores;
   }
 
