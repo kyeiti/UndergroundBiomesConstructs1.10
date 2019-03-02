@@ -1,64 +1,266 @@
 {
     "forge_marker": 1,
     "defaults": {
-        "model": "cube_all",
         "uvlock": true,
         "transform": "forge:default-block",
         "model": "quark:speleothem_medium"
     },
     "variants": {
-        "type": {
-            "red_granite": {
+        "type=red_granite": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/red_granite"
                 }
-            },
-            "black_granite": {
+            }
+        ],
+        "size=small,type=red_granite": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/red_granite"
+                }
+            }
+        ],
+        "size=medium,type=red_granite": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/red_granite"
+                }
+            }
+        ],
+        "size=big,type=red_granite": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/red_granite"
+                }
+            }
+        ],
+        "type=black_granite": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/black_granite"
                 }
-            },
-            "rhyolite": {
+            }
+        ],
+        "size=small,type=black_granite": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/black_granite"
+                }
+            }
+        ],
+        "size=medium,type=black_granite": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/black_granite"
+                }
+            }
+        ],
+        "size=big,type=black_granite": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/black_granite"
+                }
+            }
+        ],
+        "type=rhyolite": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/rhyolite"
                 }
-            },
-            "andesite": {
+            }
+        ],
+        "size=small,type=rhyolite": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/rhyolite"
+                }
+            }
+        ],
+        "size=medium,type=rhyolite": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/rhyolite"
+                }
+            }
+        ],
+        "size=big,type=rhyolite": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/rhyolite"
+                }
+            }
+        ],
+        "type=andesite": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/andesite"
                 }
-            },
-            "gabbro": {
+            }
+        ],
+        "size=small,type=andesite": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/andesite"
+                }
+            }
+        ],
+        "size=medium,type=andesite": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/andesite"
+                }
+            }
+        ],
+        "size=big,type=andesite": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/andesite"
+                }
+            }
+        ],
+        "type=gabbro": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/gabbro"
                 }
-            },
-            "basalt": {
+            }
+        ],
+        "size=small,type=gabbro": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/gabbro"
+                }
+            }
+        ],
+        "size=medium,type=gabbro": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/gabbro"
+                }
+            }
+        ],
+        "size=big,type=gabbro": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/gabbro"
+                }
+            }
+        ],
+        "type=basalt": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/basalt"
                 }
-            },
-            "komatiite": {
+            }
+        ],
+        "size=small,type=basalt": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/basalt"
+                }
+            }
+        ],
+        "size=medium,type=basalt": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/basalt"
+                }
+            }
+        ],
+        "size=big,type=basalt": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/basalt"
+                }
+            }
+        ],
+        "type=komatiite": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/komatiite"
                 }
-            },
-            "dacite": {
+            }
+        ],
+        "size=small,type=komatiite": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/komatiite"
+                }
+            }
+        ],
+        "size=medium,type=komatiite": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/komatiite"
+                }
+            }
+        ],
+        "size=big,type=komatiite": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/komatiite"
+                }
+            }
+        ],
+        "type=dacite": [
+            {
+                "model": "quark:speleothem_medium",
                 "textures": {
                     "block": "undergroundbiomes:blocks/dacite"
                 }
             }
-        },
-        "size": {
-            "small": {
-                "model": "quark:speleothem_small"
-            },
-            "medium": {
-                "model": "quark:speleothem_medium"
-            },
-            "big": {
-                "model": "quark:speleothem_big"
+        ],
+        "size=small,type=dacite": [
+            {
+                "model": "quark:speleothem_small",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/dacite"
+                }
             }
-        }
+        ],
+        "size=medium,type=dacite": [
+            {
+                "model": "quark:speleothem_medium",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/dacite"
+                }
+            }
+        ],
+        "size=big,type=dacite": [
+            {
+                "model": "quark:speleothem_big",
+                "textures": {
+                    "block": "undergroundbiomes:blocks/dacite"
+                }
+            }
+        ]
     }
 }

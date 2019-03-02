@@ -17,7 +17,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 import vazkii.arl.block.BlockMetaVariants.EnumBase;
+import net.minecraft.item.Item;
 import static exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant.*;
+
+import net.minecraft.client.renderer.block.statemap.IStateMapper;
+import net.minecraft.client.renderer.block.statemap.StateMap;
 
 /**
  * @author CurtisA, LouisDB
@@ -50,7 +54,8 @@ public class IgneousSpeleothem extends IgneousStone {
   @Override
   public IBlockState getActualState(final IBlockState state, final IBlockAccess worldIn, final BlockPos pos) {
     EnumSize size = EnumSize.values()[Math.max(0, getBearing(worldIn, pos) - 1)];
-    if(isCenter(worldIn, pos)) size = EnumSize.medium;
+    if (isCenter(worldIn, pos))
+      size = EnumSize.medium;
     return state.withProperty(SIZE, size);
   }
 

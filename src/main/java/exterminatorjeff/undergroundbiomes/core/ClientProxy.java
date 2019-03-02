@@ -4,6 +4,7 @@ import exterminatorjeff.undergroundbiomes.api.API;
 import exterminatorjeff.undergroundbiomes.client.UBCreativeTab;
 import exterminatorjeff.undergroundbiomes.client.UBOreModelLoader;
 import exterminatorjeff.undergroundbiomes.client.UBStateMappers;
+import exterminatorjeff.undergroundbiomes.common.block.IgneousSpeleothem;
 import exterminatorjeff.undergroundbiomes.common.block.UBOre;
 import exterminatorjeff.undergroundbiomes.config.UBConfig;
 import exterminatorjeff.undergroundbiomes.intermod.OresRegistry;
@@ -24,6 +25,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.block.state.IBlockState;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraft.client.renderer.block.statemap.IStateMapper;
+import net.minecraft.client.renderer.block.statemap.StateMap;
 
 /**
  * @author CurtisA, LouisDB
