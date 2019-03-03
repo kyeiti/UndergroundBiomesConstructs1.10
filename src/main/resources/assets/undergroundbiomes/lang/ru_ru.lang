@@ -65,6 +65,15 @@ tile.igneous_brick.basalt.name=Базальтовые кирпичи
 tile.igneous_brick.komatiite.name=Коматитовые кирпичи
 tile.igneous_brick.dacite.name=Дацитовые кирпичи
 
+tile.igneous_speleothem.red_granite.name=Красное гранитовое каменное отложение
+tile.igneous_speleothem.black_granite.name=Чёрное гранитовое каменное отложение
+tile.igneous_speleothem.rhyolite.name=Риолитовое гранитовое каменное отложение
+tile.igneous_speleothem.andesite.name=Андезитовое гранитовое каменное отложение
+tile.igneous_speleothem.gabbro.name=Габбровое гранитовое каменное отложение
+tile.igneous_speleothem.basalt.name=Базальтовое гранитовое каменное отложение
+tile.igneous_speleothem.komatiite.name=Коматитовоеое гранитовое каменное отложение
+tile.igneous_speleothem.dacite.name=Дацитовое гранитовое каменное отложение
+
 tile.metamorphic_stone.gneiss.name=Гнейс
 tile.metamorphic_stone.eclogite.name=Экголит
 tile.metamorphic_stone.marble.name=Мрамор
@@ -128,6 +137,15 @@ tile.metamorphic_brick.greenschist.name=Зелёные сланцевые кир
 tile.metamorphic_brick.soapstone.name=Стеатитовые кирпичи
 tile.metamorphic_brick.migmatite.name=Мигматитовые кирпичи
 
+tile.metamorphic_speleothem.gneiss.name=Гнейсовое каменное отложение
+tile.metamorphic_speleothem.eclogite.name=Экголитовое каменное отложение
+tile.metamorphic_speleothem.marble.name=Мраморное каменное отложение
+tile.metamorphic_speleothem.quartzite.name=Кварцитовое каменное отложение
+tile.metamorphic_speleothem.blueschist.name=Синее сланцевое каменное отложение
+tile.metamorphic_speleothem.greenschist.name=Зелёное сланцевое каменное отложение
+tile.metamorphic_speleothem.soapstone.name=Стеатитовое каменное отложение
+tile.metamorphic_speleothem.migmatite.name=Мигматитовое каменное отложение
+
 tile.sedimentary_stone.limestone.name=Известняк
 tile.sedimentary_stone.chalk.name=Мел
 tile.sedimentary_stone.shale.name=Сланец
@@ -172,6 +190,15 @@ tile.sedimentary_overgrown_snowed.lignite.name=Снежный буроуголь
 tile.sedimentary_overgrown_snowed.dolomite.name=Снежный доломитовый заросший камень
 tile.sedimentary_overgrown_snowed.greywacke.name=Снежный граувакковый заросший камень
 tile.sedimentary_overgrown_snowed.chert.name=Снежный кремнисто-известняковый заросший камень
+
+tile.sedimentary_speleothem.limestone.name=Известняковое каменное отложение
+tile.sedimentary_speleothem.chalk.name=Меловое каменное отложение
+tile.sedimentary_speleothem.shale.name=Сланцевое каменное отложение
+tile.sedimentary_speleothem.siltstone.name=Алевритовое каменное отложение
+tile.sedimentary_speleothem.lignite.name=Буроугольное каменное отложение
+tile.sedimentary_speleothem.dolomite.name=Доломитовое каменное отложение
+tile.sedimentary_speleothem.greywacke.name=Граувакковое каменное отложение
+tile.sedimentary_speleothem.chert.name=Кремнисто-известняковое каменное отложение
 
 # Slabs
 
@@ -289,8 +316,8 @@ tile.metamorphic_brick_stairs.gneiss.name=Гнейсовые кирпичные 
 tile.metamorphic_brick_stairs.eclogite.name=Экголитовые кирпичные ступеньки
 tile.metamorphic_brick_stairs.marble.name=Мраморные кирпичные ступеньки
 tile.metamorphic_brick_stairs.quartzite.name=Кварцитовые кирпичные ступеньки
-tile.metamorphic_brick_stairs.blueschist.name=Синий сланцевыйкирпичные ступеньки
-tile.metamorphic_brick_stairs.greenschist.name=Зелёные сланцевыйкирпичные ступеньки
+tile.metamorphic_brick_stairs.blueschist.name=Синие сланцевые кирпичные ступеньки
+tile.metamorphic_brick_stairs.greenschist.name=Зелёные сланцевые кирпичные ступеньки
 tile.metamorphic_brick_stairs.soapstone.name=Стеатитовые кирпичные ступеньки
 tile.metamorphic_brick_stairs.migmatite.name=Мигматитовые кирпичные ступеньки
 
