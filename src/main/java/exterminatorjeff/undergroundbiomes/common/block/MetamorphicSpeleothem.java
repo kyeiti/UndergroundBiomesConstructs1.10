@@ -18,6 +18,9 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 import vazkii.arl.block.BlockMetaVariants.EnumBase;
 import static exterminatorjeff.undergroundbiomes.api.enums.MetamorphicVariant.*;
+import java.util.List;
+import java.util.ArrayList;
+import net.minecraft.util.NonNullList;
 
 /**
  * @author CurtisA, LouisDB
@@ -101,6 +104,17 @@ public class MetamorphicSpeleothem extends MetamorphicStone {
   @Override
   public int quantityDropped(Random random) {
     return 0;
+  }
+
+  @Override
+  public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+    List<ItemStack> result = new ArrayList<ItemStack>();
+    return result;
+  }
+
+  @Override
+  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state,
+      int fortune) {
   }
 
   @Override
