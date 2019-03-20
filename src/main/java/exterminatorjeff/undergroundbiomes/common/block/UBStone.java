@@ -45,7 +45,7 @@ public abstract class UBStone extends Block implements UBBlock {
     setResistance(UBConfig.SPECIFIC.resistanceModifier());
     setHarvestLevel("pickaxe", 0);
     setTranslationKey(this.getInternalName());
-    setRegistryName(ModInfo.MODID,this.getInternalName());
+    setRegistryName(ModInfo.MODID, this.getInternalName());
     ((UBConfig) (UBConfig.SPECIFIC)).hardnessModifier.addTracker(hardness -> setHardness(hardness));
     ((UBConfig) (UBConfig.SPECIFIC)).resistanceModifier.addTracker(resistance -> setResistance(resistance));
     itemBlock = new UBItemBlockStone(this);
@@ -125,7 +125,8 @@ public abstract class UBStone extends Block implements UBBlock {
   }
 
   @Override
-  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state,
+      int fortune) {
     NonNullList<ItemStack> drops = NonNullList.create();
     super.getDrops(drops, world, pos, state, fortune);
     DropsRegistry.INSTANCE.addDrops(drops, this, world, pos, state, fortune);
@@ -133,7 +134,8 @@ public abstract class UBStone extends Block implements UBBlock {
   }
 
   @Override
-  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
+      EntityPlayer player) {
     Block targetBlock = state.getBlock();
     if (targetBlock instanceof UBStone) {
       return new ItemStack(this.itemBlock, 1, getMetaFromState(state));
@@ -142,7 +144,8 @@ public abstract class UBStone extends Block implements UBBlock {
   }
 
   @Override
-  public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+  public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos,
+      Predicate<IBlockState> target) {
     return true;
   }
 
