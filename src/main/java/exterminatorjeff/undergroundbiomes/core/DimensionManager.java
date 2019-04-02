@@ -113,12 +113,12 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     if (target != null) target.onGenerateMinable(event);
   }
 
-  @SubscribeEvent
+  /*@SubscribeEvent
   public void onVillageSelectBlock(BiomeEvent.GetVillageBlockID event) {
     // this goes to the overworld since there's no ID
     WorldGenManager target = managers.get(0);
     if (target != null) target.onVillageSelectBlock(event);
-  }
+  }*/
 
   @SubscribeEvent
   public void initMapGen(InitMapGenEvent event) {
