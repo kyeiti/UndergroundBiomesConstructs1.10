@@ -96,7 +96,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
   @SideOnly(Side.CLIENT)
   @Override
   public BlockRenderLayer getRenderLayer() {
-    return BlockRenderLayer.TRANSLUCENT;
+    return BlockRenderLayer.CUTOUT_MIPPED;
   }
 
   @Override
