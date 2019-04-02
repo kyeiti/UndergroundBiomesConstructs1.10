@@ -11,6 +11,15 @@ tile.igneous_stone.basalt.name=Basalt
 tile.igneous_stone.komatiite.name=Komatiite
 tile.igneous_stone.dacite.name=Dacite
 
+tile.igneous_gravel.red_granite.name=Red Granite Gravel
+tile.igneous_gravel.black_granite.name=Black Granite Gravel
+tile.igneous_gravel.rhyolite.name=Rhyolite Gravel
+tile.igneous_gravel.andesite.name=Andesite Gravel
+tile.igneous_gravel.gabbro.name=Gabbro Gravel
+tile.igneous_gravel.basalt.name=Basalt Gravel
+tile.igneous_gravel.komatiite.name=Komatiite Gravel
+tile.igneous_gravel.dacite.name=Dacite Gravel
+
 tile.igneous_monster_stone.red_granite.name=Red Granite Monster Egg
 tile.igneous_monster_stone.black_granite.name=Black Granite Monster Egg
 tile.igneous_monster_stone.rhyolite.name=Rhyolite Monster Egg
@@ -83,6 +92,15 @@ tile.metamorphic_stone.greenschist.name=Green Schist
 tile.metamorphic_stone.soapstone.name=Soapstone
 tile.metamorphic_stone.migmatite.name=Migmatite
 
+tile.metamorphic_gravel.gneiss.name=Gneiss Gravel
+tile.metamorphic_gravel.eclogite.name=Eclogite Gravel
+tile.metamorphic_gravel.marble.name=Marble Gravel
+tile.metamorphic_gravel.quartzite.name=Quartzite Gravel
+tile.metamorphic_gravel.blueschist.name=Blue Schist Gravel
+tile.metamorphic_gravel.greenschist.name=Green Schist Gravel
+tile.metamorphic_gravel.soapstone.name=Soapstone Gravel
+tile.metamorphic_gravel.migmatite.name=Migmatite Gravel
+
 tile.metamorphic_monster_stone.gneiss.name=Gneiss Monster Egg
 tile.metamorphic_monster_stone.eclogite.name=Eclogite Monster Egg
 tile.metamorphic_monster_stone.marble.name=Marble Monster Egg
@@ -154,6 +172,15 @@ tile.sedimentary_stone.lignite.name=Lignite Block
 tile.sedimentary_stone.dolomite.name=Dolomite
 tile.sedimentary_stone.greywacke.name=Greywacke
 tile.sedimentary_stone.chert.name=Chert
+
+tile.sedimentary_gravel.limestone.name=Limestone Gravel
+tile.sedimentary_gravel.chalk.name=Chalk Gravel
+tile.sedimentary_gravel.shale.name=Shale Gravel
+tile.sedimentary_gravel.siltstone.name=Siltstone Gravel
+tile.sedimentary_gravel.lignite.name=Lignite Block Gravel
+tile.sedimentary_gravel.dolomite.name=Dolomite Gravel
+tile.sedimentary_gravel.greywacke.name=Greywacke Gravel
+tile.sedimentary_gravel.chert.name=Chert Gravel
 
 tile.sedimentary_monster_stone.limestone.name=Limestone Monster Egg
 tile.sedimentary_monster_stone.chalk.name=Chalk Monster Egg

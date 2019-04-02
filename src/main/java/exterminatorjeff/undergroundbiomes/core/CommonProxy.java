@@ -170,6 +170,10 @@ public class CommonProxy {
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerBlock(event, new SedimentaryOvergrownSnowed());
     API.SEDIMENTARY_MOSSY_COBBLE.registerBlock(event, new SedimentaryMossyCobble());
 
+    API.IGNEOUS_GRAVEL.registerBlock(event, new IgneousGravel());
+    API.METAMORPHIC_GRAVEL.registerBlock(event, new MetamorphicGravel());
+    API.SEDIMENTARY_GRAVEL.registerBlock(event, new SedimentaryGravel());
+
     if (Loader.isModLoaded("quark")) {
       API.IGNEOUS_SPELEOTHEM.registerBlock(event, new IgneousSpeleothem());
       API.METAMORPHIC_SPELEOTHEM.registerBlock(event, new MetamorphicSpeleothem());
@@ -308,6 +312,10 @@ public class CommonProxy {
 
     registry.register(API.IGNEOUS_BRICK.getItemBlock());
     registry.register(API.METAMORPHIC_BRICK.getItemBlock());
+
+    registry.register(API.IGNEOUS_GRAVEL.getItemBlock());
+    registry.register(API.METAMORPHIC_GRAVEL.getItemBlock());
+    registry.register(API.SEDIMENTARY_GRAVEL.getItemBlock());
 
     registry.register(API.IGNEOUS_OVERGROWN.getItemBlock());
     registry.register(API.IGNEOUS_OVERGROWN_SNOWED.getItemBlock());

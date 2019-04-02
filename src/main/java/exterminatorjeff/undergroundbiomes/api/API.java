@@ -47,6 +47,15 @@ public final class API {
   public static final StoneEntry SEDIMENTARY_OVERGROWN = new StoneEntry("sedimentary_overgrown");
   public static final StoneEntry SEDIMENTARY_OVERGROWN_SNOWED = new StoneEntry("sedimentary_overgrown_snowed");
   public static final StoneEntry SEDIMENTARY_MOSSY_COBBLE = new StoneEntry("sedimentary_stone_mossy");
+
+  /*
+   * Gravels
+   */
+
+  public static final StoneEntry IGNEOUS_GRAVEL = new StoneEntry("igneous_gravel");
+  public static final StoneEntry METAMORPHIC_GRAVEL = new StoneEntry("metamorphic_gravel");
+  public static final StoneEntry SEDIMENTARY_GRAVEL = new StoneEntry("sedimentary_gravel");
+
   /*
    * Speleothems
    */

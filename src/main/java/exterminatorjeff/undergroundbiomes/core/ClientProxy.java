@@ -86,6 +86,10 @@ public final class ClientProxy extends CommonProxy {
     API.SEDIMENTARY_OVERGROWN_SNOWED.registerModel();
     API.SEDIMENTARY_MOSSY_COBBLE.registerModel();
 
+    API.IGNEOUS_GRAVEL.registerModel();
+    API.METAMORPHIC_GRAVEL.registerModel();
+    API.SEDIMENTARY_GRAVEL.registerModel();
+
     if (Loader.isModLoaded("quark")) {
       API.IGNEOUS_SPELEOTHEM.registerModel();
       API.METAMORPHIC_SPELEOTHEM.registerModel();

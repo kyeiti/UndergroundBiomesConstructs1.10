@@ -1,0 +1,51 @@
+{
+	"forge_marker": 1,
+  "defaults": {
+		"model": "cube_all",
+		"uvlock": true
+	},
+	"variants": {
+    "type": {
+      "gneiss": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/gneiss_gravel"
+        }
+      }, 
+      "eclogite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/eclogite_gravel"
+        }
+      }, 
+      "marble": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/marble_gravel"
+        }
+      }, 
+      "quartzite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/quartzite_gravel"
+        }
+      }, 
+      "blueschist": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/blueschist_gravel"
+        }
+      }, 
+      "greenschist": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/greenschist_gravel"
+        }
+      }, 
+      "soapstone": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/soapstone_gravel"
+        }
+      }, 
+      "migmatite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/migmatite_gravel"
+        }
+      }
+		}
+	}
+}

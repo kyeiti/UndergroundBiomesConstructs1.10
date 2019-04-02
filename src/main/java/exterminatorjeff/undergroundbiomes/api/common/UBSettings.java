@@ -50,6 +50,8 @@ public interface UBSettings {
 
   boolean replaceMonsterStone();
 
+  boolean replaceGravel();
+
   boolean replaceOvergrown();
 
   boolean replaceMossyCobblestone();
@@ -115,10 +117,15 @@ public interface UBSettings {
   boolean generationAllowed(IBlockState block);
 
   boolean displayTooltipModName();
+
   String getTooltipModNamePreText();
+
   String getTooltipModNamePreTextFormatting();
+
   String getTooltipModNameFormatting();
+
   String getTooltipModNamePostText();
+
   String getTooltipModNamePostTextFormatting();
 
 }
