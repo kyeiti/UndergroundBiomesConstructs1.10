@@ -119,7 +119,7 @@ public final class WorldGenManager implements UBStrataColumnProvider {
    * @param event
    * @see MinecraftForge/MinecraftForge#3257
    */
-  @SubscribeEvent
+  /*@SubscribeEvent
   public void onVillageSelectBlock(GetVillageBlockID event) {
     IBlockState originalState = event.getOriginal();
     Block originalBlock = originalState.getBlock();
@@ -255,7 +255,7 @@ public final class WorldGenManager implements UBStrataColumnProvider {
         if (1 > 0) throw new RuntimeException(event.getOriginal().getBlock().toString());
       }
     }
-  }
+  }*/
 
   @SubscribeEvent
   public void initMapGen(InitMapGenEvent event) {
