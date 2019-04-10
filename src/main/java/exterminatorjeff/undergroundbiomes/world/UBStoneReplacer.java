@@ -12,6 +12,7 @@ import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
 import exterminatorjeff.undergroundbiomes.world.noise.NoiseGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -70,6 +71,7 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
             for (int y = 0; y < 16; ++y) {
               IBlockState currentBlockState = storage.get(x, y, z);
               Block currentBlock = currentBlockState.getBlock();
+              BlockPos currentBlockPos = new BlockPos(x, y, z);
               /*
                * Skip air, water and UBStone
                */
@@ -146,7 +148,8 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                 }
                 continue;
               } else if (currentBlock == Blocks.SAND && API.SETTINGS.replaceSand()
-                  && currentBlock.getMetaFromState(currentBlockState) != 1) {
+                  && currentBlock.getMetaFromState(currentBlockState) != 1
+                  && ((chunk.getWorld().getBiome(currentBlockPos) != Biomes.DESERT || chunk.getWorld().getBiome(currentBlockPos) != Biomes.DESERT_HILLS) && API.SETTINGS.replaceSandInDeserts())) {
                 // Replace with UBified version
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if (strata.getBlock() instanceof UBStone) {
