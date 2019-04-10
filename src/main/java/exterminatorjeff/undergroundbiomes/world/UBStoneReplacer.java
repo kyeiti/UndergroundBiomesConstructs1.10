@@ -145,7 +145,8 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                           .getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
-              } else if (currentBlock == Blocks.SAND && API.SETTINGS.replaceSand()) {
+              } else if (currentBlock == Blocks.SAND && API.SETTINGS.replaceSand()
+                  && currentBlock.getMetaFromState(currentBlockState) != 1) {
                 // Replace with UBified version
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if (strata.getBlock() instanceof UBStone) {
