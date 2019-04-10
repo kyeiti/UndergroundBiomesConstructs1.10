@@ -57,6 +57,15 @@ public final class API {
   public static final StoneEntry SEDIMENTARY_GRAVEL = new StoneEntry("sedimentary_gravel");
 
   /*
+   * Sands
+   */
+
+  public static final StoneEntry IGNEOUS_SAND = new StoneEntry("igneous_sand");
+  public static final StoneEntry METAMORPHIC_SAND = new StoneEntry("metamorphic_sand");
+  public static final StoneEntry SEDIMENTARY_SAND = new StoneEntry("sedimentary_sand");
+
+
+  /*
    * Speleothems
    */
   public static final StoneEntry IGNEOUS_SPELEOTHEM = new StoneEntry("igneous_speleothem");

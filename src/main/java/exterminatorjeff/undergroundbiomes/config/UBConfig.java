@@ -69,6 +69,7 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting replaceMonsterStone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceMonsterStone");
   public final BooleanSetting replaceSpeleothems = new BooleanSetting(CATEGORY_GENERATION, "ReplaceQuarkSpeleothems");
   public final BooleanSetting replaceGravel = new BooleanSetting(CATEGORY_GENERATION, "ReplaceGravel");
+  public final BooleanSetting replaceSand = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSand");
 
   private static final String CATEGORY_VISUAL = "Visual";
   public final BooleanSetting plainSlabTextures = new BooleanSetting(CATEGORY_VISUAL, "PlainSlabTextures");
@@ -181,6 +182,7 @@ public class UBConfig implements UBSettings {
     replaceSpeleothems.initProperty(configuration, true,
         "Replace Quark's speleothems, quite useful if you don't want that ugly stone look...");
     replaceGravel.initProperty(configuration, true, "Replace gravel with UBC variants.");
+    replaceSand.initProperty(configuration, true, "Replace sand with UBC variants.");
 
     plainSlabTextures.initProperty(configuration, false, "Use normal stone textures for slabs");
 
@@ -450,6 +452,11 @@ public class UBConfig implements UBSettings {
   @Override
   public boolean replaceGravel() {
     return replaceGravel.getValue();
+  }
+
+  @Override
+  public boolean replaceSand() {
+    return replaceSand.getValue();
   }
 
   @Override

@@ -52,6 +52,8 @@ public interface UBSettings {
 
   boolean replaceGravel();
 
+  boolean replaceSand();
+
   boolean replaceOvergrown();
 
   boolean replaceMossyCobblestone();

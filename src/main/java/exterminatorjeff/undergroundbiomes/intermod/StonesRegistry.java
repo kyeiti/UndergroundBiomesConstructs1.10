@@ -37,6 +37,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.IGNEOUS_SPELEOTHEM;
       case GRAVEL:
         return API.IGNEOUS_GRAVEL;
+      case SAND:
+        return API.IGNEOUS_SAND;
       }
       break;
     case METAMORPHIC:
@@ -59,6 +61,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.METAMORPHIC_SPELEOTHEM;
       case GRAVEL:
         return API.METAMORPHIC_GRAVEL;
+      case SAND:
+        return API.METAMORPHIC_SAND;
       }
       break;
     case SEDIMENTARY:
@@ -81,6 +85,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.SEDIMENTARY_SPELEOTHEM;
       case GRAVEL:
         return API.SEDIMENTARY_GRAVEL;
+      case SAND:
+        return API.SEDIMENTARY_SAND;
       }
     }
     return null;
