@@ -4,6 +4,7 @@ import exterminatorjeff.undergroundbiomes.api.API;
 import exterminatorjeff.undergroundbiomes.api.common.UBLogger;
 import exterminatorjeff.undergroundbiomes.api.enums.IgneousVariant;
 import exterminatorjeff.undergroundbiomes.api.enums.MetamorphicVariant;
+import exterminatorjeff.undergroundbiomes.api.enums.SedimentaryVariant;
 import exterminatorjeff.undergroundbiomes.common.ButtonRecipe;
 import exterminatorjeff.undergroundbiomes.common.RegularStoneRecipe;
 import exterminatorjeff.undergroundbiomes.common.UBFuelHandler;
@@ -445,6 +446,9 @@ public class CommonProxy {
       OreDictionary.registerOre("gravel", new ItemStack(API.IGNEOUS_GRAVEL.getItemBlock(), 1, i));
       OreDictionary.registerOre("gravel", new ItemStack(API.METAMORPHIC_GRAVEL.getItemBlock(), 1, i));
       OreDictionary.registerOre("gravel", new ItemStack(API.SEDIMENTARY_GRAVEL.getItemBlock(), 1, i));
+      OreDictionary.registerOre("sand", new ItemStack(API.IGNEOUS_SAND.getItemBlock(), 1, i));
+      OreDictionary.registerOre("sand", new ItemStack(API.METAMORPHIC_SAND.getItemBlock(), 1, i));
+      OreDictionary.registerOre("sand", new ItemStack(API.SEDIMENTARY_SAND.getItemBlock(), 1, i));
       OreDictionary.registerOre("cobblestone", new ItemStack(API.IGNEOUS_COBBLE.getItemBlock(), 1, i));
       OreDictionary.registerOre("cobblestone", new ItemStack(API.METAMORPHIC_COBBLE.getItemBlock(), 1, i));
       OreDictionary.registerOre("stoneBricks", new ItemStack(API.IGNEOUS_BRICK.getItemBlock(), 1, i));
@@ -467,6 +471,19 @@ public class CommonProxy {
     for (int i = 0; i < MetamorphicVariant.NB_VARIANTS; ++i) {
       GameRegistry.addSmelting(new ItemStack(API.METAMORPHIC_COBBLE.getItemBlock(), 1, i),
           new ItemStack(API.METAMORPHIC_STONE.getItemBlock(), 1, i), 0.1f);
+    }
+
+    for (int i = 0; i < IgneousVariant.NB_VARIANTS; ++i) {
+      GameRegistry.addSmelting(new ItemStack(API.IGNEOUS_SAND.getItemBlock(), 1, i),
+          new ItemStack(Blocks.GLASS, 1), 0.1f);
+    }
+    for (int i = 0; i < MetamorphicVariant.NB_VARIANTS; ++i) {
+      GameRegistry.addSmelting(new ItemStack(API.METAMORPHIC_SAND.getItemBlock(), 1, i),
+          new ItemStack(Blocks.GLASS, 1), 0.1f);
+    }
+    for (int i = 0; i < SedimentaryVariant.NB_VARIANTS; ++i) {
+      GameRegistry.addSmelting(new ItemStack(API.SEDIMENTARY_SAND.getItemBlock(), 1, i),
+          new ItemStack(Blocks.GLASS, 1), 0.1f);
     }
 
     if (UBConfig.SPECIFIC.buttonsOn()) {
