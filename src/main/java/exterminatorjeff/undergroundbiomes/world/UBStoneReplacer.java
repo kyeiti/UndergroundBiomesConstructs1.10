@@ -11,6 +11,7 @@ import exterminatorjeff.undergroundbiomes.intermod.OresRegistry;
 import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
 import exterminatorjeff.undergroundbiomes.world.noise.NoiseGenerator;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSand;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
@@ -112,7 +113,7 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                   && currentBlockState.getProperties().toString().contains("=overgrown_stone")
                   && API.SETTINGS.replaceOvergrown()) {
                 // Replace with UBified version. Not the best way to test the block... But at
-                // least does not require an API
+                // least does not require an API. Needs to be re-written
                 boolean snowy = currentBlockState.getValue(PropertyBool.create("snowy"));
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if (strata.getBlock() instanceof UBStone) {
@@ -148,8 +149,8 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                 }
                 continue;
               } else if (currentBlock == Blocks.SAND && API.SETTINGS.replaceSand()
-                  && currentBlock.getMetaFromState(currentBlockState) != 1
-                  && ((chunk.getWorld().getBiome(currentBlockPos) != Biomes.DESERT || chunk.getWorld().getBiome(currentBlockPos) != Biomes.DESERT_HILLS) && API.SETTINGS.replaceSandInDeserts())) {
+                  && currentBlockState.getProperties().get(BlockSand.VARIANT) != BlockSand.EnumType.RED_SAND) {
+                // System.out.println(chunk.canSeeSky(currentBlockPos.up()));
                 // Replace with UBified version
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if (strata.getBlock() instanceof UBStone) {

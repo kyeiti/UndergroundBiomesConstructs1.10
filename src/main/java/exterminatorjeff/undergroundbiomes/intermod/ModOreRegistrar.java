@@ -210,7 +210,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("metallurgy:orichalcum_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/orichalcum_ore"));
     ores.add(new UBOreConfig("metallurgy:osmium_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/osmium_ore"));
     ores.add(new UBOreConfig("metallurgy:oureclase_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/oureclase_ore"));
-    ores.add(new UBOreConfig("metallurgy:phosporite_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/phosphorite_ore"));
+    ores.add(new UBOreConfig("metallurgy:phosphorite_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/phosphorite_ore"));
     ores.add(new UBOreConfig("metallurgy:platinum_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/platinum_ore"));
     ores.add(new UBOreConfig("metallurgy:potash_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/potash_ore"));
     ores.add(new UBOreConfig("metallurgy:prometheum_ore", 0, ModInfo.MODID + ":blocks/overlays/metallurgy4/prometheum_ore"));
