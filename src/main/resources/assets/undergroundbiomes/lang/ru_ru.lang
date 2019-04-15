@@ -11,6 +11,24 @@ tile.igneous_stone.basalt.name=Базальт
 tile.igneous_stone.komatiite.name=Коматит
 tile.igneous_stone.dacite.name=Дацит
 
+tile.igneous_gravel.red_granite.name=Красный гранитовый гравий
+tile.igneous_gravel.black_granite.name=Чёрный гранитовый гравий
+tile.igneous_gravel.rhyolite.name=Риолитовый гравий
+tile.igneous_gravel.andesite.name=Андезитовый гравий
+tile.igneous_gravel.gabbro.name=Габбровый гравий
+tile.igneous_gravel.basalt.name=Базальтовый гравий
+tile.igneous_gravel.komatiite.name=Коматитовый гравий
+tile.igneous_gravel.dacite.name=Дацитовый гравий
+
+tile.igneous_sand.red_granite.name=Красный гранитовый песок
+tile.igneous_sand.black_granite.name=Чёрный гранитовый песок
+tile.igneous_sand.rhyolite.name=Риолитовый песок
+tile.igneous_sand.andesite.name=Андезитовый песок
+tile.igneous_sand.gabbro.name=Габбровый песок
+tile.igneous_sand.basalt.name=Базальтовый песок
+tile.igneous_sand.komatiite.name=Коматитовый песок
+tile.igneous_sand.dacite.name=Дацитовый песок
+
 tile.igneous_monster_stone.red_granite.name=Красное гранитовое яйцо монстра
 tile.igneous_monster_stone.black_granite.name=Чёрное гранитовое яйцо монстра
 tile.igneous_monster_stone.rhyolite.name=Риолитовое яйцо монстра
@@ -83,6 +101,24 @@ tile.metamorphic_stone.greenschist.name=Зелёный сланец
 tile.metamorphic_stone.soapstone.name=Стеатит
 tile.metamorphic_stone.migmatite.name=Мигматит
 
+tile.metamorphic_gravel.gneiss.name=Гнейсовый гравий
+tile.metamorphic_gravel.eclogite.name=Экголитовый гравий
+tile.metamorphic_gravel.marble.name=Мраморный гравий
+tile.metamorphic_gravel.quartzite.name=Кварцитовый гравий
+tile.metamorphic_gravel.blueschist.name=Синий сланцевый гравий
+tile.metamorphic_gravel.greenschist.name=Зелёный сланцевый гравий
+tile.metamorphic_gravel.soapstone.name=Стеатитовый гравий
+tile.metamorphic_gravel.migmatite.name=Мигматитовый гравий
+
+tile.metamorphic_sand.gneiss.name=Гнейсовый песок
+tile.metamorphic_sand.eclogite.name=Экголитовый песок
+tile.metamorphic_sand.marble.name=Мраморный песок
+tile.metamorphic_sand.quartzite.name=Кварцитовый песок
+tile.metamorphic_sand.blueschist.name=Синий сланцевый песок
+tile.metamorphic_sand.greenschist.name=Зелёный сланцевый песок
+tile.metamorphic_sand.soapstone.name=Стеатитовый песок
+tile.metamorphic_sand.migmatite.name=Мигматитовый песок
+
 tile.metamorphic_monster_stone.gneiss.name=Гнейсовое яйцо монстра
 tile.metamorphic_monster_stone.eclogite.name=Экголитовое яйцо монстра
 tile.metamorphic_monster_stone.marble.name=Мраморное яйцо монстра
@@ -154,6 +190,24 @@ tile.sedimentary_stone.lignite.name=Бурый уголь
 tile.sedimentary_stone.dolomite.name=Доломит
 tile.sedimentary_stone.greywacke.name=Граувакка
 tile.sedimentary_stone.chert.name=Кремнистый известняк
+
+tile.sedimentary_gravel.limestone.name=Известняковый гравий
+tile.sedimentary_gravel.chalk.name=Меловый гравий
+tile.sedimentary_gravel.shale.name=Сланцевый гравий
+tile.sedimentary_gravel.siltstone.name=Алевритовый гравий
+tile.sedimentary_gravel.lignite.name=Буроугольный гравий
+tile.sedimentary_gravel.dolomite.name=Доломитовый гравий
+tile.sedimentary_gravel.greywacke.name=Граувакковый гравий
+tile.sedimentary_gravel.chert.name=Кремнисто-известняковый гравий
+
+tile.sedimentary_sand.limestone.name=Известняковый песок
+tile.sedimentary_sand.chalk.name=Меловый песок
+tile.sedimentary_sand.shale.name=Сланцевый песок
+tile.sedimentary_sand.siltstone.name=Алевритовый песок
+tile.sedimentary_sand.lignite.name=Буроугольный песок
+tile.sedimentary_sand.dolomite.name=Доломитовый песок
+tile.sedimentary_sand.greywacke.name=Граувакковый песок
+tile.sedimentary_sand.chert.name=Кремнисто-известняковый песок
 
 tile.sedimentary_monster_stone.limestone.name=Известняковое яйцо монстра
 tile.sedimentary_monster_stone.chalk.name=Меловое яйцо монстра
@@ -256,14 +310,14 @@ tile.metamorphic_cobble_halfslab.greenschist.name=Зелёная сланцев�
 tile.metamorphic_cobble_halfslab.soapstone.name=Стеатитовая булыжниковая плита
 tile.metamorphic_cobble_halfslab.migmatite.name=Мигматитовая булыжниковая плита
 
-tile.sedimentary_stone_halfslab.limestone.name=Известковая плита
+tile.sedimentary_stone_halfslab.limestone.name=Известняковая плита
 tile.sedimentary_stone_halfslab.chalk.name=Меловая плита
 tile.sedimentary_stone_halfslab.shale.name=Сланцевая плита
 tile.sedimentary_stone_halfslab.siltstone.name=Алевритовая плита
 tile.sedimentary_stone_halfslab.lignite.name=Буроугольная плита 
 tile.sedimentary_stone_halfslab.dolomite.name=Доломитовая плита
 tile.sedimentary_stone_halfslab.greywacke.name=Граувакковая плита
-tile.sedimentary_stone_halfslab.chert.name=Кремнистая известковая плита
+tile.sedimentary_stone_halfslab.chert.name=Кремнистая известняковая плита
 
 # Stairs
 
@@ -321,14 +375,14 @@ tile.metamorphic_brick_stairs.greenschist.name=Зелёные сланцевые
 tile.metamorphic_brick_stairs.soapstone.name=Стеатитовые кирпичные ступеньки
 tile.metamorphic_brick_stairs.migmatite.name=Мигматитовые кирпичные ступеньки
 
-tile.sedimentary_stone_stairs.limestone.name=Известковые ступеньки
+tile.sedimentary_stone_stairs.limestone.name=Известняковые ступеньки
 tile.sedimentary_stone_stairs.chalk.name=Меловые ступеньки
 tile.sedimentary_stone_stairs.shale.name=Сланцевые ступеньки
 tile.sedimentary_stone_stairs.siltstone.name=Алевритовые ступеньки
 tile.sedimentary_stone_stairs.lignite.name=Буроугольные ступеньки
 tile.sedimentary_stone_stairs.dolomite.name=Доломитовые ступеньки
 tile.sedimentary_stone_stairs.greywacke.name=Граувакковые ступеньки
-tile.sedimentary_stone_stairs.chert.name=Кремнистые известковые ступеньки
+tile.sedimentary_stone_stairs.chert.name=Кремнистые известняковые ступеньки
 
 # Walls
 
@@ -386,14 +440,14 @@ tile.metamorphic_brick_wall.greenschist.name=Зелёная сланцевая �
 tile.metamorphic_brick_wall.soapstone.name=Стеатитовая кирпичная стена
 tile.metamorphic_brick_wall.migmatite.name=Мигматитовая кирпичная стена
 
-tile.sedimentary_stone_wall.limestone.name=Известковая стена
+tile.sedimentary_stone_wall.limestone.name=Известняковая стена
 tile.sedimentary_stone_wall.chalk.name=Меловая стена
 tile.sedimentary_stone_wall.shale.name=Сланцевая стена
 tile.sedimentary_stone_wall.siltstone.name=Алевритовая стена
 tile.sedimentary_stone_wall.lignite.name=Буроугольная стена
 tile.sedimentary_stone_wall.dolomite.name=Доломитовая стена
 tile.sedimentary_stone_wall.greywacke.name=Граувакковая стена
-tile.sedimentary_stone_wall.chert.name=Кремнистая известковая стена
+tile.sedimentary_stone_wall.chert.name=Кремнистая известняковая стена
 
 # Buttons
 
@@ -451,14 +505,14 @@ tile.metamorphic_brick_button.greenschist.name=Зелёная сланцевая
 tile.metamorphic_brick_button.soapstone.name=Стеатитовая кирпичная кнопка
 tile.metamorphic_brick_button.migmatite.name=Мигматитовая кирпичная кнопка
 
-tile.sedimentary_stone_button.limestone.name=Известковая кнопка
+tile.sedimentary_stone_button.limestone.name=Известняковая кнопка
 tile.sedimentary_stone_button.chalk.name=Меловая кнопка
 tile.sedimentary_stone_button.shale.name=Сланцевая кнопка
 tile.sedimentary_stone_button.siltstone.name=Алевритовая кнопка
 tile.sedimentary_stone_button.lignite.name=Буроугольная кнопка
 tile.sedimentary_stone_button.dolomite.name=Доломитовая кнопка
 tile.sedimentary_stone_button.greywacke.name=Граувакковая кнопка
-tile.sedimentary_stone_button.chert.name=Кремнистая известковая кнопка
+tile.sedimentary_stone_button.chert.name=Кремнистая известняковая кнопка
 
 # Items
 
