@@ -13,7 +13,10 @@ import net.minecraft.init.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.EnumPlantType;
+import net.minecraftforge.common.IPlantable;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.NonNullList;
 
@@ -183,5 +186,15 @@ public class SedimentaryGravel extends SedimentaryStone {
   @Override
   public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
     return Blocks.GRAVEL.getBlockHardness(state, worldIn, pos);
+  }
+
+  @Override
+  public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction,
+      IPlantable plantable) {
+    EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
+    if (plantType == EnumPlantType.Desert || plantType == EnumPlantType.Beach || plantType == EnumPlantType.Water) {
+      return true;
+    } else
+      return false;
   }
 }

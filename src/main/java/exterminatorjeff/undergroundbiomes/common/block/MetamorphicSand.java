@@ -191,7 +191,7 @@ public class MetamorphicSand extends MetamorphicStone {
   public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction,
       IPlantable plantable) {
     EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
-    if (plantType == EnumPlantType.Desert || plantType == EnumPlantType.Beach) {
+    if (plantType == EnumPlantType.Desert || plantType == EnumPlantType.Beach || plantType == EnumPlantType.Water) {
       return true;
     } else
       return false;
