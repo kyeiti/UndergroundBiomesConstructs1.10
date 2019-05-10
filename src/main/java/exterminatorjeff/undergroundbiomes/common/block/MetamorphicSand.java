@@ -8,6 +8,7 @@ import com.google.common.base.Predicate;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
 import exterminatorjeff.undergroundbiomes.intermod.DropsRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityFallingBlock;
@@ -29,6 +30,11 @@ import net.minecraftforge.common.IPlantable;
  */
 public class MetamorphicSand extends MetamorphicStone {
   public static final String internal_name = "metamorphic_sand";
+
+  public MetamorphicSand() {
+    super();
+    setSoundType(SoundType.SAND);
+  }
 
   @Override
   public String getInternalName() {
