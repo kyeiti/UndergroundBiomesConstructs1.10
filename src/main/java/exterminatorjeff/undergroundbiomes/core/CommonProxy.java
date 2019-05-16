@@ -43,6 +43,11 @@ import net.minecraftforge.registries.IForgeRegistryModifiable;
 import org.apache.logging.log4j.Level;
 import java.io.File;
 import java.util.ArrayList;
+
+import com.ferreusveritas.dynamictrees.api.TreeHelper;
+import com.ferreusveritas.dynamictrees.api.TreeRegistry;
+import com.ferreusveritas.dynamictrees.cells.CellKits;
+
 import net.minecraftforge.fml.common.Loader;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -71,6 +76,18 @@ public class CommonProxy {
 
   @SuppressWarnings("deprecation")
   public void init(FMLInitializationEvent e) {
+    if (Loader.isModLoaded("dynamictrees")) {
+      // Needs improvements, but works !
+      for (Object resou : TreeRegistry.getSpeciesDirectory().toArray()) {
+        TreeRegistry.findSpecies(((ResourceLocation) resou).toString())
+            .addAcceptableSoil(API.IGNEOUS_OVERGROWN.getBlock());
+        TreeRegistry.findSpecies(((ResourceLocation) resou).toString())
+            .addAcceptableSoil(API.METAMORPHIC_OVERGROWN.getBlock());
+        TreeRegistry.findSpecies(((ResourceLocation) resou).toString())
+            .addAcceptableSoil(API.SEDIMENTARY_OVERGROWN.getBlock());
+      }
+    }
+
     DropsRegistry.INSTANCE.init();
 
     addOreDicts();
@@ -474,16 +491,16 @@ public class CommonProxy {
     }
 
     for (int i = 0; i < IgneousVariant.NB_VARIANTS; ++i) {
-      GameRegistry.addSmelting(new ItemStack(API.IGNEOUS_SAND.getItemBlock(), 1, i),
-          new ItemStack(Blocks.GLASS, 1), 0.1f);
+      GameRegistry.addSmelting(new ItemStack(API.IGNEOUS_SAND.getItemBlock(), 1, i), new ItemStack(Blocks.GLASS, 1),
+          0.1f);
     }
     for (int i = 0; i < MetamorphicVariant.NB_VARIANTS; ++i) {
-      GameRegistry.addSmelting(new ItemStack(API.METAMORPHIC_SAND.getItemBlock(), 1, i),
-          new ItemStack(Blocks.GLASS, 1), 0.1f);
+      GameRegistry.addSmelting(new ItemStack(API.METAMORPHIC_SAND.getItemBlock(), 1, i), new ItemStack(Blocks.GLASS, 1),
+          0.1f);
     }
     for (int i = 0; i < SedimentaryVariant.NB_VARIANTS; ++i) {
-      GameRegistry.addSmelting(new ItemStack(API.SEDIMENTARY_SAND.getItemBlock(), 1, i),
-          new ItemStack(Blocks.GLASS, 1), 0.1f);
+      GameRegistry.addSmelting(new ItemStack(API.SEDIMENTARY_SAND.getItemBlock(), 1, i), new ItemStack(Blocks.GLASS, 1),
+          0.1f);
     }
 
     if (UBConfig.SPECIFIC.buttonsOn()) {
