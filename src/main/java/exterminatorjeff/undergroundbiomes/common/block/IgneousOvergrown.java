@@ -2,6 +2,7 @@ package exterminatorjeff.undergroundbiomes.common.block;
 
 import com.google.common.base.Predicate;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
@@ -53,11 +54,25 @@ public class IgneousOvergrown extends IgneousStone {
   @Override
   public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction,
       IPlantable plantable) {
-    EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
-    if (plantable == Blocks.MELON_STEM || plantable == Blocks.PUMPKIN_STEM || plantType == EnumPlantType.Desert
-        || plantType == EnumPlantType.Plains || plantType == EnumPlantType.Cave) {
+    // Note: EnumPlantType will be changed at runtime by other mods using a Forge
+    // functionality.
+    // switch() does NOT work with enums in that case, but will crash when
+    // encountering
+    // a value not known beforehand.
+
+    // support desert, plains and cave plants
+    if (plantable.getPlantType(world, pos) == EnumPlantType.Desert || plantable.getPlantType(world, pos) == EnumPlantType.Plains || plantable.getPlantType(world, pos) == EnumPlantType.Cave) {
       return true;
-    } else
-      return false;
+    }
+    // support beach plants if there's water alongside
+    if (plantable.getPlantType(world, pos) == EnumPlantType.Beach) {
+      return (world.getBlockState(pos.east()).getMaterial() == Material.WATER
+          || world.getBlockState(pos.west()).getMaterial() == Material.WATER
+          || world.getBlockState(pos.north()).getMaterial() == Material.WATER
+          || world.getBlockState(pos.south()).getMaterial() == Material.WATER);
+    }
+    // don't support nether plants, water plants, or crops (require farmland), or
+    // anything else by default
+    return false;
   }
 }
