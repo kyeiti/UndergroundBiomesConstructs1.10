@@ -70,7 +70,10 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting replaceSpeleothems = new BooleanSetting(CATEGORY_GENERATION, "ReplaceQuarkSpeleothems");
   public final BooleanSetting replaceGravel = new BooleanSetting(CATEGORY_GENERATION, "ReplaceGravel");
   public final BooleanSetting replaceSand = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSand");
-  public final BooleanSetting replaceSandInDeserts = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSandInDeserts");
+  public final StringSetting replaceSandExcludedBiomes = new StringSetting(CATEGORY_GENERATION,
+      "ReplaceSandExcludedBiomes");
+  public final StringSetting replaceGravelExcludedBiomes = new StringSetting(CATEGORY_GENERATION,
+      "ReplaceGravelExcludedBiomes");
 
   private static final String CATEGORY_VISUAL = "Visual";
   public final BooleanSetting plainSlabTextures = new BooleanSetting(CATEGORY_VISUAL, "PlainSlabTextures");
@@ -184,7 +187,10 @@ public class UBConfig implements UBSettings {
         "Replace Quark's speleothems, quite useful if you don't want that ugly stone look...");
     replaceGravel.initProperty(configuration, true, "Replace gravel with UBC variants.");
     replaceSand.initProperty(configuration, true, "Replace sand with UBC variants.");
-    replaceSandInDeserts.initProperty(configuration, false, "Replace sand in deserts... Discalimer : Looks strange !");
+    replaceSandExcludedBiomes.initProperty(configuration, "minecraft:beaches,minecraft:desert,minecraft:cold_beach,minecraft:desert_hills,biomesoplenty:oasis",
+        "Disable biomes you don't want sand to be replaced in. Needs to be in the minecraft:ocean format. Eg. minecraft:ocean, biomesoplenty:cold_desert, minecraft:cold_beach");
+    replaceGravelExcludedBiomes.initProperty(configuration, "biomesoplenty:cold_desert",
+        "Same as replaceSandExcludedBiomes but for gravel");
 
     plainSlabTextures.initProperty(configuration, false, "Use normal stone textures for slabs");
 
@@ -462,8 +468,13 @@ public class UBConfig implements UBSettings {
   }
 
   @Override
-  public boolean replaceSandInDeserts() {
-    return replaceSandInDeserts.getValue();
+  public String replaceSandExcludedBiomes() {
+    return replaceSandExcludedBiomes.getValue();
+  }
+
+  @Override
+  public String replaceGravelExcludedBiomes() {
+    return replaceGravelExcludedBiomes.getValue();
   }
 
   @Override

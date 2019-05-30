@@ -52,7 +52,9 @@ public interface UBSettings {
 
   boolean replaceGravel();
 
-  boolean replaceSandInDeserts();
+  String replaceGravelExcludedBiomes();
+
+  String replaceSandExcludedBiomes();
 
   boolean replaceSand();
 
