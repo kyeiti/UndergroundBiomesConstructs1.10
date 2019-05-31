@@ -138,46 +138,6 @@ public class MetamorphicSand extends MetamorphicStone {
   }
 
   @Override
-  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-    if (fortune > 3) {
-      fortune = 3;
-    }
-    return rand.nextInt(10 - fortune * 3) == 0 ? Items.FLINT : itemBlock;
-  }
-
-  @Override
-  public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-    Item gravelBlock = this.getItemDropped(state, new Random(), fortune);
-    ItemStack itemStack = null;
-    if (gravelBlock == itemBlock) {
-      int meta = state.getBlock().getMetaFromState(state);
-      itemStack = new ItemStack(gravelBlock, 1, meta);
-    } else {
-      itemStack = new ItemStack(gravelBlock, 1);
-    }
-    List<ItemStack> result = new ArrayList<ItemStack>();
-    result.add(itemStack);
-    DropsRegistry.INSTANCE.addDrops(result, this, world, pos, state, fortune);
-    return result;
-  }
-
-  @Override
-  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state,
-      int fortune) {
-    Item gravelBlock = this.getItemDropped(state, new Random(), fortune);
-    ItemStack itemStack = null;
-    if (gravelBlock == itemBlock) {
-      int meta = state.getBlock().getMetaFromState(state);
-      itemStack = new ItemStack(gravelBlock, 1, meta);
-    } else {
-      itemStack = new ItemStack(gravelBlock, 1);
-    }
-    List<ItemStack> result = new ArrayList<ItemStack>();
-    result.add(itemStack);
-    DropsRegistry.INSTANCE.addDrops(result, this, world, pos, state, fortune);
-  }
-
-  @Override
   public String getHarvestTool(IBlockState state) {
     return "shovel";
   }
