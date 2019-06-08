@@ -196,6 +196,10 @@ public class CommonProxy {
     API.METAMORPHIC_SAND.registerBlock(event, new MetamorphicSand());
     API.SEDIMENTARY_SAND.registerBlock(event, new SedimentarySand());
 
+    API.IGNEOUS_CLAY.registerBlock(event, new IgneousClay());
+    API.METAMORPHIC_CLAY.registerBlock(event, new MetamorphicClay());
+    API.SEDIMENTARY_CLAY.registerBlock(event, new SedimentaryClay());
+
     if (Loader.isModLoaded("quark")) {
       API.IGNEOUS_SPELEOTHEM.registerBlock(event, new IgneousSpeleothem());
       API.METAMORPHIC_SPELEOTHEM.registerBlock(event, new MetamorphicSpeleothem());
@@ -343,6 +347,10 @@ public class CommonProxy {
     registry.register(API.METAMORPHIC_SAND.getItemBlock());
     registry.register(API.SEDIMENTARY_SAND.getItemBlock());
 
+    registry.register(API.IGNEOUS_CLAY.getItemBlock());
+    registry.register(API.METAMORPHIC_CLAY.getItemBlock());
+    registry.register(API.SEDIMENTARY_CLAY.getItemBlock());
+
     registry.register(API.IGNEOUS_OVERGROWN.getItemBlock());
     registry.register(API.IGNEOUS_OVERGROWN_SNOWED.getItemBlock());
     registry.register(API.METAMORPHIC_OVERGROWN.getItemBlock());
@@ -466,6 +474,9 @@ public class CommonProxy {
       OreDictionary.registerOre("sand", new ItemStack(API.IGNEOUS_SAND.getItemBlock(), 1, i));
       OreDictionary.registerOre("sand", new ItemStack(API.METAMORPHIC_SAND.getItemBlock(), 1, i));
       OreDictionary.registerOre("sand", new ItemStack(API.SEDIMENTARY_SAND.getItemBlock(), 1, i));
+      OreDictionary.registerOre("clay", new ItemStack(API.IGNEOUS_CLAY.getItemBlock(), 1, i));
+      OreDictionary.registerOre("clay", new ItemStack(API.METAMORPHIC_CLAY.getItemBlock(), 1, i));
+      OreDictionary.registerOre("clay", new ItemStack(API.SEDIMENTARY_CLAY.getItemBlock(), 1, i));
       OreDictionary.registerOre("cobblestone", new ItemStack(API.IGNEOUS_COBBLE.getItemBlock(), 1, i));
       OreDictionary.registerOre("cobblestone", new ItemStack(API.METAMORPHIC_COBBLE.getItemBlock(), 1, i));
       OreDictionary.registerOre("stoneBricks", new ItemStack(API.IGNEOUS_BRICK.getItemBlock(), 1, i));
