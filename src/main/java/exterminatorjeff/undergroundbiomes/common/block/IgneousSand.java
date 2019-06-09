@@ -158,4 +158,26 @@ public class IgneousSand extends IgneousStone {
     } else
       return false;
   }
+
+  @Override
+  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+    return itemBlock;
+  }
+
+  @Override
+  public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+    int meta = state.getBlock().getMetaFromState(state);
+    ItemStack itemStack = new ItemStack(itemBlock, 1, meta);
+    List<ItemStack> result = new ArrayList<ItemStack>();
+    result.add(itemStack);
+    return result;
+  }
+
+  @Override
+  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state,
+      int fortune) {
+    int meta = state.getBlock().getMetaFromState(state);
+    ItemStack itemStack = new ItemStack(itemBlock, 1, meta);
+    stacks.add(itemStack);
+  }
 }

@@ -139,14 +139,6 @@ public class SedimentarySand extends SedimentaryStone {
   }
 
   @Override
-  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-    if (fortune > 3) {
-      fortune = 3;
-    }
-    return rand.nextInt(10 - fortune * 3) == 0 ? Items.FLINT : itemBlock;
-  }
-
-  @Override
   public String getHarvestTool(IBlockState state) {
     return "shovel";
   }
@@ -164,5 +156,27 @@ public class SedimentarySand extends SedimentaryStone {
       return true;
     } else
       return false;
+  }
+
+  @Override
+  public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+    return itemBlock;
+  }
+
+  @Override
+  public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+    int meta = state.getBlock().getMetaFromState(state);
+    ItemStack itemStack = new ItemStack(itemBlock, 1, meta);
+    List<ItemStack> result = new ArrayList<ItemStack>();
+    result.add(itemStack);
+    return result;
+  }
+
+  @Override
+  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state,
+      int fortune) {
+    int meta = state.getBlock().getMetaFromState(state);
+    ItemStack itemStack = new ItemStack(itemBlock, 1, meta);
+    stacks.add(itemStack);
   }
 }
