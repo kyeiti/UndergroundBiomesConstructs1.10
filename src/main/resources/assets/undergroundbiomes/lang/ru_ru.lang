@@ -29,6 +29,15 @@ tile.igneous_sand.basalt.name=Базальтовый песок
 tile.igneous_sand.komatiite.name=Коматитовый песок
 tile.igneous_sand.dacite.name=Дацитовый песок
 
+tile.igneous_clay.red_granite.name=Красная гранитовая глина
+tile.igneous_clay.black_granite.name=Чёрная гранитовая глина
+tile.igneous_clay.rhyolite.name=Риолитовая глина
+tile.igneous_clay.andesite.name=Андезитовая глина
+tile.igneous_clay.gabbro.name=Габбровая глина
+tile.igneous_clay.basalt.name=Базальтовая глина
+tile.igneous_clay.komatiite.name=Коматитовая глина
+tile.igneous_clay.dacite.name=Дацитовая глина
+
 tile.igneous_monster_stone.red_granite.name=Красное гранитовое яйцо монстра
 tile.igneous_monster_stone.black_granite.name=Чёрное гранитовое яйцо монстра
 tile.igneous_monster_stone.rhyolite.name=Риолитовое яйцо монстра
@@ -119,6 +128,15 @@ tile.metamorphic_sand.greenschist.name=Зелёный сланцевый пес�
 tile.metamorphic_sand.soapstone.name=Стеатитовый песок
 tile.metamorphic_sand.migmatite.name=Мигматитовый песок
 
+tile.metamorphic_clay.gneiss.name=Гнейсовая глина
+tile.metamorphic_clay.eclogite.name=Экголитовая глина
+tile.metamorphic_clay.marble.name=Мраморная глина
+tile.metamorphic_clay.quartzite.name=Кварцитовая глина
+tile.metamorphic_clay.blueschist.name=Синяя сланцевая глина
+tile.metamorphic_clay.greenschist.name=Зелёная сланцевая глина
+tile.metamorphic_clay.soapstone.name=Стеатитовая глина
+tile.metamorphic_clay.migmatite.name=Мигматитовая глина
+
 tile.metamorphic_monster_stone.gneiss.name=Гнейсовое яйцо монстра
 tile.metamorphic_monster_stone.eclogite.name=Экголитовое яйцо монстра
 tile.metamorphic_monster_stone.marble.name=Мраморное яйцо монстра
@@ -208,6 +226,15 @@ tile.sedimentary_sand.lignite.name=Буроугольный песок
 tile.sedimentary_sand.dolomite.name=Доломитовый песок
 tile.sedimentary_sand.greywacke.name=Граувакковый песок
 tile.sedimentary_sand.chert.name=Кремнисто-известняковый песок
+
+tile.sedimentary_clay.limestone.name=Известняковая глина
+tile.sedimentary_clay.chalk.name=Меловая глина
+tile.sedimentary_clay.shale.name=Сланцевая глина
+tile.sedimentary_clay.siltstone.name=Алевритовая глина
+tile.sedimentary_clay.lignite.name=Буроугольная глина
+tile.sedimentary_clay.dolomite.name=Доломитовая глина
+tile.sedimentary_clay.greywacke.name=Граувакковая глина
+tile.sedimentary_clay.chert.name=Кремнисто-известняковая глина
 
 tile.sedimentary_monster_stone.limestone.name=Известняковое яйцо монстра
 tile.sedimentary_monster_stone.chalk.name=Меловое яйцо монстра
