@@ -6,6 +6,7 @@ import exterminatorjeff.undergroundbiomes.api.UBStrataColumnProvider;
 import exterminatorjeff.undergroundbiomes.api.UndergroundBiomeSet;
 import exterminatorjeff.undergroundbiomes.api.common.UBLogger;
 import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
+import exterminatorjeff.undergroundbiomes.api.event.UBForceReProcessEvent;
 import exterminatorjeff.undergroundbiomes.common.block.UBStone;
 import exterminatorjeff.undergroundbiomes.common.block.slab.UBStoneSlab;
 import exterminatorjeff.undergroundbiomes.common.block.stairs.UBStoneStairs;
@@ -85,6 +86,24 @@ public final class WorldGenManager implements UBStrataColumnProvider {
     if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
       Chunk chunk = event.getWorld().getChunk(event.getChunkX(), event.getChunkZ());
       this.stoneReplacer.replaceStoneInChunk(chunk);
+      stoneReplacer.redoOres(event.getWorld());
+    }
+  }
+
+  // May be called by other mods
+  @SubscribeEvent
+  public void onForceReprocessAll(UBForceReProcessEvent.All event) {
+    if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
+      Chunk chunk = event.getWorld().getChunk(event.getChunk().x, event.getChunk().z);
+      this.stoneReplacer.replaceStoneInChunk(chunk);
+      stoneReplacer.redoOres(event.getWorld());
+    }
+  }
+
+  // May be called by other mods
+  @SubscribeEvent
+  public void onForceReprocessOres(UBForceReProcessEvent.Ores event) {
+    if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
       stoneReplacer.redoOres(event.getWorld());
     }
   }
