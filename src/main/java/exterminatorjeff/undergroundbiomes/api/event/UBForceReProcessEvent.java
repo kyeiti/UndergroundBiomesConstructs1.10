@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.eventhandler.Cancelable;
  * 
  * Simple event other mods can call to force-reprocess a chunk & its ores
  */
-@Cancelable
 public class UBForceReProcessEvent extends ChunkEvent {
     public UBForceReProcessEvent(Chunk chunk) {
         super(chunk);
