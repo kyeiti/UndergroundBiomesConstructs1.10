@@ -92,18 +92,10 @@ public final class WorldGenManager implements UBStrataColumnProvider {
 
   // May be called by other mods
   @SubscribeEvent
-  public void onForceReprocessAll(UBForceReProcessEvent.All event) {
+  public void onForceReprocessAll(UBForceReProcessEvent event) {
     if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
-      Chunk chunk = event.getWorld().getChunk(event.getChunk().x, event.getChunk().z);
+      Chunk chunk = event.getWorld().getChunk(event.getChunkX(), event.getChunkZ());
       this.stoneReplacer.replaceStoneInChunk(chunk);
-      stoneReplacer.redoOres(event.getWorld());
-    }
-  }
-
-  // May be called by other mods
-  @SubscribeEvent
-  public void onForceReprocessOres(UBForceReProcessEvent.Ores event) {
-    if (event.getWorld().provider.getDimension() == dimensionID && worldLoaded) {
       stoneReplacer.redoOres(event.getWorld());
     }
   }
