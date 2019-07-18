@@ -520,6 +520,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig(oreName, 7, ModInfo.MODID + ":blocks/overlays/thermalfoundation/iridium"));
     ores.add(new UBOreConfig(oreName, 8, ModInfo.MODID + ":blocks/overlays/thermalfoundation/mana_infused"));
     ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 2, ModInfo.MODID + ":blocks/overlays/thermalfoundation/destabilized_redstone"));
+    ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 1, ModInfo.MODID + ":blocks/overlays/thermalfoundation/oil"));
+    ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 0, ModInfo.MODID + ":blocks/overlays/thermalfoundation/oil"));
     return ores;
   }
 }
