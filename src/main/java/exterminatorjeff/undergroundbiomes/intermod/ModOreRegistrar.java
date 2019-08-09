@@ -92,6 +92,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getProjectRedOres(), "projectred.json");
     writeDefaults(getPoorMetalsOres(), "poormetals.json");
     writeDefaults(getDenseMetalsOres(), "densemetals.json");
+    writeDefaults(getAstralSorceryOres(), "astralsorcery.json");
+    writeDefaults(getMysticalWorldOres(), "mysticalworld.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -158,6 +160,22 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("minecraft:redstone_ore", ModInfo.MODID + ":blocks/overlays/minecraft/redstone"));
     ores.add(new UBOreConfig("minecraft:gold_ore", ModInfo.MODID + ":blocks/overlays/minecraft/gold"));
     ores.add(new UBOreConfig("minecraft:emerald_ore", ModInfo.MODID + ":blocks/overlays/minecraft/emerald"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getAstralSorceryOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("astralsorcery:blockcustomsandore", 1, ModInfo.MODID + ":blocks/overlays/astralsorcery/aquamarine"));
+    ores.add(new UBOreConfig("astralsorcery:blockcustomore", 0, ModInfo.MODID + ":blocks/overlays/astralsorcery/rockcrystal"));
+    ores.add(new UBOreConfig("astralsorcery:blockcustomore", 1, ModInfo.MODID + ":blocks/overlays/astralsorcery/starmetal"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getMysticalWorldOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("mysticalworld:amethyst_ore", ModInfo.MODID + ":undergroundbiomes:blocks/overlays/mysticalWorld/amethyst"));
+    ores.add(new UBOreConfig("mysticalworld:copper_ore", ModInfo.MODID + ":undergroundbiomes:blocks/overlays/mysticalWorld/copper"));
+    ores.add(new UBOreConfig("mysticalworld:silver_ore", ModInfo.MODID + ":undergroundbiomes:blocks/overlays/mysticalWorld/silver"));
     return ores;
   }
 
@@ -502,6 +520,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig(oreName, 7, ModInfo.MODID + ":blocks/overlays/thermalfoundation/iridium"));
     ores.add(new UBOreConfig(oreName, 8, ModInfo.MODID + ":blocks/overlays/thermalfoundation/mana_infused"));
     ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 2, ModInfo.MODID + ":blocks/overlays/thermalfoundation/destabilized_redstone"));
+    ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 1, ModInfo.MODID + ":blocks/overlays/thermalfoundation/oil"));
+    ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 0, ModInfo.MODID + ":blocks/overlays/thermalfoundation/oil"));
     return ores;
   }
 }
