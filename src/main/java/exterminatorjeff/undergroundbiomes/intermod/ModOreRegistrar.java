@@ -107,6 +107,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getPyrotechOres(), "pyrotech.json");
     writeDefaults(getMubbleOres(), "mubble.json");
     writeDefaults(getMoGlowstoneOres(), "moglowstone.json");
+    writeDefaults(getFloricraftOres(), "floricraft.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -203,6 +204,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getMubbleOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("mubble:vanadium_ore", ModInfo.MODID + ":blocks/overlays/mubble/vanadium_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getFloricraftOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("floricraft:ore_salt", ModInfo.MODID + ":blocks/overlays/floricraft/ore_salt"));
     return ores;
   }
 
