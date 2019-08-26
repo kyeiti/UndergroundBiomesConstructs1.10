@@ -109,6 +109,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getMoGlowstoneOres(), "moglowstone.json");
     writeDefaults(getFloricraftOres(), "floricraft.json");
     writeDefaults(getDartcraftOres(), "dartcraftreloaded.json");
+    writeDefaults(getCustomIdeasOres(), "customideas.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -217,6 +218,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getFloricraftOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("floricraft:ore_salt", ModInfo.MODID + ":blocks/overlays/floricraft/ore_salt"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getCustomIdeasOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("custom:silversteel_ore", ModInfo.MODID + ":blocks/overlays/customideas/silversteel_ore"));
     return ores;
   }
 
