@@ -98,6 +98,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getCandyWorldOres(), "candyworld.json");
     writeDefaults(getCurioOres(), "curio.json");
     writeDefaults(getBluePowerOres(), "bluepower.json");
+    writeDefaults(getWildnatureOres(), "wildnature.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -181,6 +182,16 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
     ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
     ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getWildnatureOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("wildnature:amethyst_ore", ModInfo.MODID + ":blocks/overlays/wildnature/amethyst_ore"));
+    ores.add(new UBOreConfig("wildnature:malachite_ore", ModInfo.MODID + ":blocks/overlays/wildnature/malachite_ore"));
+    ores.add(new UBOreConfig("wildnature:ruby_ore", ModInfo.MODID + ":blocks/overlays/wildnature/ruby_ore"));
+    ores.add(new UBOreConfig("wildnature:sapphire_ore", ModInfo.MODID + ":blocks/overlays/wildnature/sapphire_ore"));
+    ores.add(new UBOreConfig("wildnature:silver_ore", ModInfo.MODID + ":blocks/overlays/wildnature/silver_ore"));
     return ores;
   }
 
