@@ -101,6 +101,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getWildnatureOres(), "wildnature.json");
     writeDefaults(getIndustrialCraftClassicOres(), "ic2classic.json");
     writeDefaults(getGrimpackOres(), "grimpack.json");
+    writeDefaults(getTreasure2Ores(), "treasure2.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -184,6 +185,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
     ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
     ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getTreasure2Ores() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("tresure2:ruby_ore", ModInfo.MODID + ":blocks/overlays/tresure2/ruby_nugget"));
+    ores.add(new UBOreConfig("tresure2:sapphire_ore", ModInfo.MODID + ":blocks/overlays/tresure2/sapphire_nugget"));
     return ores;
   }
 
