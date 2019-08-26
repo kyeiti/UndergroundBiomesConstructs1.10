@@ -97,6 +97,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getBiomeYoullGoOres(), "byg.json");
     writeDefaults(getCandyWorldOres(), "candyworld.json");
     writeDefaults(getCurioOres(), "curio.json");
+    writeDefaults(getBluePowerOres(), "bluepower.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -180,6 +181,20 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
     ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
     ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getBluePowerOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("bluepower:teslatite_ore", ModInfo.MODID + ":blocks/overlays/bluepower/teslatite_ore"));
+    ores.add(new UBOreConfig("bluepower:ruby_ore", ModInfo.MODID + ":blocks/overlays/bluepower/ruby_ore"));
+    ores.add(new UBOreConfig("bluepower:sapphire_ore", ModInfo.MODID + ":blocks/overlays/bluepower/sapphire_ore"));
+    ores.add(new UBOreConfig("bluepower:amethyst_ore", ModInfo.MODID + ":blocks/overlays/bluepower/amethyst_ore"));
+    ores.add(new UBOreConfig("bluepower:malachite_ore", ModInfo.MODID + ":blocks/overlays/bluepower/malachite_ore"));
+    ores.add(new UBOreConfig("bluepower:copper_ore", ModInfo.MODID + ":blocks/overlays/bluepower/copper_ore"));
+    ores.add(new UBOreConfig("bluepower:silver_ore", ModInfo.MODID + ":blocks/overlays/bluepower/silver_ore"));
+    ores.add(new UBOreConfig("bluepower:zinc_ore", ModInfo.MODID + ":blocks/overlays/bluepower/zinc_ore"));
+    ores.add(new UBOreConfig("bluepower:tungsten_ore", ModInfo.MODID + ":blocks/overlays/bluepower/tungsten_ore"));
     return ores;
   }
 
