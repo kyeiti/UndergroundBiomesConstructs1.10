@@ -113,6 +113,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getStarWarsOres(), "starwars.json");
     writeDefaults(getCommunityModOres(), "communitymod.json");
     writeDefaults(getAoa3Ores(), "aoa3.json");
+    writeDefaults(getAromasDimensionalOres(), "aromasdimensionalworld.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -216,6 +217,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("community_mod:squirrel_ore", ModInfo.MODID + ":blocks/overlays/community_mod/squirrel_ore"));
     ores.add(new UBOreConfig("community_mod:poke_ore", ModInfo.MODID + ":blocks/overlays/community_mod/poke_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getAromasDimensionalOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("aroma1997sdimension:miningore", 0, ModInfo.MODID + ":blocks/overlays/aroma1997sdimension/stickyore"));
+    ores.add(new UBOreConfig("aroma1997sdimension:miningore", 1, ModInfo.MODID + ":blocks/overlays/aroma1997sdimension/clayore"));
     return ores;
   }
 
