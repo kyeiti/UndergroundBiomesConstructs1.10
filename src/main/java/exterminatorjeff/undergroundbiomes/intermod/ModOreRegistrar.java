@@ -188,6 +188,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     return ores;
   }
 
+  private ArrayList<UBOreConfig> getWorldsRetoldOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("worldsretold:cryonite_ore", ModInfo.MODID + ":blocks/overlays/worldsretold/cryonite_ore"));
+    return ores;
+  }
+
   private ArrayList<UBOreConfig> getTreasure2Ores() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("tresure2:ruby_ore", ModInfo.MODID + ":blocks/overlays/tresure2/ruby_nugget"));
