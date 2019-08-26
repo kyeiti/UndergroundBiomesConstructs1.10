@@ -10,8 +10,8 @@ import net.minecraft.world.IBlockAccess;
 /**
  * @author CurtisA, LouisDB
  */
-public class MetamorphicSandstoneSmooth extends MetamorphicStone {
-  public static final String internal_name = "metamorphic_sandstone_smooth";
+public class IgneousSandstoneChiseled extends IgneousStone {
+  public static final String internal_name = "igneous_sandstone_chiseled";
 
   @Override
   public String getInternalName() {
@@ -20,12 +20,11 @@ public class MetamorphicSandstoneSmooth extends MetamorphicStone {
 
   @Override
   public UBStoneStyle getStoneStyle() {
-    return UBStoneStyle.SMOOTH_SANDSTONE;
+    return UBStoneStyle.CHISELED_SANDSTONE;
   }
 
   @Override
   public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
     return false;
   }
-
 }

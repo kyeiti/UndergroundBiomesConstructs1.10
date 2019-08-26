@@ -1,0 +1,67 @@
+{
+	"forge_marker": 1,
+  "defaults": {
+		"model": "cube_bottom_top",
+		"uvlock": true
+	},
+	"variants": {
+    "type": {
+      "gneiss": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/gneiss_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/gneiss_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/gneiss_sandstone_top"
+        }
+      }, 
+      "eclogite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/eclogite_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/eclogite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/eclogite_sandstone_top"
+        }
+      }, 
+      "marble": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/marble_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/marble_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/marble_sandstone_top"
+        }
+      }, 
+      "quartzite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/quartzite_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/quartzite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/quartzite_sandstone_top"
+        }
+      }, 
+      "blueschist": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/blueschist_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/blueschist_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/blueschist_sandstone_top"
+        }
+      }, 
+      "greenschist": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/greenschist_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/greenschist_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/greenschist_sandstone_top"
+        }
+      }, 
+      "soapstone": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/soapstone_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/soapstone_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/soapstone_sandstone_top"
+        }
+      }, 
+      "migmatite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/migmatite_sandstone_chiseled",
+          "bottom": "undergroundbiomes:blocks/migmatite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/migmatite_sandstone_top"
+        }
+      }
+		}
+	}
+}

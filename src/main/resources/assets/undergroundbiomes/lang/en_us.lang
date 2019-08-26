@@ -610,3 +610,32 @@ item.fossil_piece.skull.name=Skull fossil
 itemGroup.undergroundbiomesblocks=Underground Biomes Blocks
 itemGroup.undergroundbiomesitems=Underground Biomes Items
 itemGroup.undergroundbiomesores=Underground Biomes Ores
+
+# Other
+
+tile.igneous_sandstone_chiseled.red_granite.name=Chiseled Red Granite Sandstone
+tile.igneous_sandstone_chiseled.black_granite.name=Chiseled Black Granite Sandstone
+tile.igneous_sandstone_chiseled.rhyolite.name=Chiseled Rhyolite Sandstone
+tile.igneous_sandstone_chiseled.andesite.name=Chiseled Andesite Sandstone
+tile.igneous_sandstone_chiseled.gabbro.name=Chiseled Gabbro Sandstone
+tile.igneous_sandstone_chiseled.basalt.name=Chiseled Basalt Sandstone
+tile.igneous_sandstone_chiseled.komatiite.name=Chiseled Komatiite Sandstone
+tile.igneous_sandstone_chiseled.dacite.name=Chiseled Dacite Sandstone
+
+tile.sedimentary_sandstone_chiseled.limestone.name=Chiseled Limestone Sandstone
+tile.sedimentary_sandstone_chiseled.chalk.name=Chiseled Chalk Sandstone
+tile.sedimentary_sandstone_chiseled.shale.name=Chiseled Shale Sandstone
+tile.sedimentary_sandstone_chiseled.siltstone.name=Chiseled Siltstone Sandstone
+tile.sedimentary_sandstone_chiseled.lignite.name=Chiseled Lignite Block Sandstone
+tile.sedimentary_sandstone_chiseled.dolomite.name=Chiseled Dolomite Sandstone
+tile.sedimentary_sandstone_chiseled.greywacke.name=Chiseled Greywacke Sandstone
+tile.sedimentary_sandstone_chiseled.chert.name=Chiseled Chert Sandstone
+
+tile.sedimentary_sandstone_chiseled.limestone.name=Chiseled Limestone Sandstone
+tile.sedimentary_sandstone_chiseled.chalk.name=Chiseled Chalk Sandstone
+tile.sedimentary_sandstone_chiseled.shale.name=Chiseled Shale Sandstone
+tile.sedimentary_sandstone_chiseled.siltstone.name=Chiseled Siltstone Sandstone
+tile.sedimentary_sandstone_chiseled.lignite.name=Chiseled Lignite Block Sandstone
+tile.sedimentary_sandstone_chiseled.dolomite.name=Chiseled Dolomite Sandstone
+tile.sedimentary_sandstone_chiseled.greywacke.name=Chiseled Greywacke Sandstone
+tile.sedimentary_sandstone_chiseled.chert.name=Chiseled Chert Sandstone
