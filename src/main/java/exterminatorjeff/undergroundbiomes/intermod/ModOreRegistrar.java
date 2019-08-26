@@ -100,6 +100,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getBluePowerOres(), "bluepower.json");
     writeDefaults(getWildnatureOres(), "wildnature.json");
     writeDefaults(getIndustrialCraftClassicOres(), "ic2classic.json");
+    writeDefaults(getGrimpackOres(), "grimpack.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -183,6 +184,16 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
     ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
     ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getGrimpackOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("grimpack:aluminum_ore", ModInfo.MODID + ":blocks/overlays/byg/aluminum_ore"));
+    ores.add(new UBOreConfig("grimpack:oil_ore", ModInfo.MODID + ":blocks/overlays/byg/oil_ore"));
+    ores.add(new UBOreConfig("grimpack:black_diamond_ore", ModInfo.MODID + ":blocks/overlays/byg/black_diamond_ore"));
+    ores.add(new UBOreConfig("grimpack:element_115_ore", ModInfo.MODID + ":blocks/overlays/byg/element_115_ore"));
+    ores.add(new UBOreConfig("grimpack:randomite", ModInfo.MODID + ":blocks/overlays/byg/randomite"));
     return ores;
   }
 
