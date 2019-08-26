@@ -70,6 +70,7 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting replaceSpeleothems = new BooleanSetting(CATEGORY_GENERATION, "ReplaceQuarkSpeleothems");
   public final BooleanSetting replaceGravel = new BooleanSetting(CATEGORY_GENERATION, "ReplaceGravel");
   public final BooleanSetting replaceSand = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSand");
+  public final BooleanSetting replaceSandstone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSandstone");
   public final BooleanSetting replaceClay = new BooleanSetting(CATEGORY_GENERATION, "ReplacClay");
   public final StringSetting replaceSandExcludedBiomes = new StringSetting(CATEGORY_GENERATION,
       "ReplaceSandExcludedBiomes");
@@ -188,6 +189,7 @@ public class UBConfig implements UBSettings {
         "Replace Quark's speleothems, quite useful if you don't want that ugly stone look...");
     replaceGravel.initProperty(configuration, true, "Replace gravel with UBC variants.");
     replaceSand.initProperty(configuration, true, "Replace sand with UBC variants.");
+    replaceSandstone.initProperty(configuration, true, "Replace sandstone with UBC variants.");
     replaceClay.initProperty(configuration, true, "Replace clay with UBC variants.");
     replaceSandExcludedBiomes.initProperty(configuration, "minecraft:beaches,minecraft:desert,minecraft:cold_beach,minecraft:desert_hills,biomesoplenty:oasis",
         "Disable biomes you don't want sand to be replaced in. Needs to be in the minecraft:ocean format. Eg. minecraft:ocean, biomesoplenty:cold_desert, minecraft:cold_beach");
@@ -467,6 +469,11 @@ public class UBConfig implements UBSettings {
   @Override
   public boolean replaceSand() {
     return replaceSand.getValue();
+  }
+
+  @Override
+  public boolean replaceSandstone() {
+    return replaceSandstone.getValue();
   }
 
   @Override

@@ -60,6 +60,8 @@ public interface UBSettings {
 
   boolean replaceSand();
 
+  boolean replaceSandstone();
+
   boolean replaceOvergrown();
 
   boolean replaceMossyCobblestone();

@@ -94,6 +94,10 @@ public final class ClientProxy extends CommonProxy {
     API.METAMORPHIC_SAND.registerModel();
     API.SEDIMENTARY_SAND.registerModel();
 
+    API.IGNEOUS_SANDSTONE.registerModel();
+    API.METAMORPHIC_SANDSTONE.registerModel();
+    API.SEDIMENTARY_SANDSTONE.registerModel();
+
     API.IGNEOUS_CLAY.registerModel();
     API.METAMORPHIC_CLAY.registerModel();
     API.SEDIMENTARY_CLAY.registerModel();

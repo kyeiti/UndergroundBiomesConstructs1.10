@@ -1,0 +1,67 @@
+{
+	"forge_marker": 1,
+  "defaults": {
+		"model": "cube_bottom_top",
+		"uvlock": true
+	},
+	"variants": {
+    "type": {
+      "red_granite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/red_granite_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/red_granite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/red_granite_sandstone_top"
+        }
+      }, 
+      "black_granite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/black_granite_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/black_granite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/black_granite_sandstone_top"
+        }
+      }, 
+      "rhyolite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/rhyolite_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/rhyolite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/rhyolite_sandstone_top"
+        }
+      }, 
+      "andesite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/andesite_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/andesite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/andesite_sandstone_top"
+        }
+      }, 
+      "gabbro": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/gabbro_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/gabbro_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/gabbro_sandstone_top"
+        }
+      }, 
+      "basalt": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/basalt_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/basalt_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/basalt_sandstone_top"
+        }
+      }, 
+      "komatiite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/komatiite_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/komatiite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/komatiite_sandstone_top"
+        }
+      }, 
+      "dacite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/dacite_sandstone_normal",
+          "bottom": "undergroundbiomes:blocks/dacite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/dacite_sandstone_top"
+        }
+      }
+		}
+	}
+}

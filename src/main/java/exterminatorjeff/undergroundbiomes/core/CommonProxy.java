@@ -196,6 +196,10 @@ public class CommonProxy {
     API.METAMORPHIC_SAND.registerBlock(event, new MetamorphicSand());
     API.SEDIMENTARY_SAND.registerBlock(event, new SedimentarySand());
 
+    API.IGNEOUS_SANDSTONE.registerBlock(event, new IgneousSandstone());
+    API.METAMORPHIC_SANDSTONE.registerBlock(event, new MetamorphicSandstone());
+    API.SEDIMENTARY_SANDSTONE.registerBlock(event, new SedimentarySandstone());
+
     API.IGNEOUS_CLAY.registerBlock(event, new IgneousClay());
     API.METAMORPHIC_CLAY.registerBlock(event, new MetamorphicClay());
     API.SEDIMENTARY_CLAY.registerBlock(event, new SedimentaryClay());
@@ -346,6 +350,10 @@ public class CommonProxy {
     registry.register(API.IGNEOUS_SAND.getItemBlock());
     registry.register(API.METAMORPHIC_SAND.getItemBlock());
     registry.register(API.SEDIMENTARY_SAND.getItemBlock());
+
+    registry.register(API.IGNEOUS_SANDSTONE.getItemBlock());
+    registry.register(API.METAMORPHIC_SANDSTONE.getItemBlock());
+    registry.register(API.SEDIMENTARY_SANDSTONE.getItemBlock());
 
     registry.register(API.IGNEOUS_CLAY.getItemBlock());
     registry.register(API.METAMORPHIC_CLAY.getItemBlock());

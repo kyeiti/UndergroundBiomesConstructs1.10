@@ -29,6 +29,15 @@ tile.igneous_sand.basalt.name=Basalt Sand
 tile.igneous_sand.komatiite.name=Komatiite Sand
 tile.igneous_sand.dacite.name=Dacite Sand
 
+tile.igneous_sandstone.red_granite.name=Red Granite Sandstone
+tile.igneous_sandstone.black_granite.name=Black Granite Sandstone
+tile.igneous_sandstone.rhyolite.name=Rhyolite Sandstone
+tile.igneous_sandstone.andesite.name=Andesite Sandstone
+tile.igneous_sandstone.gabbro.name=Gabbro Sandstone
+tile.igneous_sandstone.basalt.name=Basalt Sandstone
+tile.igneous_sandstone.komatiite.name=Komatiite Sandstone
+tile.igneous_sandstone.dacite.name=Dacite Sandstone
+
 tile.igneous_clay.red_granite.name=Red Granite Clay
 tile.igneous_clay.black_granite.name=Black Granite Clay
 tile.igneous_clay.rhyolite.name=Rhyolite Clay
@@ -128,6 +137,15 @@ tile.metamorphic_sand.greenschist.name=Green Schist Sand
 tile.metamorphic_sand.soapstone.name=Soapstone Sand
 tile.metamorphic_sand.migmatite.name=Migmatite Sand
 
+tile.metamorphic_sandstone.gneiss.name=Gneiss Sandstone
+tile.metamorphic_sandstone.eclogite.name=Eclogite Sandstone
+tile.metamorphic_sandstone.marble.name=Marble Sandstone
+tile.metamorphic_sandstone.quartzite.name=Quartzite Sandstone
+tile.metamorphic_sandstone.blueschist.name=Blue Schist Sandstone
+tile.metamorphic_sandstone.greenschist.name=Green Schist Sandstone
+tile.metamorphic_sandstone.soapstone.name=Soapstone Sandstone
+tile.metamorphic_sandstone.migmatite.name=Migmatite Sandstone
+
 tile.metamorphic_clay.gneiss.name=Gneiss Clay
 tile.metamorphic_clay.eclogite.name=Eclogite Clay
 tile.metamorphic_clay.marble.name=Marble Clay
@@ -226,6 +244,15 @@ tile.sedimentary_sand.lignite.name=Lignite Block Sand
 tile.sedimentary_sand.dolomite.name=Dolomite Sand
 tile.sedimentary_sand.greywacke.name=Greywacke Sand
 tile.sedimentary_sand.chert.name=Chert Sand
+
+tile.sedimentary_sandstone.limestone.name=Limestone Sandstone
+tile.sedimentary_sandstone.chalk.name=Chalk Sandstone
+tile.sedimentary_sandstone.shale.name=Shale Sandstone
+tile.sedimentary_sandstone.siltstone.name=Siltstone Sandstone
+tile.sedimentary_sandstone.lignite.name=Lignite Block Sandstone
+tile.sedimentary_sandstone.dolomite.name=Dolomite Sandstone
+tile.sedimentary_sandstone.greywacke.name=Greywacke Sandstone
+tile.sedimentary_sandstone.chert.name=Chert Sandstone
 
 tile.sedimentary_clay.limestone.name=Limestone Clay
 tile.sedimentary_clay.chalk.name=Chalk Clay
