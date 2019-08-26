@@ -61,6 +61,7 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     }
     ((UBConfig) (UBConfig.SPECIFIC)).getUBifiedDimensions().forEach(dimensionID -> {
       WorldGenManager manager = new WorldGenManager(dimensionID);
+      MinecraftForge.EVENT_BUS.register(manager);
       managers.put(dimensionID, manager);
     });
   }
