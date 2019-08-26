@@ -215,6 +215,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     return ores;
   }
 
+  private ArrayList<UBOreConfig> getStarWarsOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("starwars:ore_crystal", ModInfo.MODID + ":blocks/overlays/starwars/ore_crystal"));
+    return ores;
+  }
+
   private ArrayList<UBOreConfig> getFloricraftOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("floricraft:ore_salt", ModInfo.MODID + ":blocks/overlays/floricraft/ore_salt"));
