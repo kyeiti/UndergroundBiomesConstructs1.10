@@ -104,6 +104,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getTreasure2Ores(), "treasure2.json");
     writeDefaults(getWorldsRetoldOres(), "worldsretold.json");
     writeDefaults(getScalingHealthOres(), "scalinghealth.json");
+    writeDefaults(getPyrotechOres(), "pyrotech.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -187,6 +188,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
     ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
     ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getPyrotechOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("pyrotech:fossil_ore", ModInfo.MODID + ":blocks/overlays/pyrotech/fossil_ore"));
+    ores.add(new UBOreConfig("pyrotech:dense_coal_ore", ModInfo.MODID + ":blocks/overlays/byg/dense_coal_ore"));
     return ores;
   }
 
