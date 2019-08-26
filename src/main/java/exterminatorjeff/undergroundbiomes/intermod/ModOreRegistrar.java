@@ -96,6 +96,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getMysticalWorldOres(), "mysticalworld.json");
     writeDefaults(getBiomeYoullGoOres(), "byg.json");
     writeDefaults(getCandyWorldOres(), "candyworld.json");
+    writeDefaults(getCurioOres(), "curio.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -179,6 +180,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
     ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
     ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getCurioOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("curio:blockmysticore", ModInfo.MODID + ":blocks/overlays/curio/mystic_ore"));
     return ores;
   }
 
