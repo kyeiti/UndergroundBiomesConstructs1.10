@@ -108,6 +108,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getMubbleOres(), "mubble.json");
     writeDefaults(getMoGlowstoneOres(), "moglowstone.json");
     writeDefaults(getFloricraftOres(), "floricraft.json");
+    writeDefaults(getDartcraftOres(), "dartcraftreloaded.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -204,6 +205,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getMubbleOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("mubble:vanadium_ore", ModInfo.MODID + ":blocks/overlays/mubble/vanadium_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getDartcraftOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("dartcraftreloaded:orepower", ModInfo.MODID + ":blocks/overlays/dartcraftreloaded/orepower"));
     return ores;
   }
 
