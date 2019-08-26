@@ -102,6 +102,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getIndustrialCraftClassicOres(), "ic2classic.json");
     writeDefaults(getGrimpackOres(), "grimpack.json");
     writeDefaults(getTreasure2Ores(), "treasure2.json");
+    writeDefaults(getWorldsRetoldOres(), "worldsretold.json");
+    writeDefaults(getScalingHealthOres(), "scalinghealth.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -191,6 +193,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getWorldsRetoldOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("worldsretold:cryonite_ore", ModInfo.MODID + ":blocks/overlays/worldsretold/cryonite_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getScalingHealthOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("scalinghealth:crystalore", ModInfo.MODID + ":blocks/overlays/scalinghealth/crystalore"));
     return ores;
   }
 
