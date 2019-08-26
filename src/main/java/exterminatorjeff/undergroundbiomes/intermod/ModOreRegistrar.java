@@ -112,6 +112,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getCustomIdeasOres(), "customideas.json");
     writeDefaults(getStarWarsOres(), "starwars.json");
     writeDefaults(getCommunityModOres(), "communitymod.json");
+    writeDefaults(getAoa3Ores(), "aoa3.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -257,6 +258,17 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getScalingHealthOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("scalinghealth:crystalore", ModInfo.MODID + ":blocks/overlays/scalinghealth/crystalore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getAoa3Ores() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("aoa3:amethyst_ore", ModInfo.MODID + ":blocks/overlays/aoa3/amethyst_ore"));
+    ores.add(new UBOreConfig("aoa3:jade_ore", ModInfo.MODID + ":blocks/overlays/aoa3/jade_ore"));
+    ores.add(new UBOreConfig("aoa3:limonite_ore", ModInfo.MODID + ":blocks/overlays/aoa3/limonite_ore"));
+    ores.add(new UBOreConfig("aoa3:rosite_ore", ModInfo.MODID + ":blocks/overlays/aoa3/rosite_ore"));
+    ores.add(new UBOreConfig("aoa3:runium_ore", ModInfo.MODID + ":blocks/overlays/aoa3/runium_ore"));
+    ores.add(new UBOreConfig("aoa3:sapphire_ore", ModInfo.MODID + ":blocks/overlays/aoa3/sapphire_ore"));
     return ores;
   }
 
