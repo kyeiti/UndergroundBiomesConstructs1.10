@@ -12,6 +12,7 @@ import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
 import exterminatorjeff.undergroundbiomes.world.noise.NoiseGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
+import net.minecraft.block.BlockSandStone;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
@@ -175,7 +176,7 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                           .getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
-              } else if (currentBlock == Blocks.SANDSTONE && API.SETTINGS.replaceSandstone()) {
+              } else if (currentBlock == Blocks.SANDSTONE && API.SETTINGS.replaceSandstone() && currentBlockState.getProperties().get(BlockSandStone.TYPE) == BlockSandStone.EnumType.DEFAULT) {
                 // Replace with UBified version
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if (strata.getBlock() instanceof UBStone) {
@@ -185,13 +186,13 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                           .getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
-              } else if (currentBlock == Blocks.SANDSTONE && API.SETTINGS.replaceSandstone()) {
+              } else if (currentBlock == Blocks.SANDSTONE && API.SETTINGS.replaceSandstone() && currentBlockState.getProperties().get(BlockSandStone.TYPE) == BlockSandStone.EnumType.SMOOTH) {
                 // Replace with UBified version
                 IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
                 if (strata.getBlock() instanceof UBStone) {
                   UBStone block = (UBStone) strata.getBlock();
                   storage.set(x, y, z,
-                      (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SANDSTONE).getBlock())
+                      (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SMOOTH_SANDSTONE).getBlock())
                           .getStateFromMeta(block.getMetaFromState(strata)));
                 }
                 continue;
