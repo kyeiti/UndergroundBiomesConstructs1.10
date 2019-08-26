@@ -10,8 +10,8 @@ import net.minecraft.world.IBlockAccess;
 /**
  * @author CurtisA, LouisDB
  */
-public class MetamorphicSandstone extends MetamorphicStone {
-  public static final String internal_name = "metamorphic_sandstone";
+public class MetamorphicSandstoneSmooth extends MetamorphicStone {
+  public static final String internal_name = "metamorphic_sandstone_smooth";
 
   @Override
   public String getInternalName() {
@@ -20,7 +20,7 @@ public class MetamorphicSandstone extends MetamorphicStone {
 
   @Override
   public UBStoneStyle getStoneStyle() {
-    return UBStoneStyle.SANDSTONE;
+    return UBStoneStyle.COBBLE;
   }
 
   @Override

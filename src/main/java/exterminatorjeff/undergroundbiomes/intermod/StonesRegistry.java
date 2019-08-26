@@ -43,6 +43,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.IGNEOUS_CLAY;
       case SANDSTONE:
         return API.IGNEOUS_SANDSTONE;
+      case SMOOTH_SANDSTONE:
+        return API.IGNEOUS_SMOOTH_SANDSTONE;
       }
       break;
     case METAMORPHIC:
@@ -71,6 +73,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.METAMORPHIC_CLAY;
       case SANDSTONE:
         return API.METAMORPHIC_SANDSTONE;
+      case SMOOTH_SANDSTONE:
+        return API.METAMORPHIC_SMOOTH_SANDSTONE;
       }
       break;
     case SEDIMENTARY:
@@ -99,6 +103,8 @@ public enum StonesRegistry implements UBStonesRegistry {
         return API.SEDIMENTARY_CLAY;
       case SANDSTONE:
         return API.SEDIMENTARY_SANDSTONE;
+      case SMOOTH_SANDSTONE:
+        return API.SEDIMENTARY_SMOOTH_SANDSTONE;
       }
     }
     return null;

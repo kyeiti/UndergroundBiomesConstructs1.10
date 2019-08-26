@@ -92,6 +92,17 @@ stones.each { stone_type, value ->
     }
     processResourceTemplates.dependsOn "processSandstoneRecipeTemplatesFor${type.capitalize()}"
   }
+  for (int index = 0; index < value.types.size(); index++) {
+    String type = value.types[index]
+    task "processSmoothSandstoneRecipeTemplatesFor${type.capitalize()}"(type: Copy) {
+      from "src/main/resources_templates"
+      into "build/resources/main"
+      include "**/recipes/sandstone_smooth.json"
+      rename "(.*).json", "${type}_smooth_sandstone.json"
+      expand(input: stone_type + "_sandstone", output: stone_type + "_sandstone_smooth", meta: index)
+    }
+    processResourceTemplates.dependsOn "processSmoothSandstoneRecipeTemplatesFor${type.capitalize()}"
+  }
   if (value.variants.contains("brick")) {
     for (int index = 0; index < value.types.size(); index++) {
       String type = value.types[index]
@@ -159,6 +170,20 @@ stones.each { stone_type, value ->
         include "**/recipes/${item_type}.json"
         rename "(.*).json", "${type}_${item_type}.json"
         expand(input: stone_type + "_sand", output: stone_type + "_${item_type}", meta: index)
+      }
+      processResourceTemplates.dependsOn "process${item_type.capitalize()}RecipeTemplatesFor${stone_type.capitalize()}${type.capitalize()}"
+    }
+  }
+  if (value.types.contains("sandstone_smooth")) {
+    for (int index = 0; index < value.types.size(); index++) {
+      String type = value.types[index]
+      String item_type = "sandstone_smooth"
+      task "process${item_type.capitalize()}RecipeTemplatesFor${stone_type.capitalize()}${type.capitalize()}"(type: Copy) {
+        from "src/main/resources_templates"
+        into "build/resources/main"
+        include "**/recipes/${item_type}.json"
+        rename "(.*).json", "${type}_${item_type}.json"
+        expand(input: stone_type + "_sandstone", output: stone_type + "_${item_type}", meta: index)
       }
       processResourceTemplates.dependsOn "process${item_type.capitalize()}RecipeTemplatesFor${stone_type.capitalize()}${type.capitalize()}"
     }

@@ -200,6 +200,10 @@ public class CommonProxy {
     API.METAMORPHIC_SANDSTONE.registerBlock(event, new MetamorphicSandstone());
     API.SEDIMENTARY_SANDSTONE.registerBlock(event, new SedimentarySandstone());
 
+    API.IGNEOUS_SMOOTH_SANDSTONE.registerBlock(event, new IgneousSandstoneSmooth());
+    API.METAMORPHIC_SMOOTH_SANDSTONE.registerBlock(event, new MetamorphicSandstoneSmooth());
+    API.SEDIMENTARY_SMOOTH_SANDSTONE.registerBlock(event, new SedimentarySandstoneSmooth());
+
     API.IGNEOUS_CLAY.registerBlock(event, new IgneousClay());
     API.METAMORPHIC_CLAY.registerBlock(event, new MetamorphicClay());
     API.SEDIMENTARY_CLAY.registerBlock(event, new SedimentaryClay());
@@ -355,6 +359,10 @@ public class CommonProxy {
     registry.register(API.METAMORPHIC_SANDSTONE.getItemBlock());
     registry.register(API.SEDIMENTARY_SANDSTONE.getItemBlock());
 
+    registry.register(API.IGNEOUS_SMOOTH_SANDSTONE.getItemBlock());
+    registry.register(API.METAMORPHIC_SMOOTH_SANDSTONE.getItemBlock());
+    registry.register(API.SEDIMENTARY_SMOOTH_SANDSTONE.getItemBlock());
+
     registry.register(API.IGNEOUS_CLAY.getItemBlock());
     registry.register(API.METAMORPHIC_CLAY.getItemBlock());
     registry.register(API.SEDIMENTARY_CLAY.getItemBlock());
@@ -482,6 +490,9 @@ public class CommonProxy {
       OreDictionary.registerOre("sand", new ItemStack(API.IGNEOUS_SAND.getItemBlock(), 1, i));
       OreDictionary.registerOre("sand", new ItemStack(API.METAMORPHIC_SAND.getItemBlock(), 1, i));
       OreDictionary.registerOre("sand", new ItemStack(API.SEDIMENTARY_SAND.getItemBlock(), 1, i));
+      OreDictionary.registerOre("sandstone", new ItemStack(API.IGNEOUS_SANDSTONE.getItemBlock(), 1, i));
+      OreDictionary.registerOre("sandstone", new ItemStack(API.METAMORPHIC_SANDSTONE.getItemBlock(), 1, i));
+      OreDictionary.registerOre("sandstone", new ItemStack(API.SEDIMENTARY_SANDSTONE.getItemBlock(), 1, i));
       OreDictionary.registerOre("clay", new ItemStack(API.IGNEOUS_CLAY.getItemBlock(), 1, i));
       OreDictionary.registerOre("clay", new ItemStack(API.METAMORPHIC_CLAY.getItemBlock(), 1, i));
       OreDictionary.registerOre("clay", new ItemStack(API.SEDIMENTARY_CLAY.getItemBlock(), 1, i));

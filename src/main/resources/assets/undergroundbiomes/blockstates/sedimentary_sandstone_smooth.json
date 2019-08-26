@@ -1,0 +1,67 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_bottom_top",
+    "uvlock": true
+  },
+  "variants": {
+    "type": {
+      "limestone": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/limestone_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/limestone_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/limestone_sandstone_top"
+        }
+      },
+      "chalk": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/chalk_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/chalk_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/chalk_sandstone_top"
+        }
+      },
+      "shale": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/shale_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/shale_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/shale_sandstone_top"
+        }
+      },
+      "siltstone": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/siltstone_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/siltstone_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/siltstone_sandstone_top"
+        }
+      },
+      "lignite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/lignite_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/lignite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/lignite_sandstone_top"
+        }
+      },
+      "dolomite": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/dolomite_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/dolomite_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/dolomite_sandstone_top"
+        }
+      },
+      "greywacke": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/greywacke_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/greywacke_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/greywacke_sandstone_top"
+        }
+      },
+      "chert": {
+        "textures": {
+          "side": "undergroundbiomes:blocks/chert_sandstone_smooth",
+          "bottom": "undergroundbiomes:blocks/chert_sandstone_bottom",
+          "top": "undergroundbiomes:blocks/chert_sandstone_top"
+        }
+      }
+    }
+  }
+}

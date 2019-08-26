@@ -73,6 +73,15 @@ public final class API {
   public static final StoneEntry SEDIMENTARY_SANDSTONE = new StoneEntry("sedimentary_sandstone");
 
   /*
+   * Sandstones
+   */
+
+  public static final StoneEntry IGNEOUS_SMOOTH_SANDSTONE = new StoneEntry("igneous_sandstone_smooth");
+  public static final StoneEntry METAMORPHIC_SMOOTH_SANDSTONE = new StoneEntry("metamorphic_sandstone_smooth");
+  public static final StoneEntry SEDIMENTARY_SMOOTH_SANDSTONE = new StoneEntry("sedimentary_sandstone_smooth");
+
+
+  /*
    * Clays
    */
 

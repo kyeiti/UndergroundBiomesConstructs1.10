@@ -38,6 +38,15 @@ tile.igneous_sandstone.basalt.name=Basalt Sandstone
 tile.igneous_sandstone.komatiite.name=Komatiite Sandstone
 tile.igneous_sandstone.dacite.name=Dacite Sandstone
 
+tile.igneous_sandstone_smooth.red_granite.name=Smooth Red Granite Sandstone
+tile.igneous_sandstone_smooth.black_granite.name=Smooth Black Granite Sandstone
+tile.igneous_sandstone_smooth.rhyolite.name=Smooth Rhyolite Sandstone
+tile.igneous_sandstone_smooth.andesite.name=Smooth Andesite Sandstone
+tile.igneous_sandstone_smooth.gabbro.name=Smooth Gabbro Sandstone
+tile.igneous_sandstone_smooth.basalt.name=Smooth Basalt Sandstone
+tile.igneous_sandstone_smooth.komatiite.name=Smooth Komatiite Sandstone
+tile.igneous_sandstone_smooth.dacite.name=Smooth Dacite Sandstone
+
 tile.igneous_clay.red_granite.name=Red Granite Clay
 tile.igneous_clay.black_granite.name=Black Granite Clay
 tile.igneous_clay.rhyolite.name=Rhyolite Clay
@@ -146,6 +155,15 @@ tile.metamorphic_sandstone.greenschist.name=Green Schist Sandstone
 tile.metamorphic_sandstone.soapstone.name=Soapstone Sandstone
 tile.metamorphic_sandstone.migmatite.name=Migmatite Sandstone
 
+tile.metamorphic_sandstone_smooth.gneiss.name=Smooth Gneiss Sandstone
+tile.metamorphic_sandstone_smooth.eclogite.name=Smooth Eclogite Sandstone
+tile.metamorphic_sandstone_smooth.marble.name=Smooth Marble Sandstone
+tile.metamorphic_sandstone_smooth.quartzite.name=Smooth Quartzite Sandstone
+tile.metamorphic_sandstone_smooth.blueschist.name=Smooth Blue Schist Sandstone
+tile.metamorphic_sandstone_smooth.greenschist.name=Smooth Green Schist Sandstone
+tile.metamorphic_sandstone_smooth.soapstone.name=Smooth Soapstone Sandstone
+tile.metamorphic_sandstone_smooth.migmatite.name=Smooth Migmatite Sandstone
+
 tile.metamorphic_clay.gneiss.name=Gneiss Clay
 tile.metamorphic_clay.eclogite.name=Eclogite Clay
 tile.metamorphic_clay.marble.name=Marble Clay
@@ -253,6 +271,15 @@ tile.sedimentary_sandstone.lignite.name=Lignite Block Sandstone
 tile.sedimentary_sandstone.dolomite.name=Dolomite Sandstone
 tile.sedimentary_sandstone.greywacke.name=Greywacke Sandstone
 tile.sedimentary_sandstone.chert.name=Chert Sandstone
+
+tile.sedimentary_sandstone_smooth.limestone.name=Smooth Limestone Sandstone
+tile.sedimentary_sandstone_smooth.chalk.name=Smooth Chalk Sandstone
+tile.sedimentary_sandstone_smooth.shale.name=Smooth Shale Sandstone
+tile.sedimentary_sandstone_smooth.siltstone.name=Smooth Siltstone Sandstone
+tile.sedimentary_sandstone_smooth.lignite.name=Smooth Lignite Block Sandstone
+tile.sedimentary_sandstone_smooth.dolomite.name=Smooth Dolomite Sandstone
+tile.sedimentary_sandstone_smooth.greywacke.name=Smooth Greywacke Sandstone
+tile.sedimentary_sandstone_smooth.chert.name=Smooth Chert Sandstone
 
 tile.sedimentary_clay.limestone.name=Limestone Clay
 tile.sedimentary_clay.chalk.name=Chalk Clay
