@@ -105,6 +105,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getWorldsRetoldOres(), "worldsretold.json");
     writeDefaults(getScalingHealthOres(), "scalinghealth.json");
     writeDefaults(getPyrotechOres(), "pyrotech.json");
+    writeDefaults(getMubbleOres(), "mubble.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -195,6 +196,12 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("pyrotech:fossil_ore", ModInfo.MODID + ":blocks/overlays/pyrotech/fossil_ore"));
     ores.add(new UBOreConfig("pyrotech:dense_coal_ore", ModInfo.MODID + ":blocks/overlays/byg/dense_coal_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getMubbleOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("mubble:vanadium_ore", ModInfo.MODID + ":blocks/overlays/mubble/vanadium_ore"));
     return ores;
   }
 
