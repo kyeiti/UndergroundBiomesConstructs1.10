@@ -528,6 +528,9 @@ public class CommonProxy {
     if (API.SETTINGS.replaceMossyCobblestone()) {
       modRegistry.remove(new ResourceLocation("minecraft:mossy_cobblestone"));
     }
+    if (API.SETTINGS.replaceSandstone()) {
+      modRegistry.remove(new ResourceLocation("minecraft:sandstone"));
+    }
 
     RegularStoneRecipe regularCobblestoneRecipe = new RegularStoneRecipe();
     modRegistry.register(regularCobblestoneRecipe);
