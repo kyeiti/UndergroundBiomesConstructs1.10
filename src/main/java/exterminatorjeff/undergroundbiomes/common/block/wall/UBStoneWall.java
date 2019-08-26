@@ -78,7 +78,7 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
   private boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
     IBlockState state = worldIn.getBlockState(pos);
     Block block = state.getBlock();
-    if (block instanceof UBStoneWall)
+    if (block instanceof UBStoneWall || block instanceof BlockWall)
       return true;
     if (block == Blocks.BARRIER)
       return false;
