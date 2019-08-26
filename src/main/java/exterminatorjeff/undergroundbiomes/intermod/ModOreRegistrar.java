@@ -99,6 +99,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getCurioOres(), "curio.json");
     writeDefaults(getBluePowerOres(), "bluepower.json");
     writeDefaults(getWildnatureOres(), "wildnature.json");
+    writeDefaults(getIndustrialCraftClassicOres(), "ic2classic.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -485,6 +486,16 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig(oreName, 2, ModInfo.MODID + ":blocks/overlays/thermalfoundation/lead"));
     ores.add(new UBOreConfig(oreName, 3, ModInfo.MODID + ":blocks/overlays/thermalfoundation/tin"));
     ores.add(new UBOreConfig(oreName, 4, ModInfo.MODID + ":blocks/overlays/custom/uranium"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getIndustrialCraftClassicOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    String oreName = "ic2-classic-spmod:blockmetal";
+    ores.add(new UBOreConfig(oreName, 0, ModInfo.MODID + ":blocks/overlays/thermalfoundation/copper"));
+    ores.add(new UBOreConfig(oreName, 3, ModInfo.MODID + ":blocks/overlays/thermalfoundation/lead"));
+    ores.add(new UBOreConfig(oreName, 1, ModInfo.MODID + ":blocks/overlays/thermalfoundation/tin"));
+    ores.add(new UBOreConfig(oreName, 2, ModInfo.MODID + ":blocks/overlays/custom/uranium"));
     return ores;
   }
 
