@@ -111,6 +111,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getDartcraftOres(), "dartcraftreloaded.json");
     writeDefaults(getCustomIdeasOres(), "customideas.json");
     writeDefaults(getStarWarsOres(), "starwars.json");
+    writeDefaults(getCommunityModOres(), "communitymod.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -207,6 +208,13 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getMubbleOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     ores.add(new UBOreConfig("mubble:vanadium_ore", ModInfo.MODID + ":blocks/overlays/mubble/vanadium_ore"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getCommunityModOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("community_mod:squirrel_ore", ModInfo.MODID + ":blocks/overlays/community_mod/squirrel_ore"));
+    ores.add(new UBOreConfig("community_mod:poke_ore", ModInfo.MODID + ":blocks/overlays/community_mod/poke_ore"));
     return ores;
   }
 
