@@ -94,6 +94,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getDenseMetalsOres(), "densemetals.json");
     writeDefaults(getAstralSorceryOres(), "astralsorcery.json");
     writeDefaults(getMysticalWorldOres(), "mysticalworld.json");
+    writeDefaults(getBiomeYoullGoOres(), "byg.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -168,6 +169,15 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("astralsorcery:blockcustomsandore", 1, ModInfo.MODID + ":blocks/overlays/astralsorcery/aquamarine"));
     ores.add(new UBOreConfig("astralsorcery:blockcustomore", 0, ModInfo.MODID + ":blocks/overlays/astralsorcery/rockcrystal"));
     ores.add(new UBOreConfig("astralsorcery:blockcustomore", 1, ModInfo.MODID + ":blocks/overlays/astralsorcery/starmetal"));
+    return ores;
+  }
+
+  private ArrayList<UBOreConfig> getBiomeYoullGoOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    ores.add(new UBOreConfig("byg:fossilstone", ModInfo.MODID + ":blocks/overlays/byg/fossil_stone"));
+    ores.add(new UBOreConfig("byg:lathariumore", ModInfo.MODID + ":blocks/overlays/byg/latharium_ore"));
+    ores.add(new UBOreConfig("byg:pendoriteore", ModInfo.MODID + ":blocks/overlays/byg/pendorite_ore"));
+    ores.add(new UBOreConfig("byg:tamreliteore", ModInfo.MODID + ":blocks/overlays/byg/tamrelite_ore"));
     return ores;
   }
 
