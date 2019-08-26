@@ -110,6 +110,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getFloricraftOres(), "floricraft.json");
     writeDefaults(getDartcraftOres(), "dartcraftreloaded.json");
     writeDefaults(getCustomIdeasOres(), "customideas.json");
+    writeDefaults(getStarWarsOres(), "starwars.json");
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
