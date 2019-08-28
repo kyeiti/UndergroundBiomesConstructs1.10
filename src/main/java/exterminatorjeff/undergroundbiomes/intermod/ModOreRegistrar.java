@@ -253,7 +253,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private ArrayList<UBOreConfig> getMoGlowstoneOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
-    ores.add(new UBOreConfig("mubble:vanadium_ore", ModInfo.MODID + ":blocks/overlays/moglowstone/glowstone_ore"));
+    ores.add(new UBOreConfig("moglowstone:glowstone_ore", ModInfo.MODID + ":blocks/overlays/moglowstone/glowstone_ore"));
     return ores;
   }
 
@@ -289,11 +289,11 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private ArrayList<UBOreConfig> getGrimpackOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
-    ores.add(new UBOreConfig("grimpack:aluminum_ore", ModInfo.MODID + ":blocks/overlays/byg/aluminum_ore"));
-    ores.add(new UBOreConfig("grimpack:oil_ore", ModInfo.MODID + ":blocks/overlays/byg/oil_ore"));
-    ores.add(new UBOreConfig("grimpack:black_diamond_ore", ModInfo.MODID + ":blocks/overlays/byg/black_diamond_ore"));
-    ores.add(new UBOreConfig("grimpack:element_115_ore", ModInfo.MODID + ":blocks/overlays/byg/element_115_ore"));
-    ores.add(new UBOreConfig("grimpack:randomite", ModInfo.MODID + ":blocks/overlays/byg/randomite"));
+    ores.add(new UBOreConfig("grimpack:aluminum_ore", ModInfo.MODID + ":blocks/overlays/grimpack/aluminum_ore"));
+    ores.add(new UBOreConfig("grimpack:oil_ore", ModInfo.MODID + ":blocks/overlays/grimpack/oil_ore"));
+    ores.add(new UBOreConfig("grimpack:black_diamond_ore", ModInfo.MODID + ":blocks/overlays/grimpack/black_diamond_ore"));
+    ores.add(new UBOreConfig("grimpack:element_115_ore", ModInfo.MODID + ":blocks/overlays/grimpack/element_115_ore"));
+    ores.add(new UBOreConfig("grimpack:randomite", ModInfo.MODID + ":blocks/overlays/grimpack/randomite"));
     return ores;
   }
 
@@ -335,9 +335,9 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private ArrayList<UBOreConfig> getMysticalWorldOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
-    ores.add(new UBOreConfig("mysticalworld:amethyst_ore", ModInfo.MODID + ":undergroundbiomes:blocks/overlays/mysticalWorld/amethyst"));
-    ores.add(new UBOreConfig("mysticalworld:copper_ore", ModInfo.MODID + ":undergroundbiomes:blocks/overlays/mysticalWorld/copper"));
-    ores.add(new UBOreConfig("mysticalworld:silver_ore", ModInfo.MODID + ":undergroundbiomes:blocks/overlays/mysticalWorld/silver"));
+    ores.add(new UBOreConfig("mysticalworld:amethyst_ore", ModInfo.MODID + ":blocks/overlays/mysticalWorld/amethyst"));
+    ores.add(new UBOreConfig("mysticalworld:copper_ore", ModInfo.MODID + ":blocks/overlays/mysticalWorld/copper"));
+    ores.add(new UBOreConfig("mysticalworld:silver_ore", ModInfo.MODID + ":blocks/overlays/mysticalWorld/silver"));
     return ores;
   }
 
