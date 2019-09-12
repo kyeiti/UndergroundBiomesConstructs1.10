@@ -139,5 +139,4 @@ public abstract class UBStoneSlab extends BlockSlab implements UBSubBlock {
   public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
     return baseStone().getExplosionResistance(world, pos, exploder, explosion);
   }
-
 }
