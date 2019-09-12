@@ -1,0 +1,4 @@
+if ! git rev-parse --abbrev-ref HEAD | grep master
+then
+ ./gradlew clean
+fi
