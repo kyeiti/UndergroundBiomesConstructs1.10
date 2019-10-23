@@ -1,6 +1,15 @@
 package exterminatorjeff.undergroundbiomes.config;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+
 import com.google.common.collect.ImmutableSet;
+
+import org.apache.logging.log4j.Level;
+
 import exterminatorjeff.undergroundbiomes.api.API;
 import exterminatorjeff.undergroundbiomes.api.common.UBLogger;
 import exterminatorjeff.undergroundbiomes.api.common.UBSettings;
@@ -17,13 +26,6 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
-import org.apache.logging.log4j.Level;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
 
 /**
  * @author CurtisA, LouisDB
@@ -72,9 +74,9 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting replaceSand = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSand");
   public final BooleanSetting replaceSandstone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSandstone");
   public final BooleanSetting replaceClay = new BooleanSetting(CATEGORY_GENERATION, "ReplacClay");
-  public final StringSetting replaceSandExcludedBiomes = new StringSetting(CATEGORY_GENERATION,
+  public final StringSetting replaceSandExcludedBiomes = new StringSetting(CATEGORY_SPECIFIC,
       "ReplaceSandExcludedBiomes");
-  public final StringSetting replaceGravelExcludedBiomes = new StringSetting(CATEGORY_GENERATION,
+  public final StringSetting replaceGravelExcludedBiomes = new StringSetting(CATEGORY_SPECIFIC,
       "ReplaceGravelExcludedBiomes");
 
   private static final String CATEGORY_VISUAL = "Visual";
