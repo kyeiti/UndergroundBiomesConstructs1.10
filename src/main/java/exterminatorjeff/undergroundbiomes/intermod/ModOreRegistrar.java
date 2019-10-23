@@ -335,9 +335,9 @@ public class ModOreRegistrar implements UBModOreRegistrar {
 
   private ArrayList<UBOreConfig> getMysticalWorldOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
-    ores.add(new UBOreConfig("mysticalworld:amethyst_ore", ModInfo.MODID + ":blocks/overlays/mysticalWorld/amethyst"));
-    ores.add(new UBOreConfig("mysticalworld:copper_ore", ModInfo.MODID + ":blocks/overlays/mysticalWorld/copper"));
-    ores.add(new UBOreConfig("mysticalworld:silver_ore", ModInfo.MODID + ":blocks/overlays/mysticalWorld/silver"));
+    ores.add(new UBOreConfig("mysticalworld:amethyst_ore", ModInfo.MODID + ":blocks/overlays/mysticalworld/amethyst"));
+    ores.add(new UBOreConfig("mysticalworld:copper_ore", ModInfo.MODID + ":blocks/overlays/mysticalworld/copper"));
+    ores.add(new UBOreConfig("mysticalworld:silver_ore", ModInfo.MODID + ":blocks/overlays/mysticalworld/silver"));
     return ores;
   }
 
