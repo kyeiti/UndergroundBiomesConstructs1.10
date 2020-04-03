@@ -661,6 +661,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getTechRebornOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     String oreName = "techreborn:ore";
+    String oreName2 = "techreborn:ore2";
     ores.add(new UBOreConfig(oreName, 0, ModInfo.MODID + ":blocks/overlays/techreborn/galena"));
     ores.add(new UBOreConfig(oreName, 1, ModInfo.MODID + ":blocks/overlays/techreborn/iridium"));
     ores.add(new UBOreConfig(oreName, 2, ModInfo.MODID + ":blocks/overlays/techreborn/ruby"));
@@ -668,6 +669,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig(oreName, 4, ModInfo.MODID + ":blocks/overlays/techreborn/bauxite"));
     ores.add(new UBOreConfig(oreName, 12, ModInfo.MODID + ":blocks/overlays/techreborn/lead"));
     ores.add(new UBOreConfig(oreName, 13, ModInfo.MODID + ":blocks/overlays/techreborn/silver"));
+    ores.add(new UBOreConfig(oreName2, 0, ModInfo.MODID + ":blocks/overlays/techreborn/copper"));
+    ores.add(new UBOreConfig(oreName2, 1, ModInfo.MODID + ":blocks/overlays/techreborn/tin"));
     return ores;
   }
 
