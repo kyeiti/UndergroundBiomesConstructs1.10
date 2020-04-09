@@ -114,6 +114,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     writeDefaults(getCommunityModOres(), "communitymod.json");
     writeDefaults(getAoa3Ores(), "aoa3.json");
     writeDefaults(getAromasDimensionalOres(), "aromasdimensionalworld.json");
+    writeDefaults(getRailcraftOres(), "railcraft.json");
+
   }
 
   private void writeDefaults(ArrayList<UBOreConfig> ores, String filename) {
@@ -661,6 +663,7 @@ public class ModOreRegistrar implements UBModOreRegistrar {
   private ArrayList<UBOreConfig> getTechRebornOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     String oreName = "techreborn:ore";
+    String oreName2 = "techreborn:ore2";
     ores.add(new UBOreConfig(oreName, 0, ModInfo.MODID + ":blocks/overlays/techreborn/galena"));
     ores.add(new UBOreConfig(oreName, 1, ModInfo.MODID + ":blocks/overlays/techreborn/iridium"));
     ores.add(new UBOreConfig(oreName, 2, ModInfo.MODID + ":blocks/overlays/techreborn/ruby"));
@@ -668,6 +671,8 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig(oreName, 4, ModInfo.MODID + ":blocks/overlays/techreborn/bauxite"));
     ores.add(new UBOreConfig(oreName, 12, ModInfo.MODID + ":blocks/overlays/techreborn/lead"));
     ores.add(new UBOreConfig(oreName, 13, ModInfo.MODID + ":blocks/overlays/techreborn/silver"));
+    ores.add(new UBOreConfig(oreName2, 0, ModInfo.MODID + ":blocks/overlays/techreborn/copper"));
+    ores.add(new UBOreConfig(oreName2, 1, ModInfo.MODID + ":blocks/overlays/techreborn/tin"));
     return ores;
   }
 
@@ -696,4 +701,28 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig("thermalfoundation:ore_fluid", 0, ModInfo.MODID + ":blocks/overlays/thermalfoundation/oil"));
     return ores;
   }
+
+{
+  private ArrayList<UBOreConfig> getRailcraftOres() {
+    ArrayList<UBOreConfig> ores = new ArrayList<>();
+    String oreName = "railcraft:ore_metal";
+    String oreNamePoor = "railcraft:ore_metal_poor";
+    ores.add(new UBOreConfig(oreName, 0, "railcraft:blocks/ore_copper"));
+    ores.add(new UBOreConfig(oreName, 1, "railcraft:blocks/ore_tin"));
+    ores.add(new UBOreConfig(oreName, 2, "railcraft:blocks/ore_lead"));
+    ores.add(new UBOreConfig(oreName, 3, "railcraft:blocks/ore_silver"));
+    ores.add(new UBOreConfig(oreName, 4, "railcraft:blocks/ore_nickel"));
+    ores.add(new UBOreConfig(oreName, 5, "railcraft:blocks/ore_zinc"));
+    ores.add(new UBOreConfig(oreNamePoor, 0, "railcraft:blocks/ore_poor_iron"));
+    ores.add(new UBOreConfig(oreNamePoor, 1, "railcraft:blocks/ore_poor_gold"));
+    ores.add(new UBOreConfig(oreNamePoor, 2, "railcraft:blocks/ore_poor_copper"));
+    ores.add(new UBOreConfig(oreNamePoor, 3, "railcraft:blocks/ore_poor_tin"));
+    ores.add(new UBOreConfig(oreNamePoor, 4, "railcraft:blocks/ore_poor_lead"));
+    ores.add(new UBOreConfig(oreNamePoor, 5, "railcraft:blocks/ore_poor_silver"));
+    ores.add(new UBOreConfig(oreNamePoor, 6, "railcraft:blocks/ore_poor_nickel"));
+    ores.add(new UBOreConfig(oreNamePoor, 7, "railcraft:blocks/ore_poor_zinc"));
+   return ores;
+  }
+
+
 }
