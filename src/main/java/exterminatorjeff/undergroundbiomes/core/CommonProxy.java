@@ -581,8 +581,8 @@ public class CommonProxy {
       OreDictionary.registerOre("blockClay", new ItemStack(API.SEDIMENTARY_CLAY.getItemBlock(), 1, i));
       OreDictionary.registerOre("cobblestone", new ItemStack(API.IGNEOUS_COBBLE.getItemBlock(), 1, i));
       OreDictionary.registerOre("cobblestone", new ItemStack(API.METAMORPHIC_COBBLE.getItemBlock(), 1, i));
-      OreDictionary.registerOre("stoneBricks", new ItemStack(API.IGNEOUS_BRICK.getItemBlock(), 1, i));
-      OreDictionary.registerOre("stoneBricks", new ItemStack(API.METAMORPHIC_BRICK.getItemBlock(), 1, i));
+      OreDictionary.registerOre("bricksStone", new ItemStack(API.IGNEOUS_BRICK.getItemBlock(), 1, i));
+      OreDictionary.registerOre("bricksStone", new ItemStack(API.METAMORPHIC_BRICK.getItemBlock(), 1, i));
       OreDictionary.registerOre("fossilPiece", new ItemStack(API.METAMORPHIC_BRICK.getItemBlock(), 1, i));
       OreDictionary.registerOre("blockMossy", new ItemStack(API.METAMORPHIC_MOSSY_COBBLE.getItemBlock(), 1, i));
       OreDictionary.registerOre("blockMossy", new ItemStack(API.SEDIMENTARY_MOSSY_COBBLE.getItemBlock(), 1, i));
