@@ -702,7 +702,6 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     return ores;
   }
 
-{
   private ArrayList<UBOreConfig> getRailcraftOres() {
     ArrayList<UBOreConfig> ores = new ArrayList<>();
     String oreName = "railcraft:ore_metal";
@@ -721,8 +720,6 @@ public class ModOreRegistrar implements UBModOreRegistrar {
     ores.add(new UBOreConfig(oreNamePoor, 5, "railcraft:blocks/ore_poor_silver"));
     ores.add(new UBOreConfig(oreNamePoor, 6, "railcraft:blocks/ore_poor_nickel"));
     ores.add(new UBOreConfig(oreNamePoor, 7, "railcraft:blocks/ore_poor_zinc"));
-   return ores;
+    return ores;
   }
-
-
 }
