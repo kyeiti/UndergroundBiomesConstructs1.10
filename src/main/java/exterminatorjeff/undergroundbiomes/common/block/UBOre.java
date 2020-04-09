@@ -230,7 +230,8 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Override
   public boolean canHarvestBlock(IBlockAccess world, BlockPos pos, EntityPlayer player) {
-    return player.getHeldItemMainhand().canHarvestBlock(baseOreState);
+    //return player.getHeldItemMainhand().canHarvestBlock(baseOreState);
+    return super.canHarvestBlock(world, pos, player); // Change restores behaviour where tools with lower harvest levels do not provide resources
   }
 
   @Override
