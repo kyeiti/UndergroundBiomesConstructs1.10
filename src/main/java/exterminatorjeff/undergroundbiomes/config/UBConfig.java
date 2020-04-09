@@ -73,11 +73,13 @@ public class UBConfig implements UBSettings {
   public final BooleanSetting replaceGravel = new BooleanSetting(CATEGORY_GENERATION, "ReplaceGravel");
   public final BooleanSetting replaceSand = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSand");
   public final BooleanSetting replaceSandstone = new BooleanSetting(CATEGORY_GENERATION, "ReplaceSandstone");
-  public final BooleanSetting replaceClay = new BooleanSetting(CATEGORY_GENERATION, "ReplacClay");
+  public final BooleanSetting replaceClay = new BooleanSetting(CATEGORY_GENERATION, "ReplaceClay");
   public final StringSetting replaceSandExcludedBiomes = new StringSetting(CATEGORY_SPECIFIC,
       "ReplaceSandExcludedBiomes");
   public final StringSetting replaceGravelExcludedBiomes = new StringSetting(CATEGORY_SPECIFIC,
       "ReplaceGravelExcludedBiomes");
+  public final StringSetting replaceClayExcludedBiomes = new StringSetting(CATEGORY_SPECIFIC,
+      "ReplaceClayExcludedBiomes");
 
   private static final String CATEGORY_VISUAL = "Visual";
   public final BooleanSetting plainSlabTextures = new BooleanSetting(CATEGORY_VISUAL, "PlainSlabTextures");
@@ -197,6 +199,8 @@ public class UBConfig implements UBSettings {
         "Disable biomes you don't want sand to be replaced in. Needs to be in the minecraft:ocean format. Eg. minecraft:ocean, biomesoplenty:cold_desert, minecraft:cold_beach");
     replaceGravelExcludedBiomes.initProperty(configuration, "biomesoplenty:cold_desert",
         "Same as replaceSandExcludedBiomes but for gravel");
+    replaceClayExcludedBiomes.initProperty(configuration, "",
+        "Same as replaceSandExcludedBiomes but for clay");
 
     plainSlabTextures.initProperty(configuration, false, "Use normal stone textures for slabs");
 
@@ -491,6 +495,11 @@ public class UBConfig implements UBSettings {
   @Override
   public String replaceGravelExcludedBiomes() {
     return replaceGravelExcludedBiomes.getValue();
+  }
+
+  @Override
+  public String replaceClayExcludedBiomes() {
+    return replaceClayExcludedBiomes.getValue();
   }
 
   @Override
