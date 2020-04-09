@@ -55,35 +55,46 @@ public enum DropsRegistry implements UBDropsRegistry {
    */
   public void init() {
 		addSourceFor(API.IGNEOUS_STONE.getBlock(), (drops, world, pos, state, fortune) -> {
-			if (pos.getY() <= 32 && world.rand.nextInt(100) <= fortune)
-				drops.add(new ItemStack(Items.GOLD_NUGGET));
+			if (pos.getY() <= 32 && world.rand.nextInt(100) <= fortune) {
+        drops.clear();
+        drops.add(new ItemStack(Items.GOLD_NUGGET));
+      }
 		});
 		addSourceFor(API.METAMORPHIC_STONE.getBlock(), (drops, world, pos, state, fortune) -> {
 			if (world.rand.nextInt(100) <= fortune) {
-				if (pos.getY() <= 16)
-					drops.add(new ItemStack(Items.REDSTONE));
-				else if (pos.getY() <= 32)
-					drops.add(new ItemStack(Items.DYE, 1, 4)); // Lapis lazuli
+				if (pos.getY() <= 16) {
+          drops.clear();
+          drops.add(new ItemStack(Items.REDSTONE));
+        }
+				else if (pos.getY() <= 32) {
+          drops.clear();
+          drops.add(new ItemStack(Items.DYE, 1, 4)); // Lapis lazuli
+        }
 			}
 		});
 		addSourceFor(API.SEDIMENTARY_STONE.getBlock(), (drops, world, pos, state, fortune) -> {
 			if (world.rand.nextInt(100) <= fortune) {
 				switch (state.getValue(SedimentaryVariant.SEDIMENTARY_VARIANT_PROPERTY)) {
-				case CHALK:
-					drops.add(new ItemStack(API.FOSSIL_PIECE.getItem(), 1, world.rand.nextInt(FossilVariant.NB_VARIANTS)));
+        case CHALK:
+          drops.clear();
+          drops.add(new ItemStack(API.FOSSIL_PIECE.getItem(), 1, world.rand.nextInt(FossilVariant.NB_VARIANTS)));
 					break;
 				case DOLOMITE:
 				case LIGNITE:
-				case LIMESTONE:
+        case LIMESTONE:
+          drops.clear();
 					drops.add(new ItemStack(API.FOSSIL_PIECE.getItem(), 1, world.rand.nextInt(FossilVariant.NB_VARIANTS)));
 					break;
-				case SILTSTONE:
+        case SILTSTONE:
+          drops.clear();
 					drops.add(new ItemStack(API.FOSSIL_PIECE.getItem(), 1, world.rand.nextInt(FossilVariant.NB_VARIANTS)));
 					break;
-				case SHALE:
+        case SHALE:
+          drops.clear();
 					drops.add(new ItemStack(Items.CLAY_BALL));
 					break;
-				case CHERT:
+        case CHERT:
+          drops.clear();
 					drops.add(new ItemStack(Items.FLINT));
 					break;
 				default:
