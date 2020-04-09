@@ -39,7 +39,7 @@ public class UBOreSedimentary extends UBOre {
 
   @Override
   public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-    return getDefaultState().withProperty(SEDIMENTARY_VARIANT_PROPERTY, values()[placer.getHeldItemMainhand().getMetadata()]);
+    return getDefaultState().withProperty(SEDIMENTARY_VARIANT_PROPERTY, values()[meta]);
   }
 
 }
