@@ -1,30 +1,13 @@
 package exterminatorjeff.undergroundbiomes.world;
 
-import exterminatorjeff.undergroundbiomes.api.UBBiome;
 import exterminatorjeff.undergroundbiomes.api.UBStrataColumn;
 import exterminatorjeff.undergroundbiomes.api.UBStrataColumnProvider;
 import exterminatorjeff.undergroundbiomes.api.UndergroundBiomeSet;
 import exterminatorjeff.undergroundbiomes.api.common.UBLogger;
-import exterminatorjeff.undergroundbiomes.api.enums.UBStoneStyle;
 import exterminatorjeff.undergroundbiomes.api.event.UBForceReProcessEvent;
-import exterminatorjeff.undergroundbiomes.common.block.UBStone;
-import exterminatorjeff.undergroundbiomes.common.block.slab.UBStoneSlab;
-import exterminatorjeff.undergroundbiomes.common.block.stairs.UBStoneStairs;
 import exterminatorjeff.undergroundbiomes.config.UBConfig;
-import exterminatorjeff.undergroundbiomes.intermod.StonesRegistry;
-import net.minecraft.block.*;
-import net.minecraft.block.BlockSlab.EnumBlockHalf;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.gen.structure.MapGenVillage;
-import net.minecraft.world.gen.structure.StructureStart;
-import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockID;
-import net.minecraftforge.event.terraingen.InitMapGenEvent;
-import net.minecraftforge.event.terraingen.InitMapGenEvent.EventType;
 import net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -75,10 +58,10 @@ public final class WorldGenManager implements UBStrataColumnProvider {
     }
   }
 
-
+  /*
   private UBBiome blockBiomeValue(int xPos, int zPos) {
     return stoneReplacer.UBBiomeAt(xPos, zPos);
-  }
+  }*/
 
 
   @SubscribeEvent(priority = EventPriority.LOWEST)
@@ -119,9 +102,9 @@ public final class WorldGenManager implements UBStrataColumnProvider {
    * Villages
    */
 
-  private BlockPos pos;
-  private boolean hasChanged = false;
-  private UBBiome currentBiome;
+  //private BlockPos pos;
+  //private boolean hasChanged = false;
+  //private UBBiome currentBiome;
 
   /**
    * Currently this event is not fired for every village structures block. It
@@ -268,7 +251,7 @@ public final class WorldGenManager implements UBStrataColumnProvider {
     }
   }*/
 
-  @SubscribeEvent
+  /*@SubscribeEvent
   public void initMapGen(InitMapGenEvent event) {
     if (event.getType() == EventType.VILLAGE) {
       event.setNewGen(new MapGenVillage() {
@@ -282,7 +265,7 @@ public final class WorldGenManager implements UBStrataColumnProvider {
       });
       event.setResult(Result.DENY);
     }
-  }
+  }*/
 
   @Override
   public UBStrataColumn strataColumn(int x, int z) {

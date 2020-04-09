@@ -15,8 +15,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.dedicated.PropertyManager;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.terraingen.BiomeEvent;
-import net.minecraftforge.event.terraingen.InitMapGenEvent;
 import net.minecraftforge.event.terraingen.OreGenEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -121,6 +119,7 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     if (target != null) target.onVillageSelectBlock(event);
   }*/
 
+  /*
   @SubscribeEvent
   public void initMapGen(InitMapGenEvent event) {
     // this goes to the overworld since there's no ID
@@ -128,6 +127,7 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     if (target != null) target.initMapGen(event);
 
   }
+  */
 
   public void clearWorldManagers() {
     managers = new HashMap<Integer, WorldGenManager>();
