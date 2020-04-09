@@ -180,24 +180,30 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
                 continue;
               } else if (currentBlock == Blocks.SANDSTONE && API.SETTINGS.replaceSandstone()
                   && currentBlockState.getProperties().get(BlockSandStone.TYPE) == BlockSandStone.EnumType.DEFAULT) {
-                // Replace with UBified version
-                IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
-                if (strata.getBlock() instanceof UBStone) {
-                  UBStone block = (UBStone) strata.getBlock();
-                  storage.set(x, y, z,
-                      (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SANDSTONE).getBlock())
-                          .getStateFromMeta(block.getMetaFromState(strata)));
+                if (!API.SETTINGS.replaceSandExcludedBiomes().contains(chunk
+                    .getBiome(currentBlockPos, chunk.getWorld().getBiomeProvider()).getRegistryName().toString())) {
+                  // Replace with UBified version
+                  IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
+                  if (strata.getBlock() instanceof UBStone) {
+                    UBStone block = (UBStone) strata.getBlock();
+                    storage.set(x, y, z,
+                        (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SANDSTONE).getBlock())
+                            .getStateFromMeta(block.getMetaFromState(strata)));
+                  }
                 }
                 continue;
               } else if (currentBlock == Blocks.SANDSTONE && API.SETTINGS.replaceSandstone()
                   && currentBlockState.getProperties().get(BlockSandStone.TYPE) == BlockSandStone.EnumType.SMOOTH) {
-                // Replace with UBified version
-                IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
-                if (strata.getBlock() instanceof UBStone) {
-                  UBStone block = (UBStone) strata.getBlock();
-                  storage.set(x, y, z,
-                      (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SMOOTH_SANDSTONE).getBlock())
-                          .getStateFromMeta(block.getMetaFromState(strata)));
+                if (!API.SETTINGS.replaceSandExcludedBiomes().contains(chunk
+                    .getBiome(currentBlockPos, chunk.getWorld().getBiomeProvider()).getRegistryName().toString())) {
+                  // Replace with UBified version
+                  IBlockState strata = currentBiome.getStrataBlockAtLayer(yPos + y + variation);
+                  if (strata.getBlock() instanceof UBStone) {
+                    UBStone block = (UBStone) strata.getBlock();
+                    storage.set(x, y, z,
+                        (StonesRegistry.INSTANCE.stoneFor(block.getStoneType(), UBStoneStyle.SMOOTH_SANDSTONE)
+                            .getBlock()).getStateFromMeta(block.getMetaFromState(strata)));
+                  }
                 }
                 continue;
               } else if (quarkpresent && API.SETTINGS.replaceSpeleothems() && currentBlock instanceof BlockSpeleothem) {
