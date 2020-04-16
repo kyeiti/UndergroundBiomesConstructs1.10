@@ -266,7 +266,9 @@ public abstract class UBStoneReplacer implements UBStrataColumnProvider {
     HashMap<ChunkPos, ArrayList<BlockPos>> toRedo = OresRegistry.INSTANCE.forRedo(world);
     for (ChunkPos chunkID : toRedo.keySet()) {
       ArrayList<BlockPos> locations = toRedo.get(chunkID);
-      Chunk chunk = world.getChunk(chunkID.x, chunkID.z);
+      Chunk chunk = world.getChunkProvider().getLoadedChunk(chunkID.x, chunkID.z);
+      if (chunk == null)
+        continue;
       int[] biomeValues = getBiomeValues(chunk);
       for (BlockPos location : locations) {
         IBlockState currentBlockState = chunk.getBlockState(location);
