@@ -1,0 +1,531 @@
+# Underground Biomes localization
+# ===============================
+# Blocks
+ 
+tile.igneous_stone.red_granite.name=Czerwony Granit
+tile.igneous_stone.black_granite.name=Czarny Granit
+tile.igneous_stone.rhyolite.name=Ryolit
+tile.igneous_stone.andesite.name=Andezyt
+tile.igneous_stone.gabbro.name=Gabro
+tile.igneous_stone.basalt.name=Bazalt
+tile.igneous_stone.komatiite.name=Komatyt
+tile.igneous_stone.dacite.name=Diacyt
+ 
+tile.igneous_gravel.red_granite.name=Żwir Czerwonego Granitu
+tile.igneous_gravel.black_granite.name=Żwir Czarnego Granitu
+tile.igneous_gravel.rhyolite.name=Ryolitowy Żwir
+tile.igneous_gravel.andesite.name=Andezytowy Żwir
+tile.igneous_gravel.gabbro.name=Żwir Gabro
+tile.igneous_gravel.basalt.name=Bazaltowy Żwir
+tile.igneous_gravel.komatiite.name=Komatytowy Żwir
+tile.igneous_gravel.dacite.name=Diacytowy Żwir
+ 
+tile.igneous_sand.red_granite.name=Piasek Czerwonego Granitu
+tile.igneous_sand.black_granite.name=Piasek Czarnego Granitu
+tile.igneous_sand.rhyolite.name=Ryolitowy Piasek
+tile.igneous_sand.andesite.name=Andezytowy Piasek
+tile.igneous_sand.gabbro.name=Piasek Gabro
+tile.igneous_sand.basalt.name=Bazaltowy Piasek
+tile.igneous_sand.komatiite.name=Komatytowy Piasek
+tile.igneous_sand.dacite.name=Diacytowy Piasek
+ 
+tile.igneous_monster_stone.red_granite.name=Czerwony Granit Z Ukrytym Potworem
+tile.igneous_monster_stone.black_granite.name=Czarny Granit Z Ukrytym Potworem
+tile.igneous_monster_stone.rhyolite.name=Ryolit Z Ukrytym Potworem
+tile.igneous_monster_stone.andesite.name=Andezyt Z Ukrytym Potworem
+tile.igneous_monster_stone.gabbro.name=Gabro Z Ukrytym Potworem
+tile.igneous_monster_stone.basalt.name=Bazalt Z Ukrytym Potworem
+tile.igneous_monster_stone.komatiite.name=Komatyt Z Ukrytym Potworem
+tile.igneous_monster_stone.dacite.name=Diacyt Z Ukrytym Potworem
+ 
+tile.igneous_overgrown.red_granite.name=Porośnięty Czerwony Granit
+tile.igneous_overgrown.black_granite.name=Porośnięty Czarny Granit
+tile.igneous_overgrown.rhyolite.name=Porośnięty Ryolit
+tile.igneous_overgrown.andesite.name=Porośnięty Andezyt
+tile.igneous_overgrown.gabbro.name=Porośnięty Gabro
+tile.igneous_overgrown.basalt.name=Porośnięty Bazalt
+tile.igneous_overgrown.komatiite.name=Porośnięty Komatyt
+tile.igneous_overgrown.dacite.name=Porośnięty Diacyt
+ 
+tile.igneous_overgrown_snowed.red_granite.name=Zaśnieżony Porośnięty Czerwony Granit
+tile.igneous_overgrown_snowed.black_granite.name=Zaśnieżony Porośnięty Czarny Granit
+tile.igneous_overgrown_snowed.rhyolite.name=Zaśnieżony Porośnięty Ryolit
+tile.igneous_overgrown_snowed.andesite.name=Zaśnieżony Porośnięty Andezyt
+tile.igneous_overgrown_snowed.gabbro.name=Zaśnieżony Porośnięty Gabro
+tile.igneous_overgrown_snowed.basalt.name=Zaśnieżony Porośnięty Bazalt
+tile.igneous_overgrown_snowed.komatiite.name=Zaśnieżony Porośnięty Komatyt
+tile.igneous_overgrown_snowed.dacite.name=Zaśnieżony Porośnięty Diacyt
+ 
+tile.igneous_cobble.red_granite.name=Bruk Czerwonego Granitu
+tile.igneous_cobble.black_granite.name=Bruk Czarnego Granitu
+tile.igneous_cobble.rhyolite.name=Ryolitowy Bruk
+tile.igneous_cobble.andesite.name=Andezytowy Bruk
+tile.igneous_cobble.gabbro.name=Bruk Gabro
+tile.igneous_cobble.basalt.name=Bazaltowy Bruk
+tile.igneous_cobble.komatiite.name=Komatytowy Bruk
+tile.igneous_cobble.dacite.name=Diacytowy Bruk
+ 
+tile.igneous_cobble_mossy.red_granite.name=Zamszony Bruk Czerwonego Granitu
+tile.igneous_cobble_mossy.black_granite.name=Zamszony Bruk Czarnego Granitu
+tile.igneous_cobble_mossy.rhyolite.name=Zamszony Ryolitowy Bruk
+tile.igneous_cobble_mossy.andesite.name=Zamszony Andezytowy Bruk
+tile.igneous_cobble_mossy.gabbro.name=Zamszony Bruk Gabro
+tile.igneous_cobble_mossy.basalt.name=Zamszony Bazaltowy Bruk
+tile.igneous_cobble_mossy.komatiite.name=Zamszony Komatytowy Bruk
+tile.igneous_cobble_mossy.dacite.name=Zamszony Diacytowy Bruk
+ 
+tile.igneous_brick.red_granite.name=Cegły z Czerwonego Granitu
+tile.igneous_brick.black_granite.name=Cegły z Czarnego Granitu
+tile.igneous_brick.rhyolite.name=Ryolitowe Cegły
+tile.igneous_brick.andesite.name=Andezytowe Cegły
+tile.igneous_brick.gabbro.name=Cegły Gabro
+tile.igneous_brick.basalt.name=Bazaltowe Cegły
+tile.igneous_brick.komatiite.name=Komatytowe Cegły
+tile.igneous_brick.dacite.name=Diacytowe Cegły
+ 
+tile.igneous_speleothem.red_granite.name=Naciek Czerwonego Granitu
+tile.igneous_speleothem.black_granite.name=Naciek Czarnego Granitu
+tile.igneous_speleothem.rhyolite.name=Ryolitowy Naciek
+tile.igneous_speleothem.andesite.name=Andezytowy Naciek
+tile.igneous_speleothem.gabbro.name=Naciek Gabro
+tile.igneous_speleothem.basalt.name=Bazaltowy Naciek
+tile.igneous_speleothem.komatiite.name=Komatytowy Naciek
+tile.igneous_speleothem.dacite.name=Diacytowy Naciek
+ 
+tile.metamorphic_stone.gneiss.name=Gnejs
+tile.metamorphic_stone.eclogite.name=Eklogit
+tile.metamorphic_stone.marble.name=Marmur
+tile.metamorphic_stone.quartzite.name=Kwarcyt
+tile.metamorphic_stone.blueschist.name=Niebieski Łupek
+tile.metamorphic_stone.greenschist.name=Zielony Łupek
+tile.metamorphic_stone.soapstone.name=Steatyt
+tile.metamorphic_stone.migmatite.name=Migmatyt
+ 
+tile.metamorphic_gravel.gneiss.name=Gnejsowy Żwir
+tile.metamorphic_gravel.eclogite.name=Eklogitowy Żwir
+tile.metamorphic_gravel.marble.name=Marmurowy Żwir
+tile.metamorphic_gravel.quartzite.name=Kwarcytowy Żwir
+tile.metamorphic_gravel.blueschist.name=Żwir Niebieskiego Łupka
+tile.metamorphic_gravel.greenschist.name=Żwir Zielonego Łupka
+tile.metamorphic_gravel.soapstone.name=Steatytowy Żwir
+tile.metamorphic_gravel.migmatite.name=Migmatytowy Żwir
+ 
+tile.metamorphic_sand.gneiss.name=Gnejsowy Piasek
+tile.metamorphic_sand.eclogite.name=Eklogitowy Piasek
+tile.metamorphic_sand.marble.name=Marmurowy Piasek
+tile.metamorphic_sand.quartzite.name=Kwarcytowy Piasek
+tile.metamorphic_sand.blueschist.name=Niebieskiego Łupka Piasek
+tile.metamorphic_sand.greenschist.name=Piasek Zielonego Łupka
+tile.metamorphic_sand.soapstone.name=Steatytowy Piasek
+tile.metamorphic_sand.migmatite.name=Migmatytowy Piasek
+ 
+tile.metamorphic_monster_stone.gneiss.name=Gnejs Z Ukrytym Potworem
+tile.metamorphic_monster_stone.eclogite.name=Eklogit Z Ukrytym Potworem
+tile.metamorphic_monster_stone.marble.name=Marmur Z Ukrytym Potworem
+tile.metamorphic_monster_stone.quartzite.name=Kwarcyt Z Ukrytym Potworem
+tile.metamorphic_monster_stone.blueschist.name=Niebieski Łupek Z Ukrytym Potworem
+tile.metamorphic_monster_stone.greenschist.name=Zielony Łupek Z Ukrytym Potworem
+tile.metamorphic_monster_stone.soapstone.name=Steatyt Z Ukrytym Potworem
+tile.metamorphic_monster_stone.migmatite.name=Migmatyt Z Ukrytym Potworem
+ 
+tile.metamorphic_overgrown.gneiss.name=Porośnięty Gnejs
+tile.metamorphic_overgrown.eclogite.name=Porośnięty Eklogit
+tile.metamorphic_overgrown.marble.name=Porośnięty Marmur
+tile.metamorphic_overgrown.quartzite.name=Porośnięty Kwarcyt
+tile.metamorphic_overgrown.blueschist.name=Porośnięty Niebieski Łupek
+tile.metamorphic_overgrown.greenschist.name=Porośnięty Zielony Łupek
+tile.metamorphic_overgrown.soapstone.name=Porośnięty Steatyt
+tile.metamorphic_overgrown.migmatite.name=Porośnięty Migmatyt
+ 
+tile.metamorphic_overgrown_snowed.gneiss.name=Zaśnieżony Porośnięty Gnejs
+tile.metamorphic_overgrown_snowed.eclogite.name=Zaśnieżony Porośnięty Eklogit
+tile.metamorphic_overgrown_snowed.marble.name=Zaśnieżony Porośnięty Marmur
+tile.metamorphic_overgrown_snowed.quartzite.name=Zaśnieżony Porośnięty Kwarcyt
+tile.metamorphic_overgrown_snowed.blueschist.name=Zaśnieżony Porośnięty Niebieski Łupek
+tile.metamorphic_overgrown_snowed.greenschist.name=Zaśnieżony Porośnięty Zielony Łupek
+tile.metamorphic_overgrown_snowed.soapstone.name=Zaśnieżony Porośnięty Steatyt
+tile.metamorphic_overgrown_snowed.migmatite.name=Zaśnieżony Porośnięty Migmatyt
+ 
+tile.metamorphic_cobble.gneiss.name=Gnejsowy Bruk
+tile.metamorphic_cobble.eclogite.name=Eklogitowy Bruk
+tile.metamorphic_cobble.marble.name=Marmurowy Bruk
+tile.metamorphic_cobble.quartzite.name=Kwarcytowy Bruk
+tile.metamorphic_cobble.blueschist.name=Bruk Niebieskiego Łupka
+tile.metamorphic_cobble.greenschist.name=Bruk Zielonego Łupka
+tile.metamorphic_cobble.soapstone.name=Steatytowy Bruk
+tile.metamorphic_cobble.migmatite.name=Migmatytowy Bruk
+ 
+tile.metamorphic_cobble_mossy.gneiss.name=Zamszony Gnejsowy Bruk
+tile.metamorphic_cobble_mossy.eclogite.name=Zamszony Eklogitowy Bruk
+tile.metamorphic_cobble_mossy.marble.name=Zamszony Marmurowy Bruk
+tile.metamorphic_cobble_mossy.quartzite.name=Zamszony Kwarcytowy Bruk
+tile.metamorphic_cobble_mossy.blueschist.name=Zamszony Bruk Niebieskiego Łupka
+tile.metamorphic_cobble_mossy.greenschist.name=Zamszony Bruk Zielonego Łupka
+tile.metamorphic_cobble_mossy.soapstone.name=Zamszony Steatytowy Bruk
+tile.metamorphic_cobble_mossy.migmatite.name=Zamszony Migmatytowy Bruk
+ 
+tile.metamorphic_brick.gneiss.name=Gnejsowe Cegły
+tile.metamorphic_brick.eclogite.name=Eklogitowe Cegły
+tile.metamorphic_brick.marble.name=Marmurowe Cegły
+tile.metamorphic_brick.quartzite.name=Kwarcytowe Cegły
+tile.metamorphic_brick.blueschist.name=Cegły Niebieskiego Łupka
+tile.metamorphic_brick.greenschist.name=Cegły Zielonego Łupka
+tile.metamorphic_brick.soapstone.name=Steatytowe Cegły
+tile.metamorphic_brick.migmatite.name=Migmatytowe Cegły
+ 
+tile.metamorphic_speleothem.gneiss.name=Gnejsowy Naciek
+tile.metamorphic_speleothem.eclogite.name=Eklogitowy Naciek
+tile.metamorphic_speleothem.marble.name=Marmurowy Naciek
+tile.metamorphic_speleothem.quartzite.name=Kwarcytowy Naciek
+tile.metamorphic_speleothem.blueschist.name=Naciek Niebieskiego Łupka
+tile.metamorphic_speleothem.greenschist.name=Naciek Zielonego Łupka
+tile.metamorphic_speleothem.soapstone.name=Steatytowy Naciek
+tile.metamorphic_speleothem.migmatite.name=Migmatytowy Naciek
+ 
+tile.sedimentary_stone.limestone.name=Wapień
+tile.sedimentary_stone.chalk.name=Kreda
+tile.sedimentary_stone.shale.name=Łupek Ilasty
+tile.sedimentary_stone.siltstone.name=Piaskowiec Drobnoziarnisty
+tile.sedimentary_stone.lignite.name=Blok Węgla Brunatnego
+tile.sedimentary_stone.dolomite.name=Dolomit
+tile.sedimentary_stone.greywacke.name=Szarogłaz
+tile.sedimentary_stone.chert.name=Rogowiec
+ 
+tile.sedimentary_gravel.limestone.name=Wapienny Żwir
+tile.sedimentary_gravel.chalk.name=Kredowy Żwir
+tile.sedimentary_gravel.shale.name=Żwir Łupka Ilastego
+tile.sedimentary_gravel.siltstone.name=Żwir Piaskowca Drobnoziarnistego
+tile.sedimentary_gravel.lignite.name=Żwir Węgla Brunatnego
+tile.sedimentary_gravel.dolomite.name=Dolomitowy Żwir
+tile.sedimentary_gravel.greywacke.name=Żwir Szarogłazu
+tile.sedimentary_gravel.chert.name=Żwir Rogowca
+ 
+tile.sedimentary_sand.limestone.name=Wapienny Piasek
+tile.sedimentary_sand.chalk.name=Kredowy Piasek
+tile.sedimentary_sand.shale.name=Piasek Łupka Ilastego
+tile.sedimentary_sand.siltstone.name=Piasek Piaskowca Drobnoziarnistego
+tile.sedimentary_sand.lignite.name=Piasek Węgla Brunatnego
+tile.sedimentary_sand.dolomite.name=Dolomitowy Piasek
+tile.sedimentary_sand.greywacke.name=Piasek Szarogłazu
+tile.sedimentary_sand.chert.name=Piasek Rogowca
+ 
+tile.sedimentary_monster_stone.limestone.name=Wapień Z Ukrytym Potworem
+tile.sedimentary_monster_stone.chalk.name=Kreda Z Ukrytym Potworem
+tile.sedimentary_monster_stone.shale.name=Łupek Ilasty Z Ukrytym Potworem
+tile.sedimentary_monster_stone.siltstone.name=Piaskowiec Drobnoziarnisty Z Ukrytym Potworem
+tile.sedimentary_monster_stone.lignite.name=Blok Węgla Brunatnego Z Ukrytym Potworem
+tile.sedimentary_monster_stone.dolomite.name=Dolomit Z Ukrytym Potworem
+tile.sedimentary_monster_stone.greywacke.name=Szarogłaz Z Ukrytym Potworem
+tile.sedimentary_monster_stone.chert.name=Rogowiec Z Ukrytym Potworem
+ 
+tile.sedimentary_stone_mossy.limestone.name=Zamszony Wapień
+tile.sedimentary_stone_mossy.chalk.name=Zamszona Kreda
+tile.sedimentary_stone_mossy.shale.name=Zamszony Łupek Ilasty
+tile.sedimentary_stone_mossy.siltstone.name=Zamszony Piaskowiec Drobnoziarnisty
+tile.sedimentary_stone_mossy.lignite.name=Zamszony Blok Węgla Brunatnego
+tile.sedimentary_stone_mossy.dolomite.name=Zamszony Dolomit
+tile.sedimentary_stone_mossy.greywacke.name=Zamszony Szarogłaz
+tile.sedimentary_stone_mossy.chert.name=Zamszony Rogowiec
+ 
+tile.sedimentary_overgrown.limestone.name=Porośnięty Wapień
+tile.sedimentary_overgrown.chalk.name=Porośnięta Kreda
+tile.sedimentary_overgrown.shale.name=Porośnięty Łupek Ilasty
+tile.sedimentary_overgrown.siltstone.name=Porośnięty Piaskowiec Drobnoziarnisty
+tile.sedimentary_overgrown.lignite.name=Porośnięty Blok Węgla Brunatnego
+tile.sedimentary_overgrown.dolomite.name=Porośnięty Dolomit
+tile.sedimentary_overgrown.greywacke.name=Porośnięty Szarogłaz
+tile.sedimentary_overgrown.chert.name=Porośnięty Rogowiec
+ 
+tile.sedimentary_overgrown_snowed.limestone.name=Porośnięty Wapień
+tile.sedimentary_overgrown_snowed.chalk.name=Porośnięta Kreda
+tile.sedimentary_overgrown_snowed.shale.name=Porośnięty Łupek Ilasty
+tile.sedimentary_overgrown_snowed.siltstone.name=Porośnięty Piaskowiec Drobnoziarnisty
+tile.sedimentary_overgrown_snowed.lignite.name=Porośnięty Blok Węgla Brunatnego
+tile.sedimentary_overgrown_snowed.dolomite.name=Porośnięty Dolomit
+tile.sedimentary_overgrown_snowed.greywacke.name=Porośnięty Szarogłaz
+tile.sedimentary_overgrown_snowed.chert.name=Porośnięty Rogowiec
+ 
+tile.sedimentary_speleothem.limestone.name=Wapienny Naciek
+tile.sedimentary_speleothem.chalk.name=Kredowy Naciek
+tile.sedimentary_speleothem.shale.name=Naciek Łupka Ilastego
+tile.sedimentary_speleothem.siltstone.name=Naciek Piaskowca Drobnoziarnistego
+tile.sedimentary_speleothem.lignite.name=Naciek Węgla Brunatnego
+tile.sedimentary_speleothem.dolomite.name=Dolomitowy Naciek
+tile.sedimentary_speleothem.greywacke.name=Szarogłazowy Naciek
+tile.sedimentary_speleothem.chert.name=Naciek Rogowca
+ 
+# Slabs
+ 
+tile.igneous_brick_halfslab.red_granite.name=Płyta z Cegieł Czerwonego Granitu
+tile.igneous_brick_halfslab.black_granite.name=Płyta z Cegieł Czarnego Granitu
+tile.igneous_brick_halfslab.rhyolite.name=Płyta z Ryolitowych Cegieł
+tile.igneous_brick_halfslab.andesite.name=Płyta z Andezytowych Cegieł
+tile.igneous_brick_halfslab.gabbro.name=Płyta z Cegieł Gabro
+tile.igneous_brick_halfslab.basalt.name=Płyta z Bazaltowych Cegieł
+tile.igneous_brick_halfslab.komatiite.name=Płyta z Komatytowych Cegieł
+tile.igneous_brick_halfslab.dacite.name=Płyta z Diacytowych Cegieł
+ 
+tile.metamorphic_brick_halfslab.gneiss.name=Płyta z Gnejsowych Cegieł
+tile.metamorphic_brick_halfslab.eclogite.name=Płyta z Eklogitowych Cegieł
+tile.metamorphic_brick_halfslab.marble.name=Płyta z Marmurowych Cegieł
+tile.metamorphic_brick_halfslab.quartzite.name=Płyta z Kwarcytowych Cegieł
+tile.metamorphic_brick_halfslab.blueschist.name=Płyta z Cegieł Niebieskiego Łupka
+tile.metamorphic_brick_halfslab.greenschist.name=Płyta z Cegieł Zielonego Łupka
+tile.metamorphic_brick_halfslab.soapstone.name=Płyta z Steatytowych Cegieł
+tile.metamorphic_brick_halfslab.migmatite.name=Płyta z Migmatytowych Cegieł
+ 
+tile.igneous_stone_halfslab.red_granite.name=Płyta Czerwonego Granitu
+tile.igneous_stone_halfslab.black_granite.name=Płyta Czarnego Granitu
+tile.igneous_stone_halfslab.rhyolite.name=Ryolitowa Płyta
+tile.igneous_stone_halfslab.andesite.name=Andezytowa Płyta
+tile.igneous_stone_halfslab.gabbro.name=Płyta z Gabro
+tile.igneous_stone_halfslab.basalt.name=Bazaltowa Płyta
+tile.igneous_stone_halfslab.komatiite.name=Komatytowa Płyta
+tile.igneous_stone_halfslab.dacite.name=Diacytowa Płyta
+ 
+tile.metamorphic_stone_halfslab.gneiss.name=Gnejsowa Płyta
+tile.metamorphic_stone_halfslab.eclogite.name=Eklogitowa Płyta
+tile.metamorphic_stone_halfslab.marble.name=Marmurowa Płyta
+tile.metamorphic_stone_halfslab.quartzite.name=Kwarcytowa Płyta
+tile.metamorphic_stone_halfslab.blueschist.name=Płyta Niebieskiego Łupka
+tile.metamorphic_stone_halfslab.greenschist.name=Płyta Zielonego Łupka
+tile.metamorphic_stone_halfslab.soapstone.name=Steatytowa Płyta
+tile.metamorphic_stone_halfslab.migmatite.name=Migmatytowa Płyta
+ 
+tile.igneous_cobble_halfslab.red_granite.name=Płyta z Bruku Czerwonego Granitu
+tile.igneous_cobble_halfslab.black_granite.name=Płyta z Bruku Czarnego Granitu
+tile.igneous_cobble_halfslab.rhyolite.name=Płyta z Ryolitowego Bruku
+tile.igneous_cobble_halfslab.andesite.name=Płyta z Andezytowego Bruku
+tile.igneous_cobble_halfslab.gabbro.name=Płyta z Bruku Gabro
+tile.igneous_cobble_halfslab.basalt.name=Płyta z Bazaltowego Bruku
+tile.igneous_cobble_halfslab.komatiite.name=Płyta z Komatytowego Bruku
+tile.igneous_cobble_halfslab.dacite.name=Płyta z Diacytowego Bruku
+ 
+tile.metamorphic_cobble_halfslab.gneiss.name=Płyta z Gnejsowego Bruku
+tile.metamorphic_cobble_halfslab.eclogite.name=Płyta z Eklogitowego Bruku
+tile.metamorphic_cobble_halfslab.marble.name=Płyta z Marmurowego Bruku
+tile.metamorphic_cobble_halfslab.quartzite.name=Płyta z Kwarcytowego Bruku
+tile.metamorphic_cobble_halfslab.blueschist.name=Płyta z Bruku Niebieskiego Łupka
+tile.metamorphic_cobble_halfslab.greenschist.name=Płyta z Bruku Zielonego Łupka
+tile.metamorphic_cobble_halfslab.soapstone.name=Płyta z Steatytowego Bruku
+tile.metamorphic_cobble_halfslab.migmatite.name=Płyta z Migmatytowego Bruku
+ 
+tile.sedimentary_stone_halfslab.limestone.name=Wapienna Płyta
+tile.sedimentary_stone_halfslab.chalk.name=Kredowa Płyta
+tile.sedimentary_stone_halfslab.shale.name=Płyta z Łupka Ilastego
+tile.sedimentary_stone_halfslab.siltstone.name=Płyta z Piaskowca Drobnoziarnistego
+tile.sedimentary_stone_halfslab.lignite.name=Płyta z Węgla Brunatnego
+tile.sedimentary_stone_halfslab.dolomite.name=Dolomitowa Płyta
+tile.sedimentary_stone_halfslab.greywacke.name=Płyta z Szarogłazu
+tile.sedimentary_stone_halfslab.chert.name=Płyta z Rogowca
+ 
+# Stairs
+ 
+tile.igneous_stone_stairs.red_granite.name=Schody z Czerwonego Granitu
+tile.igneous_stone_stairs.black_granite.name=Schody z Czarnego Granitu
+tile.igneous_stone_stairs.rhyolite.name=Ryolitowe Schody
+tile.igneous_stone_stairs.andesite.name=Andezytowe Schody
+tile.igneous_stone_stairs.gabbro.name=Schody Gabro
+tile.igneous_stone_stairs.basalt.name=Bazaltowe Schody
+tile.igneous_stone_stairs.komatiite.name=Komatytowe Schody
+tile.igneous_stone_stairs.dacite.name=Diacytowe Schody
+ 
+tile.igneous_cobble_stairs.red_granite.name=Schody z Bruk Czerwonego Granitu
+tile.igneous_cobble_stairs.black_granite.name=Schody z Bruk Czarnego Granitu
+tile.igneous_cobble_stairs.rhyolite.name=Schody z Ryolitowego Bruku
+tile.igneous_cobble_stairs.andesite.name=Schody z Andezytowego Bruku
+tile.igneous_cobble_stairs.gabbro.name=Schody z Bruku Gabro
+tile.igneous_cobble_stairs.basalt.name=Schody z Bazaltowego Bruku
+tile.igneous_cobble_stairs.komatiite.name=Schody z Komatytowego Bruku
+tile.igneous_cobble_stairs.dacite.name=Schody z Diacytowego Bruku
+ 
+tile.igneous_brick_stairs.red_granite.name=Schody z Cegieł Czerwonego Granitu
+tile.igneous_brick_stairs.black_granite.name=Schody z Cegieł Czarnego Granitu
+tile.igneous_brick_stairs.rhyolite.name=Schody z Ryolitowych Cegieł
+tile.igneous_brick_stairs.andesite.name=Schody z Andezytowych Cegieł
+tile.igneous_brick_stairs.gabbro.name=Schody z Cegieł Gabro
+tile.igneous_brick_stairs.basalt.name=Schody z Bazaltowych Cegieł
+tile.igneous_brick_stairs.komatiite.name=Schody z Komatytowych Cegieł
+tile.igneous_brick_stairs.dacite.name=Schody z Diacytowych Cegieł
+ 
+tile.metamorphic_stone_stairs.gneiss.name=Gnejsowe Schody
+tile.metamorphic_stone_stairs.eclogite.name=Eklogitowe Schody
+tile.metamorphic_stone_stairs.marble.name=Marmurowe Schody
+tile.metamorphic_stone_stairs.quartzite.name=Kwarcytowe Schody
+tile.metamorphic_stone_stairs.blueschist.name=Schody z Niebieskiego Łupka
+tile.metamorphic_stone_stairs.greenschist.name=Schody z Zielonego Łupka
+tile.metamorphic_stone_stairs.soapstone.name=Steatytowe Schody
+tile.metamorphic_stone_stairs.migmatite.name=Migmatytowe Schody
+ 
+tile.metamorphic_cobble_stairs.gneiss.name=Schody z Gnejsowego Bruku
+tile.metamorphic_cobble_stairs.eclogite.name=Schody z Eklogitowego Bruku
+tile.metamorphic_cobble_stairs.marble.name=Schody z Marmurowego Bruku
+tile.metamorphic_cobble_stairs.quartzite.name=Schody z Kwarcytowego Bruku
+tile.metamorphic_cobble_stairs.blueschist.name=Schody z Bruku Niebieskiego Łupka
+tile.metamorphic_cobble_stairs.greenschist.name=Schody z Bruku Zielonego Łupka
+tile.metamorphic_cobble_stairs.soapstone.name=Schody z Steatytowego Bruku
+tile.metamorphic_cobble_stairs.migmatite.name=Schody z Migmatytowego Bruku
+ 
+tile.metamorphic_brick_stairs.gneiss.name=Schody z Gnejsowych Cegieł
+tile.metamorphic_brick_stairs.eclogite.name=Schody z Eklogitowych Cegieł
+tile.metamorphic_brick_stairs.marble.name=Schody z Marmurowych Cegieł
+tile.metamorphic_brick_stairs.quartzite.name=Schody z Kwarcytowych Cegieł
+tile.metamorphic_brick_stairs.blueschist.name=Schody z Cegieł Niebieskiego Łupka
+tile.metamorphic_brick_stairs.greenschist.name=Schody z Cegieł Zielonego Łupka
+tile.metamorphic_brick_stairs.soapstone.name=Schody z Steatytowych Cegieł
+tile.metamorphic_brick_stairs.migmatite.name=Schody z Migmatytowych Cegieł
+ 
+tile.sedimentary_stone_stairs.limestone.name=Wapienne Schody
+tile.sedimentary_stone_stairs.chalk.name=Kredowe Schody
+tile.sedimentary_stone_stairs.shale.name=Schody z Łupka Ilastego
+tile.sedimentary_stone_stairs.siltstone.name=Schody z Piaskowca Drobnoziarnistego
+tile.sedimentary_stone_stairs.lignite.name=Schody z Węgla Brunatnego
+tile.sedimentary_stone_stairs.dolomite.name=Dolomitowe Schody
+tile.sedimentary_stone_stairs.greywacke.name=Schody z Szarogłazu
+tile.sedimentary_stone_stairs.chert.name=Schody z Rogowca
+ 
+# Walls
+ 
+tile.igneous_stone_wall.red_granite.name=Murek z Czerwonego Granitu
+tile.igneous_stone_wall.black_granite.name=Murek z Czarnego Granitu
+tile.igneous_stone_wall.rhyolite.name=Ryolitowy Murek
+tile.igneous_stone_wall.andesite.name=Andezytowy Murek
+tile.igneous_stone_wall.gabbro.name=Murek z Gabro
+tile.igneous_stone_wall.basalt.name=Bazaltowy Murek
+tile.igneous_stone_wall.komatiite.name=Komatytowy Murek
+tile.igneous_stone_wall.dacite.name=Diacytowy Murek
+ 
+tile.igneous_cobble_wall.red_granite.name=Murek z Bruku Czerwonego Granitu
+tile.igneous_cobble_wall.black_granite.name=Murek z Bruku Czarnego Granitu
+tile.igneous_cobble_wall.rhyolite.name=Murek z Ryolitowego Bruku
+tile.igneous_cobble_wall.andesite.name=Murek z Andezytowego Bruku
+tile.igneous_cobble_wall.gabbro.name=Murek z Bruku Gabro
+tile.igneous_cobble_wall.basalt.name=Murek z Bazaltowego Bruku
+tile.igneous_cobble_wall.komatiite.name=Murek z Komatytowego Bruku
+tile.igneous_cobble_wall.dacite.name=Murek z Diacytowego Bruku
+ 
+tile.igneous_brick_wall.red_granite.name=Murek z Cegieł Czerwonego Granitu
+tile.igneous_brick_wall.black_granite.name=Murek z Cegieł Czarnego Granitu
+tile.igneous_brick_wall.rhyolite.name=Murek z Ryolitowych Cegieł
+tile.igneous_brick_wall.andesite.name=Murek z Andezytowych Cegieł
+tile.igneous_brick_wall.gabbro.name=Murek z Cegieł Gabro
+tile.igneous_brick_wall.basalt.name=Murek z Bazaltowych Cegieł
+tile.igneous_brick_wall.komatiite.name=Murek z Komatytowych Cegieł
+tile.igneous_brick_wall.dacite.name=Murek z Diacytowych Cegieł
+ 
+tile.metamorphic_stone_wall.gneiss.name=Gnejsowy Murek
+tile.metamorphic_stone_wall.eclogite.name=Eklogitowy Murek
+tile.metamorphic_stone_wall.marble.name=Marmurowy Murek
+tile.metamorphic_stone_wall.quartzite.name=Kwarcytowy Murek
+tile.metamorphic_stone_wall.blueschist.name=Murek z Niebieskiego Łupka
+tile.metamorphic_stone_wall.greenschist.name=Murek z Zielonego Łupka
+tile.metamorphic_stone_wall.soapstone.name=Steatytowy Murek
+tile.metamorphic_stone_wall.migmatite.name=Migmatytowy Murek
+ 
+tile.metamorphic_cobble_wall.gneiss.name=Murek z Gnejsowego Bruku
+tile.metamorphic_cobble_wall.eclogite.name=Murek z Eklogitowego Bruku
+tile.metamorphic_cobble_wall.marble.name=Murek z Marmurowego Bruku
+tile.metamorphic_cobble_wall.quartzite.name=Murek z Kwarcytowego Bruku
+tile.metamorphic_cobble_wall.blueschist.name=Murek z Bruku Niebieskiego Łupka
+tile.metamorphic_cobble_wall.greenschist.name=Murek z Bruku Zielonego Łupka
+tile.metamorphic_cobble_wall.soapstone.name=Murek z steatytowego Bruku
+tile.metamorphic_cobble_wall.migmatite.name=Murek z Migmatytowego Bruku
+ 
+tile.metamorphic_brick_wall.gneiss.name=Murek z Gnejsowych Cegieł
+tile.metamorphic_brick_wall.eclogite.name=Murek z Eklogitowych Cegieł
+tile.metamorphic_brick_wall.marble.name=Murek z Marmurowych Cegieł
+tile.metamorphic_brick_wall.quartzite.name=Murek z Kwarcytowych Cegieł
+tile.metamorphic_brick_wall.blueschist.name=Murekz Cegieł Niebieskiego Łupka
+tile.metamorphic_brick_wall.greenschist.name=Murek z Cegieł Zielonego Łupka
+tile.metamorphic_brick_wall.soapstone.name=Murek z Steatytowych Cegieł
+tile.metamorphic_brick_wall.migmatite.name=Murek z Migmatytowych Cegieł
+ 
+tile.sedimentary_stone_wall.limestone.name=Wapienny Murek
+tile.sedimentary_stone_wall.chalk.name=Kredowy Murek
+tile.sedimentary_stone_wall.shale.name=Murek z Łupka Ilastego
+tile.sedimentary_stone_wall.siltstone.name=Murek z Piaskowca Drobnoziarnistego
+tile.sedimentary_stone_wall.lignite.name=Murek z Węgla Brunatnego
+tile.sedimentary_stone_wall.dolomite.name=Dolomitowy Murek
+tile.sedimentary_stone_wall.greywacke.name=Murek z Szarogłazu
+tile.sedimentary_stone_wall.chert.name=Murek z Rogowca
+ 
+# Buttons
+ 
+tile.igneous_stone_button.red_granite.name=Przycisk z Czerwonego granitu
+tile.igneous_stone_button.black_granite.name=Przycisk z Czarnego granitu
+tile.igneous_stone_button.rhyolite.name=Ryolitowy Przycisk
+tile.igneous_stone_button.andesite.name=Andezytowy Przycisk
+tile.igneous_stone_button.gabbro.name=Przycisk z Gabro
+tile.igneous_stone_button.basalt.name=Bazaltowy Przycisk
+tile.igneous_stone_button.komatiite.name=Komatytowy Przycisk
+tile.igneous_stone_button.dacite.name=Diacytowy Przycisk
+ 
+tile.igneous_cobble_button.red_granite.name=Przycisk z Bruku z Czerwonego granitu
+tile.igneous_cobble_button.black_granite.name=Przycisk z Bruku z Czarnego granitu
+tile.igneous_cobble_button.rhyolite.name=Przycisk z Bruku Ryolitowego
+tile.igneous_cobble_button.andesite.name=Przycisk z Bruku Andezytowego
+tile.igneous_cobble_button.gabbro.name=Przycisk z Bruku Gabro
+tile.igneous_cobble_button.basalt.name=Przycisk z Bruku Bazaltowego
+tile.igneous_cobble_button.komatiite.name=Przycisk z Bruku Komatytowego
+tile.igneous_cobble_button.dacite.name=Przycisk z Bruku Diacytowego
+ 
+tile.igneous_brick_button.red_granite.name=Przycisk z Cegieł z Czerwonego Granitu
+tile.igneous_brick_button.black_granite.name=Przycisk z Cegieł z Czarnego Granitu
+tile.igneous_brick_button.rhyolite.name=Przycisk z Cegieł Ryolitowych
+tile.igneous_brick_button.andesite.name=Przycisk z Cegieł Andezytowych
+tile.igneous_brick_button.gabbro.name=Przycisk z Cegieł Gabro
+tile.igneous_brick_button.basalt.name=Przycisk z Cegieł Bazaltowych
+tile.igneous_brick_button.komatiite.name=Przycisk z Cegieł Komatytowych
+tile.igneous_brick_button.dacite.name=Przycisk z Cegieł Diacytowych
+ 
+tile.metamorphic_stone_button.gneiss.name=Gnejsowy Przycisk
+tile.metamorphic_stone_button.eclogite.name=Eklogitowy Przycisk
+tile.metamorphic_stone_button.marble.name=Marmurowy Przycisk
+tile.metamorphic_stone_button.quartzite.name=Kwarcytowy Przycisk
+tile.metamorphic_stone_button.blueschist.name=Przycisk z Niebieskiego Łupka
+tile.metamorphic_stone_button.greenschist.name=Przycisk z Zielonego Łupka
+tile.metamorphic_stone_button.soapstone.name=Steatytowy Przycisk
+tile.metamorphic_stone_button.migmatite.name=Migmatytowy Przycisk
+ 
+tile.metamorphic_cobble_button.gneiss.name=Przycisk z Bruku Gnejsowego
+tile.metamorphic_cobble_button.eclogite.name=Przycisk z Bruku Eklogitowego
+tile.metamorphic_cobble_button.marble.name=Przycisk z Bruku Marmurowego
+tile.metamorphic_cobble_button.quartzite.name=Przycisk z Bruku Kwarcytowego
+tile.metamorphic_cobble_button.blueschist.name=Przycisk z Bruku Niebieskiego Łupka
+tile.metamorphic_cobble_button.greenschist.name=Przycisk z Bruku Zielonego Łupka
+tile.metamorphic_cobble_button.soapstone.name=Przycisk z Bruku steatytowego
+tile.metamorphic_cobble_button.migmatite.name=Przycisk z Bruku Migmatytowego
+ 
+tile.metamorphic_brick_button.gneiss.name=Przycisk z Cegieł Gnejsowych
+tile.metamorphic_brick_button.eclogite.name=Przycisk z Cegieł Eklogitowych
+tile.metamorphic_brick_button.marble.name=Przycisk z Cegieł Marmurowych
+tile.metamorphic_brick_button.quartzite.name=Przyciskz Cegieł Kwarcytowych
+tile.metamorphic_brick_button.blueschist.name=Przycisk z Cegieł z Niebieskiego Łupka
+tile.metamorphic_brick_button.greenschist.name=Przycisk z Cegieł z Zielonego Łupka
+tile.metamorphic_brick_button.soapstone.name=Przycisk z Cegieł Steatytowych
+tile.metamorphic_brick_button.migmatite.name=Przycisk z Cegieł Migmatytowych
+ 
+tile.sedimentary_stone_button.limestone.name=Wapienny Przycisk
+tile.sedimentary_stone_button.chalk.name=Kredowy Przycisk
+tile.sedimentary_stone_button.shale.name=Przycisk z Łupka Ilastego
+tile.sedimentary_stone_button.siltstone.name=Przycisk z Piaskowca Drobnoziarnistego
+tile.sedimentary_stone_button.lignite.name=Przycisk z Węgla Brunatnego
+tile.sedimentary_stone_button.dolomite.name=Dolomitowy Przycisk
+tile.sedimentary_stone_button.greywacke.name=Przycisk z Szarogłazu
+tile.sedimentary_stone_button.chert.name=Przycisk z Rogowca
+ 
+# Items
+ 
+item.lignite_coal.name=Węgiel brunatny
+item.fossil_piece.ammonite.name=Skamielina amonitowa
+item.fossil_piece.shell.name=Skamieniała Muszla
+item.fossil_piece.bone.name=Skamieniała Kość
+item.fossil_piece.boneshard.name=Skamieniały Odłamek Kości
+item.fossil_piece.rib.name=Skamieniałe Żebro
+item.fossil_piece.skull.name=Skamieniała Czaszka
+ 
+# Creative Tabs
+ 
+itemGroup.undergroundbiomesblocks=Podziemne Biomy Bloki
+itemGroup.undergroundbiomesitems=Podziemne Biomy Przedmioty
+itemGroup.undergroundbiomesores=Podziemne Biomy Rudy

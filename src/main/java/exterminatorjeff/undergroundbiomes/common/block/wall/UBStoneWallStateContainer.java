@@ -1,6 +1,5 @@
 package exterminatorjeff.undergroundbiomes.common.block.wall;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;

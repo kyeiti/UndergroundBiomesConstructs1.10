@@ -1,6 +1,5 @@
 package exterminatorjeff.undergroundbiomes.common.item;
 
-import exterminatorjeff.undergroundbiomes.api.ModInfo;
 import exterminatorjeff.undergroundbiomes.api.common.UBItem;
 import exterminatorjeff.undergroundbiomes.client.UBCreativeTab;
 import net.minecraft.item.Item;

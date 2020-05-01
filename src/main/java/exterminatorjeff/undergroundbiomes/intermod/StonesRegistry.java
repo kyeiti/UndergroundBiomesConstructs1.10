@@ -17,28 +17,101 @@ public enum StonesRegistry implements UBStonesRegistry {
 
   private StoneEntry getStoneEntry(UBStoneType type, UBStoneStyle style) {
     switch (type) {
-      case IGNEOUS:
-        switch (style) {
-          case STONE:
-            return API.IGNEOUS_STONE;
-          case COBBLE:
-            return API.IGNEOUS_COBBLE;
-          case BRICK:
-            return API.IGNEOUS_BRICK;
-        }
-        break;
-      case METAMORPHIC:
-        switch (style) {
-          case STONE:
-            return API.METAMORPHIC_STONE;
-          case COBBLE:
-            return API.METAMORPHIC_COBBLE;
-          case BRICK:
-            return API.METAMORPHIC_BRICK;
-        }
-        break;
-      case SEDIMENTARY:
+    case IGNEOUS:
+      switch (style) {
+      case STONE:
+        return API.IGNEOUS_STONE;
+      case COBBLE:
+        return API.IGNEOUS_COBBLE;
+      case BRICK:
+        return API.IGNEOUS_BRICK;
+      case OVERGROWN:
+        return API.IGNEOUS_OVERGROWN;
+      case OVERGROWN_SNOWED:
+        return API.IGNEOUS_OVERGROWN_SNOWED;
+      case MOSSY_COBBLE:
+        return API.IGNEOUS_MOSSY_COBBLE;
+      case MONSTER_STONE:
+        return API.IGNEOUS_MONSTER_STONE;
+      case SPELEOTHEM:
+        return API.IGNEOUS_SPELEOTHEM;
+      case GRAVEL:
+        return API.IGNEOUS_GRAVEL;
+      case SAND:
+        return API.IGNEOUS_SAND;
+      case CLAY:
+        return API.IGNEOUS_CLAY;
+      case SANDSTONE:
+        return API.IGNEOUS_SANDSTONE;
+      case SMOOTH_SANDSTONE:
+        return API.IGNEOUS_SMOOTH_SANDSTONE;
+      case CHISELED_SANDSTONE:
+        return API.IGNEOUS_CHISELED_SANDSTONE;
+      }
+      break;
+    case METAMORPHIC:
+      switch (style) {
+      case STONE:
+        return API.METAMORPHIC_STONE;
+      case COBBLE:
+        return API.METAMORPHIC_COBBLE;
+      case BRICK:
+        return API.METAMORPHIC_BRICK;
+      case OVERGROWN:
+        return API.METAMORPHIC_OVERGROWN;
+      case OVERGROWN_SNOWED:
+        return API.METAMORPHIC_OVERGROWN_SNOWED;
+      case MOSSY_COBBLE:
+        return API.METAMORPHIC_MOSSY_COBBLE;
+      case MONSTER_STONE:
+        return API.METAMORPHIC_MONSTER_STONE;
+      case SPELEOTHEM:
+        return API.METAMORPHIC_SPELEOTHEM;
+      case GRAVEL:
+        return API.METAMORPHIC_GRAVEL;
+      case SAND:
+        return API.METAMORPHIC_SAND;
+      case CLAY:
+        return API.METAMORPHIC_CLAY;
+      case SANDSTONE:
+        return API.METAMORPHIC_SANDSTONE;
+      case SMOOTH_SANDSTONE:
+        return API.METAMORPHIC_SMOOTH_SANDSTONE;
+      case CHISELED_SANDSTONE:
+        return API.METAMORPHIC_CHISELED_SANDSTONE;
+      }
+      break;
+    case SEDIMENTARY:
+      switch (style) {
+      case STONE:
         return API.SEDIMENTARY_STONE;
+      case COBBLE:
+        return API.SEDIMENTARY_STONE;
+      case BRICK:
+        return API.SEDIMENTARY_STONE;
+      case OVERGROWN:
+        return API.SEDIMENTARY_OVERGROWN;
+      case OVERGROWN_SNOWED:
+        return API.SEDIMENTARY_OVERGROWN_SNOWED;
+      case MOSSY_COBBLE:
+        return API.SEDIMENTARY_MOSSY_COBBLE;
+      case MONSTER_STONE:
+        return API.SEDIMENTARY_MONSTER_STONE;
+      case SPELEOTHEM:
+        return API.SEDIMENTARY_SPELEOTHEM;
+      case GRAVEL:
+        return API.SEDIMENTARY_GRAVEL;
+      case SAND:
+        return API.SEDIMENTARY_SAND;
+      case CLAY:
+        return API.SEDIMENTARY_CLAY;
+      case SANDSTONE:
+        return API.SEDIMENTARY_SANDSTONE;
+      case SMOOTH_SANDSTONE:
+        return API.SEDIMENTARY_SMOOTH_SANDSTONE;
+      case CHISELED_SANDSTONE:
+        return API.SEDIMENTARY_CHISELED_SANDSTONE;
+      }
     }
     return null;
   }
@@ -54,10 +127,13 @@ public enum StonesRegistry implements UBStonesRegistry {
     addIfRegistered(stones, API.IGNEOUS_STONE);
     addIfRegistered(stones, API.IGNEOUS_COBBLE);
     addIfRegistered(stones, API.IGNEOUS_BRICK);
+    addIfRegistered(stones, API.IGNEOUS_OVERGROWN);
     addIfRegistered(stones, API.METAMORPHIC_STONE);
     addIfRegistered(stones, API.METAMORPHIC_COBBLE);
     addIfRegistered(stones, API.METAMORPHIC_BRICK);
+    addIfRegistered(stones, API.METAMORPHIC_OVERGROWN);
     addIfRegistered(stones, API.SEDIMENTARY_STONE);
+    addIfRegistered(stones, API.SEDIMENTARY_OVERGROWN);
     return stones;
   }
 

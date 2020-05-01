@@ -77,6 +77,7 @@ public class StairsItemBlock extends RotatingItemBlock implements UBStairs {
    * @param hitY
    * @param hitZ
    */
+  @SuppressWarnings("deprecation")
   @Override
   public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
     IBlockState iblockstate = worldIn.getBlockState(pos);
@@ -115,7 +116,7 @@ public class StairsItemBlock extends RotatingItemBlock implements UBStairs {
         return true;
       }
     }
-    throw new RuntimeException(state.getBlock().getUnlocalizedName());
+    throw new RuntimeException(state.getBlock().getTranslationKey());
     //return true;
   }
 

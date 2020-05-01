@@ -1,6 +1,5 @@
 package exterminatorjeff.undergroundbiomes.api.names;
 
-import exterminatorjeff.undergroundbiomes.api.ModInfo;
 import exterminatorjeff.undergroundbiomes.api.common.UBBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -8,7 +7,6 @@ import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
@@ -21,7 +19,7 @@ public abstract class BlockEntry extends Entry<UBBlock> implements BlockAccess {
   }
 
   public BlockEntry(Block block) {
-    super(block.getUnlocalizedName());
+    super(block.getTranslationKey());
     // sanitize inputs
     if (getBlock() == null) throw new RuntimeException();
   }

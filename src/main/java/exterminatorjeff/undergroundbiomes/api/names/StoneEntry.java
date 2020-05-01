@@ -1,9 +1,5 @@
 package exterminatorjeff.undergroundbiomes.api.names;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.registries.IForgeRegistry;
-
 /**
  * @author LouisDB
  */

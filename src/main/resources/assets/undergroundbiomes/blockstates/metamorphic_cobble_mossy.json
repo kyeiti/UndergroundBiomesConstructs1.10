@@ -1,0 +1,58 @@
+{
+	"forge_marker": 1,
+  "defaults": {
+		"model": "undergroundbiomes:mossy_cobble"
+	},
+	"variants": {
+    "type": {
+      "gneiss": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/gneiss_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "eclogite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/eclogite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "marble": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/marble_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "quartzite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/quartzite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "blueschist": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/blueschist_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "greenschist": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/greenschist_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "soapstone": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/soapstone_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "migmatite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/migmatite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }
+		}
+	}
+}

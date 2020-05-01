@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.IFuelHandler;
  *
  * @author CurtisA
  */
+@SuppressWarnings("deprecation")
 public enum UBFuelHandler implements IFuelHandler {
   INSTANCE;
 

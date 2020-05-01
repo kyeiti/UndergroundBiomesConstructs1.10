@@ -9,10 +9,8 @@ import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -20,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.util.text.translation.I18n;
 
 /**
  * @author CurtisA, LouisDB
@@ -70,15 +69,16 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
     return getMetaFromState(state);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public String getLocalizedName() {
-    return I18n.format(this.getUnlocalizedName() + ".name");
+    return I18n.translateToLocal(this.getTranslationKey() + ".name");
   }
 
   private boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
     IBlockState state = worldIn.getBlockState(pos);
     Block block = state.getBlock();
-    if (block instanceof UBStoneWall)
+    if (block instanceof UBStoneWall || block instanceof BlockWall)
       return true;
     if (block == Blocks.BARRIER)
       return false;
@@ -129,8 +129,8 @@ public abstract class UBStoneWall extends BlockWall implements UBSubBlock {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-      return super.getUnlocalizedName(stack) + "." + getVariantName(stack.getMetadata());
+    public String getUnlocalizedNameInefficiently(ItemStack stack) {
+      return super.getUnlocalizedNameInefficiently(stack) + "." + getVariantName(stack.getMetadata());
     }
 
   }

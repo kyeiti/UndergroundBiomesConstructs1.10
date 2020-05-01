@@ -16,5 +16,7 @@ public interface IUBOreConfig {
 
   public int getLightValue();
 
+  public boolean hasAlphaOverlay();
+
   public ArrayList<String> getOreDirectories();
 }

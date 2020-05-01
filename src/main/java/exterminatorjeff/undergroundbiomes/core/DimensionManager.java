@@ -15,8 +15,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.dedicated.PropertyManager;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.terraingen.BiomeEvent;
-import net.minecraftforge.event.terraingen.InitMapGenEvent;
 import net.minecraftforge.event.terraingen.OreGenEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -29,7 +27,7 @@ import java.util.HashMap;
  * @author Zeno410
  */
 public class DimensionManager implements UBDimensionalStrataColumnProvider {
-  public HashMap<Integer, WorldGenManager> managers = new HashMap();
+  public HashMap<Integer, WorldGenManager> managers = new HashMap<Integer, WorldGenManager>();
   private boolean villageRegistered = false;
   private boolean oreRegistered = false;
   private ConfigManager configManager;
@@ -39,7 +37,7 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
   }
 
   public void refreshManagers() {
-    managers = new HashMap();
+    managers = new HashMap<Integer, WorldGenManager>();
 
     if (UBConfig.SPECIFIC.ubifyVillages() && !villageRegistered) {
       MinecraftForge.TERRAIN_GEN_BUS.register(this);
@@ -61,13 +59,12 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     }
     ((UBConfig) (UBConfig.SPECIFIC)).getUBifiedDimensions().forEach(dimensionID -> {
       WorldGenManager manager = new WorldGenManager(dimensionID);
+      MinecraftForge.EVENT_BUS.register(manager);
       managers.put(dimensionID, manager);
     });
-    if (1 < 0)
-      throw new RuntimeException("" + managers.size() + " " + ((UBConfig) (UBConfig.SPECIFIC)).includedDimensions +
-        ((UBConfig) (UBConfig.SPECIFIC)).getUBifiedDimensions().size());
   }
 
+  @SuppressWarnings("unused")
   public void serverLoad(MinecraftServer server) {
     if (server == null) return;
     //logger.info("server starting");
@@ -115,13 +112,14 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     if (target != null) target.onGenerateMinable(event);
   }
 
-  @SubscribeEvent
+  /*@SubscribeEvent
   public void onVillageSelectBlock(BiomeEvent.GetVillageBlockID event) {
     // this goes to the overworld since there's no ID
     WorldGenManager target = managers.get(0);
     if (target != null) target.onVillageSelectBlock(event);
-  }
+  }*/
 
+  /*
   @SubscribeEvent
   public void initMapGen(InitMapGenEvent event) {
     // this goes to the overworld since there's no ID
@@ -129,9 +127,10 @@ public class DimensionManager implements UBDimensionalStrataColumnProvider {
     if (target != null) target.initMapGen(event);
 
   }
+  */
 
   public void clearWorldManagers() {
-    managers = new HashMap();
+    managers = new HashMap<Integer, WorldGenManager>();
   }
 
   @Override

@@ -34,7 +34,7 @@ public class UBCreativeTab extends CreativeTabs {
 
   @SideOnly(Side.CLIENT)
   @Override
-  public ItemStack getTabIconItem() {
+  public ItemStack createIcon() {
     return icon;
   }
 

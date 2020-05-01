@@ -44,8 +44,8 @@ public abstract class UBStone extends Block implements UBBlock {
     setHardness(UBConfig.SPECIFIC.hardnessModifier());
     setResistance(UBConfig.SPECIFIC.resistanceModifier());
     setHarvestLevel("pickaxe", 0);
-    setUnlocalizedName(this.getInternalName());
-    setRegistryName(ModInfo.MODID,this.getInternalName());
+    setTranslationKey(this.getInternalName());
+    setRegistryName(ModInfo.MODID, this.getInternalName());
     ((UBConfig) (UBConfig.SPECIFIC)).hardnessModifier.addTracker(hardness -> setHardness(hardness));
     ((UBConfig) (UBConfig.SPECIFIC)).resistanceModifier.addTracker(resistance -> setResistance(resistance));
     itemBlock = new UBItemBlockStone(this);
@@ -116,6 +116,7 @@ public abstract class UBStone extends Block implements UBBlock {
     return getMetaFromState(state);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
     List<ItemStack> drops = super.getDrops(world, pos, state, fortune);
@@ -124,7 +125,8 @@ public abstract class UBStone extends Block implements UBBlock {
   }
 
   @Override
-  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+  public void getDrops(NonNullList<ItemStack> stacks, IBlockAccess world, BlockPos pos, IBlockState state,
+      int fortune) {
     NonNullList<ItemStack> drops = NonNullList.create();
     super.getDrops(drops, world, pos, state, fortune);
     DropsRegistry.INSTANCE.addDrops(drops, this, world, pos, state, fortune);
@@ -132,7 +134,8 @@ public abstract class UBStone extends Block implements UBBlock {
   }
 
   @Override
-  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
+      EntityPlayer player) {
     Block targetBlock = state.getBlock();
     if (targetBlock instanceof UBStone) {
       return new ItemStack(this.itemBlock, 1, getMetaFromState(state));
@@ -141,7 +144,8 @@ public abstract class UBStone extends Block implements UBBlock {
   }
 
   @Override
-  public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+  public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos,
+      Predicate<IBlockState> target) {
     return true;
   }
 
@@ -155,7 +159,7 @@ public abstract class UBStone extends Block implements UBBlock {
     public UBItemBlockStone(UBStone block) {
       super(block);
       setMaxDamage(0);
-      setUnlocalizedName(block.getUnlocalizedName());
+      setTranslationKey(block.getTranslationKey());
       setRegistryName(block.getRegistryName());
       setHasSubtypes(true);
     }
@@ -166,8 +170,8 @@ public abstract class UBStone extends Block implements UBBlock {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-      return super.getUnlocalizedName() + "." + getVariantName(stack.getMetadata());
+    public String getUnlocalizedNameInefficiently(ItemStack stack) {
+      return super.getTranslationKey() + "." + getVariantName(stack.getMetadata());
     }
 
   }

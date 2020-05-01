@@ -2,12 +2,10 @@ package exterminatorjeff.undergroundbiomes.common.itemblock;
 
 import exterminatorjeff.undergroundbiomes.api.common.UBButton;
 import exterminatorjeff.undergroundbiomes.api.names.BlockEntry;
-import exterminatorjeff.undergroundbiomes.client.UBCreativeTab;
 import exterminatorjeff.undergroundbiomes.common.block.button.UBStoneButton;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;

@@ -1,6 +1,5 @@
 package exterminatorjeff.undergroundbiomes.client;
 
-import com.google.common.base.Function;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import exterminatorjeff.undergroundbiomes.api.ModInfo;

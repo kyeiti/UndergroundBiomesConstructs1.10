@@ -7,7 +7,6 @@ import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
@@ -36,17 +35,17 @@ public class StairsEntry extends Entry<UBStairs> {
 
   @Override
   protected void doRegisterItem(IForgeRegistry<Item> registry) {
-    getItemBlock().setUnlocalizedName(internalName);
+    getItemBlock().setTranslationKey(internalName);
     registry.register(getItemBlock().setRegistryName(internalName));
   }
 
   @Override
   protected void doRegisterBlock(IForgeRegistry<Block> registry) {
-    getItemBlock().setUnlocalizedName(internalName);
+    getItemBlock().setTranslationKey(internalName);
     for (EnumFacing facing : EnumFacing.HORIZONTALS) {
       String name = internalName + "_" + facing;
       Block block = getBlock(facing);
-      block.setUnlocalizedName(name);
+      block.setTranslationKey(name);
       registry.register(block.setRegistryName(name));
     }
   }

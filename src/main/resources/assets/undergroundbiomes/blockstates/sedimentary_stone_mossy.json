@@ -1,0 +1,58 @@
+{
+	"forge_marker": 1,
+  "defaults": {
+		"model": "undergroundbiomes:mossy_cobble"
+	},
+	"variants": {
+    "type": {
+      "limestone": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/limestone",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "chalk": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/chalk",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "shale": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/shale",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "siltstone": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/siltstone",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "lignite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/lignite",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "dolomite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/dolomite",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "greywacke": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/greywacke",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "chert": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/chert",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }
+		}
+	}
+}

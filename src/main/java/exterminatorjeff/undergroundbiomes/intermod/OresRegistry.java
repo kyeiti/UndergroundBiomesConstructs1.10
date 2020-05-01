@@ -13,7 +13,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.item.crafting.IRecipe;
@@ -45,11 +44,14 @@ public enum OresRegistry implements UBOresRegistry {
 
   private static final UBLogger LOGGER = new UBLogger(OresRegistry.class, Level.INFO);
 
+  @SuppressWarnings("unused")
   private final String SETUP_ERROR_MSG = "Cannot setup UBOres for '%s', " + ModInfo.NAME + "'s block registering has not started yet!";
+  @SuppressWarnings("unused")
   private final String SETUP_INFO_MSG = "The ore '%s' has been successfully UBfied.";
   private final String REQUEST_ERROR_MSG = "Cannot request UBOres setup for '%s', " + ModInfo.NAME + "'s block registering is done!";
   private final String REQUEST_INFO_MSG = "Request for '%s' to be UBfied added.";
 
+  @SuppressWarnings("unused")
   private String format(String message, Block baseOre) {
     return String.format(message, baseOre.getRegistryName());
   }
@@ -65,6 +67,7 @@ public enum OresRegistry implements UBOresRegistry {
   private boolean alreadySetup = false;
   private final Set<UBifyRequest> requests = new HashSet<UBifyRequest>();
   private final Map<String, OreEntry> ubifiedOres = new HashMap<>();
+  @SuppressWarnings("unused")
   private final Map<String, ArrayList<String>> oreDirectories = new HashMap<>();
 
   private String toKey(Block baseOre, int baseOreMeta, Block baseStone) {
@@ -117,7 +120,7 @@ public enum OresRegistry implements UBOresRegistry {
     for (UBifyRequest request : requests) {
       Block baseOre = request.baseOre;
       int baseOreMeta = request.baseOreMeta;
-      LOGGER.info("Registering ore: " + baseOre.getUnlocalizedName());
+      //LOGGER.info("Registering ore: " + baseOre.getTranslationKey());
       request.getIgneousOreEntry().registerBlock(event, new UBOreIgneous(baseOre, request.config));
       request.getMetamorphicOreEntry().registerBlock(event, new UBOreMetamorphic(baseOre, request.config));
       request.getSedimentraryOreEntry().registerBlock(event, new UBOreSedimentary(baseOre, request.config));
@@ -218,8 +221,8 @@ public enum OresRegistry implements UBOresRegistry {
     ResourceLocation location = oresToOverlays.get(key);
     if (location == null)
       LOGGER.error("There is no registered overlay for '" + key + "'!");
-    else
-      LOGGER.debug("Found overlay for '" + key + "': " + location);
+    //else
+      //LOGGER.debug("Found overlay for '" + key + "': " + location);
     return location;
   }
 
@@ -234,7 +237,7 @@ public enum OresRegistry implements UBOresRegistry {
   private void registerOreOverlay(String key, ResourceLocation overlayLocation) {
     if (!oresToOverlays.containsKey(key)) {
       oresToOverlays.put(key, overlayLocation);
-      LOGGER.debug("Overlay for '" + key + "' registered.");
+      //LOGGER.debug("Overlay for '" + key + "' registered.");
     } else
       LOGGER.warn("An overlay for '" + key + "' has already been registered!");
   }
@@ -258,7 +261,7 @@ public enum OresRegistry implements UBOresRegistry {
 
   public void copyOreDictionaries() {
     for (OreEntry oreEntry : ubifiedOres.values()) {
-      LOGGER.info("Copying ore dictionaries");
+      //LOGGER.info("Copying ore dictionaries");
       copyOreDictionary(oreEntry);
     }
   }
@@ -276,7 +279,7 @@ public enum OresRegistry implements UBOresRegistry {
     int[] registrationIDs = OreDictionary.getOreIDs(baseOreStack);
     for (int i = 0; i < registrationIDs.length; i++) {
       String registrationName = OreDictionary.getOreName(registrationIDs[i]);
-      LOGGER.info(baseOre.getLocalizedName() + " " + registrationName + " " + block.getLocalizedName());
+      //LOGGER.info(baseOre.getLocalizedName() + " " + registrationName + " " + block.getLocalizedName());
       registerOreDirctionary(registrationName, block);
     }
     for(String oreDictionary : oreEntry.ore().config.getOreDirectories()){
@@ -300,18 +303,18 @@ public enum OresRegistry implements UBOresRegistry {
     return ((World) access).provider.getDimension();
   }
 
-  private final HashMap<Integer, HashMap<ChunkPos, ArrayList<BlockPos>>> storedLocations = new HashMap();
+  private final HashMap<Integer, HashMap<ChunkPos, ArrayList<BlockPos>>> storedLocations = new HashMap<Integer, HashMap<ChunkPos, ArrayList<BlockPos>>>();
 
   private final ArrayList<BlockPos> blockPosList(IBlockAccess world, ChunkPos chunkID) {
     int dimension = dimension(world);
     HashMap<ChunkPos, ArrayList<BlockPos>> worldMap = storedLocations.get(dimension);
     if (worldMap == null) {
-      worldMap = new HashMap();
+      worldMap = new HashMap<ChunkPos, ArrayList<BlockPos>>();
       storedLocations.put(dimension, worldMap);
     }
     ArrayList<BlockPos> result = worldMap.get(chunkID);
     if (result == null) {
-      result = new ArrayList();
+      result = new ArrayList<BlockPos>();
       worldMap.put(chunkID, result);
     }
     return result;
@@ -329,7 +332,7 @@ public enum OresRegistry implements UBOresRegistry {
     synchronized (storedLocations) {
       int dimension = dimension(world);
       result = storedLocations.get(dimension);
-      if (result == null) result = new HashMap();
+      if (result == null) result = new HashMap<ChunkPos, ArrayList<BlockPos>>();
       storedLocations.remove(dimension);
     }
     return result;

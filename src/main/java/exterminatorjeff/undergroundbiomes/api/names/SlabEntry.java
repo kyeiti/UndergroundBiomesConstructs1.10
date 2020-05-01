@@ -6,7 +6,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
@@ -45,10 +44,10 @@ public final class SlabEntry extends Entry<UBSlab> {
   @Override
   protected void doRegisterBlock(IForgeRegistry<Block> registry) {
     String name = internalName + "_halfslab";
-    getHalfSlab().setUnlocalizedName(name);
+    getHalfSlab().setTranslationKey(name);
     registry.register(getHalfSlab().setRegistryName(name));
     name = internalName + "_fullslab";
-    getFullSlab().setUnlocalizedName(name);
+    getFullSlab().setTranslationKey(name);
     registry.register(getFullSlab().setRegistryName(name));
   }
 

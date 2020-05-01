@@ -48,6 +48,26 @@ public interface UBSettings {
 
   boolean replaceCobblestone();
 
+  boolean replaceMonsterStone();
+
+  boolean replaceGravel();
+
+  boolean replaceClay();
+
+  String replaceGravelExcludedBiomes();
+
+  String replaceSandExcludedBiomes();
+
+  String replaceClayExcludedBiomes();
+
+  boolean replaceSand();
+
+  boolean replaceSandstone();
+
+  boolean replaceOvergrown();
+
+  boolean replaceMossyCobblestone();
+
   boolean buttonsOn();
 
   boolean igneousButtonsOn();
@@ -90,9 +110,13 @@ public interface UBSettings {
 
   boolean brickWallsOn();
 
+  boolean replaceSpeleothems();
+
   int buttonRecipeResult();
 
   boolean disableVanillaStoneVariants();
+
+  String customOreBlockHardnes();
 
   /*
    * Client
@@ -105,10 +129,15 @@ public interface UBSettings {
   boolean generationAllowed(IBlockState block);
 
   boolean displayTooltipModName();
+
   String getTooltipModNamePreText();
+
   String getTooltipModNamePreTextFormatting();
+
   String getTooltipModNameFormatting();
+
   String getTooltipModNamePostText();
+
   String getTooltipModNamePostTextFormatting();
 
 }

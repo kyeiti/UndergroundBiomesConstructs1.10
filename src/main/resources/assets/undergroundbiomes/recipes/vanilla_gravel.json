@@ -1,0 +1,111 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 0
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 1
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 2
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 3
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 4
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 5
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 6
+      },
+      {
+        "item": "undergroundbiomes:igneous_gravel",
+        "data": 7
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 0
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 1
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 2
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 3
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 4
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 5
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 6
+      },
+      {
+        "item": "undergroundbiomes:metamorphic_gravel",
+        "data": 7
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 0
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 1
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 2
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 3
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 4
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 5
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 6
+      },
+      {
+        "item": "undergroundbiomes:sedimentary_gravel",
+        "data": 7
+      }
+    ]
+  },
+  "result": {
+    "item": "minecraft:gravel",
+    "data": 0,
+    "count": 2
+  }
+}

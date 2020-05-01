@@ -1,0 +1,58 @@
+{
+	"forge_marker": 1,
+  "defaults": {
+    "model": "undergroundbiomes:mossy_cobble"
+	},
+	"variants": {
+    "type": {
+      "red_granite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/red_granite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "black_granite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/black_granite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "rhyolite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/rhyolite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "andesite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/andesite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "gabbro": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/gabbro_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "basalt": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/basalt_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "komatiite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/komatiite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }, 
+      "dacite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/dacite_cobble",
+          "overlay": "undergroundbiomes:blocks/mossy_overlay"
+        }
+      }
+		}
+	}
+}

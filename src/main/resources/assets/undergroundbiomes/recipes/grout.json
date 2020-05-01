@@ -1,0 +1,46 @@
+{
+    "type": "forge:ore_shapeless",
+    "group": "tconstruct:grout",
+    "ingredients": [
+        {
+            "type": "forge:ore_dict",
+            "ore": "gravel"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "gravel"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+            "item": "minecraft:clay"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "gravel"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "gravel"
+        }
+    ],
+    "result": {
+        "item": "tconstruct:soil",
+        "count": 8,
+        "data": 0
+    }
+}

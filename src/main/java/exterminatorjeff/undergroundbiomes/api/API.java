@@ -29,12 +29,80 @@ public final class API {
    */
 
   public static final StoneEntry IGNEOUS_STONE = new StoneEntry("igneous_stone");
+  public static final StoneEntry IGNEOUS_MONSTER_STONE = new StoneEntry("igneous_monster_stone");
   public static final StoneEntry IGNEOUS_COBBLE = new StoneEntry("igneous_cobble");
   public static final StoneEntry IGNEOUS_BRICK = new StoneEntry("igneous_brick");
+  public static final StoneEntry IGNEOUS_OVERGROWN = new StoneEntry("igneous_overgrown");
+  public static final StoneEntry IGNEOUS_OVERGROWN_SNOWED = new StoneEntry("igneous_overgrown_snowed");
+  public static final StoneEntry IGNEOUS_MOSSY_COBBLE = new StoneEntry("igneous_cobble_mossy");
   public static final StoneEntry METAMORPHIC_STONE = new StoneEntry("metamorphic_stone");
+  public static final StoneEntry METAMORPHIC_MONSTER_STONE = new StoneEntry("metamorphic_monster_stone");
   public static final StoneEntry METAMORPHIC_COBBLE = new StoneEntry("metamorphic_cobble");
+  public static final StoneEntry METAMORPHIC_OVERGROWN = new StoneEntry("metamorphic_overgrown");
+  public static final StoneEntry METAMORPHIC_OVERGROWN_SNOWED = new StoneEntry("metamorphic_overgrown_snowed");
   public static final StoneEntry METAMORPHIC_BRICK = new StoneEntry("metamorphic_brick");
+  public static final StoneEntry METAMORPHIC_MOSSY_COBBLE = new StoneEntry("metamorphic_cobble_mossy");
   public static final StoneEntry SEDIMENTARY_STONE = new StoneEntry("sedimentary_stone");
+  public static final StoneEntry SEDIMENTARY_MONSTER_STONE = new StoneEntry("sedimentary_monster_stone");
+  public static final StoneEntry SEDIMENTARY_OVERGROWN = new StoneEntry("sedimentary_overgrown");
+  public static final StoneEntry SEDIMENTARY_OVERGROWN_SNOWED = new StoneEntry("sedimentary_overgrown_snowed");
+  public static final StoneEntry SEDIMENTARY_MOSSY_COBBLE = new StoneEntry("sedimentary_stone_mossy");
+
+  /*
+   * Gravels
+   */
+
+  public static final StoneEntry IGNEOUS_GRAVEL = new StoneEntry("igneous_gravel");
+  public static final StoneEntry METAMORPHIC_GRAVEL = new StoneEntry("metamorphic_gravel");
+  public static final StoneEntry SEDIMENTARY_GRAVEL = new StoneEntry("sedimentary_gravel");
+
+  /*
+   * Sands
+   */
+
+  public static final StoneEntry IGNEOUS_SAND = new StoneEntry("igneous_sand");
+  public static final StoneEntry METAMORPHIC_SAND = new StoneEntry("metamorphic_sand");
+  public static final StoneEntry SEDIMENTARY_SAND = new StoneEntry("sedimentary_sand");
+
+  /*
+   * Sandstones
+   */
+
+  public static final StoneEntry IGNEOUS_SANDSTONE = new StoneEntry("igneous_sandstone");
+  public static final StoneEntry METAMORPHIC_SANDSTONE = new StoneEntry("metamorphic_sandstone");
+  public static final StoneEntry SEDIMENTARY_SANDSTONE = new StoneEntry("sedimentary_sandstone");
+
+  /*
+   * Sandstones
+   */
+
+  public static final StoneEntry IGNEOUS_SMOOTH_SANDSTONE = new StoneEntry("igneous_sandstone_smooth");
+  public static final StoneEntry METAMORPHIC_SMOOTH_SANDSTONE = new StoneEntry("metamorphic_sandstone_smooth");
+  public static final StoneEntry SEDIMENTARY_SMOOTH_SANDSTONE = new StoneEntry("sedimentary_sandstone_smooth");
+
+  /*
+   * Sandstones
+   */
+
+  public static final StoneEntry IGNEOUS_CHISELED_SANDSTONE = new StoneEntry("igneous_sandstone_chiseled");
+  public static final StoneEntry METAMORPHIC_CHISELED_SANDSTONE = new StoneEntry("metamorphic_sandstone_chiseled");
+  public static final StoneEntry SEDIMENTARY_CHISELED_SANDSTONE = new StoneEntry("sedimentary_sandstone_chiseled");
+
+  /*
+   * Clays
+   */
+
+  public static final StoneEntry IGNEOUS_CLAY = new StoneEntry("igneous_clay");
+  public static final StoneEntry METAMORPHIC_CLAY = new StoneEntry("metamorphic_clay");
+  public static final StoneEntry SEDIMENTARY_CLAY = new StoneEntry("sedimentary_clay");
+
+
+  /*
+   * Speleothems
+   */
+  public static final StoneEntry IGNEOUS_SPELEOTHEM = new StoneEntry("igneous_speleothem");
+  public static final StoneEntry METAMORPHIC_SPELEOTHEM = new StoneEntry("metamorphic_speleothem");
+  public static final StoneEntry SEDIMENTARY_SPELEOTHEM = new StoneEntry("sedimentary_speleothem");
 
   /*
    * Slabs

@@ -5,15 +5,11 @@ import exterminatorjeff.undergroundbiomes.api.common.IUBOreConfig;
 import exterminatorjeff.undergroundbiomes.client.UBCreativeTab;
 import exterminatorjeff.undergroundbiomes.common.UBSubBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -23,16 +19,14 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
+import tyra314.toolprogression.api.OverwrittenContent;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -61,9 +55,18 @@ public abstract class UBOre extends Block implements UBSubBlock {
   protected final ItemBlock itemBlock;
   public final IUBOreConfig config;
 
+  @SuppressWarnings("deprecation")
   public UBOre(Block baseOre, IUBOreConfig config) {
-    super(Material.ROCK);
-    setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()), baseOre.getHarvestLevel(baseOre.getDefaultState()));
+    super(baseOre.getMaterial(baseOre.getDefaultState()));
+    if (Loader.isModLoaded("toolprogression")) {
+      if (OverwrittenContent.blocks.containsKey(this.getTranslationKey())) {
+        String toolClass = OverwrittenContent.blocks.get(this.getTranslationKey()).toolclass;
+        int harvestLevel = OverwrittenContent.blocks.get(this.getTranslationKey()).level;
+        setHarvestLevel(toolClass, harvestLevel);
+      }
+    } else
+      setHarvestLevel(baseOre.getHarvestTool(baseOre.getDefaultState()),
+          baseOre.getHarvestLevel(baseOre.getDefaultState()));
     setCreativeTab(UBCreativeTab.UB_ORES_TAB);
     this.itemBlock = new UBItemOre(this);
     this.baseOre = baseOre;
@@ -74,7 +77,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Override
   public int getLightValue(IBlockState state, IBlockAccess access, BlockPos pos) {
-    if(config.getLightValue() > -1) {
+    if (config.getLightValue() > -1) {
       return config.getLightValue();
     }
     return baseOre.getLightValue(baseOreState, access, pos);
@@ -92,8 +95,11 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @SideOnly(Side.CLIENT)
   @Override
-  public BlockRenderLayer getBlockLayer() {
-    return BlockRenderLayer.CUTOUT_MIPPED;
+  public BlockRenderLayer getRenderLayer() {
+    if (config.hasAlphaOverlay())
+      return BlockRenderLayer.TRANSLUCENT;
+    else
+      return BlockRenderLayer.CUTOUT_MIPPED;
   }
 
   @Override
@@ -130,8 +136,8 @@ public abstract class UBOre extends Block implements UBSubBlock {
   }
 
   @Override
-  public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
-    baseOre.onBlockDestroyedByPlayer(world, pos, baseOreState);
+  public void onPlayerDestroy(World world, BlockPos pos, IBlockState state) {
+    baseOre.onPlayerDestroy(world, pos, baseOreState);
   }
 
   @Override
@@ -141,23 +147,40 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Nullable
   public String getHarvestTool(IBlockState state) {
-    return baseOre.getHarvestTool(baseOreState);
+    if (Loader.isModLoaded("toolprogression")) {
+      if (OverwrittenContent.blocks.containsKey(this.getTranslationKey())
+          && API.SETTINGS.customOreBlockHardnes().contains(this.getTranslationKey())) {
+        return OverwrittenContent.blocks.get(this.getTranslationKey()).toolclass;
+      } else
+        return baseOre.getHarvestTool(baseOreState);
+    } else
+      return baseOre.getHarvestTool(baseOreState);
   }
 
   public int getHarvestLevel(IBlockState state) {
-    return baseOre.getHarvestLevel(baseOreState);
+    if (Loader.isModLoaded("toolprogression")) {
+      if (OverwrittenContent.blocks.containsKey(this.getTranslationKey())
+          && API.SETTINGS.customOreBlockHardnes().contains(this.getTranslationKey())) {
+        return OverwrittenContent.blocks.get(this.getTranslationKey()).level;
+      } else
+        return baseOre.getHarvestLevel(baseOreState);
+    } else
+      return baseOre.getHarvestLevel(baseOreState);
   }
 
   @Override
-  public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
+  public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player,
+      boolean willHarvest) {
     return baseOre.removedByPlayer(baseOreState, world, pos, player, willHarvest);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public boolean canProvidePower(IBlockState state) {
     return baseOre.canProvidePower(baseOreState);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public int getWeakPower(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
     return baseOre.getWeakPower(baseOreState, world, pos, side);
@@ -182,6 +205,7 @@ public abstract class UBOre extends Block implements UBSubBlock {
     }
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
     return baseOre.getDrops(world, pos, baseOreState, fortune);
@@ -206,7 +230,8 @@ public abstract class UBOre extends Block implements UBSubBlock {
 
   @Override
   public boolean canHarvestBlock(IBlockAccess world, BlockPos pos, EntityPlayer player) {
-    return true;
+    //return player.getHeldItemMainhand().canHarvestBlock(baseOreState);
+    return super.canHarvestBlock(world, pos, player); // Change restores behaviour where tools with lower harvest levels do not provide resources
   }
 
   @Override
@@ -215,29 +240,22 @@ public abstract class UBOre extends Block implements UBSubBlock {
   }
 
   @Override
-  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+  public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
+      EntityPlayer player) {
     return new ItemStack(itemBlock, 1, getMetaFromState(world.getBlockState(pos)));
   }
 
   @Override
   public void addInformation(ItemStack stack, @Nullable World world, List<String> infos, ITooltipFlag tooltipFlag) {
-    if(API.SETTINGS.displayTooltipModName()) {
+    if (API.SETTINGS.displayTooltipModName()) {
       Map<String, ModContainer> indexedModList = Loader.instance().getIndexedModList();
-      String modName = indexedModList.get(baseOre.getRegistryName().getResourceDomain()).getName();
-      infos.add(
-        API.SETTINGS.getTooltipModNamePreTextFormatting() +
-          API.SETTINGS.getTooltipModNamePreText() +
-          "\u00A7r " +
-          API.SETTINGS.getTooltipModNameFormatting() +
-          modName +
-          "\u00A7r " +
-          API.SETTINGS.getTooltipModNamePostTextFormatting() +
-          API.SETTINGS.getTooltipModNamePostText()
-      );
+      String modName = indexedModList.get(baseOre.getRegistryName().getNamespace()).getName();
+      infos.add(API.SETTINGS.getTooltipModNamePreTextFormatting() + API.SETTINGS.getTooltipModNamePreText() + "\u00A7r "
+          + API.SETTINGS.getTooltipModNameFormatting() + modName + "\u00A7r "
+          + API.SETTINGS.getTooltipModNamePostTextFormatting() + API.SETTINGS.getTooltipModNamePostText());
     }
     super.addInformation(stack, world, infos, tooltipFlag);
   }
-
 
   /**
    * @author CurtisA, LouisDB
@@ -260,7 +278,6 @@ public abstract class UBOre extends Block implements UBSubBlock {
       return stack.getMetadata();
     }
 
-
     @SideOnly(Side.CLIENT)
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
@@ -270,19 +287,22 @@ public abstract class UBOre extends Block implements UBSubBlock {
       try {
 
         if (baseOreMeta == NO_METADATA) {
-          return I18n.format(baseStone().getItemBlock().getUnlocalizedName(stack) + ".name") + " " + I18n.format(baseOre.getUnlocalizedName() + ".name");
+          return I18n.format(baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name") + " "
+              + I18n.format(baseOre.getTranslationKey() + ".name");
         }
         ItemStack baseStack = new ItemStack(baseOre, 1, baseOreMeta);
-        return I18n.format(baseStone().getItemBlock().getUnlocalizedName(stack) + ".name") + " " + baseStack.getDisplayName();
+        return I18n.format(baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name") + " "
+            + baseStack.getDisplayName();
       } catch (Error error) {
         if (baseOreMeta == NO_METADATA) {
-          return baseStone().getItemBlock().getUnlocalizedName(stack) + ".name" + " " + baseOre.getUnlocalizedName() + ".name";
+          return baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name" + " "
+              + baseOre.getTranslationKey() + ".name";
         }
         ItemStack baseStack = new ItemStack(baseOre, 1, baseOreMeta);
-        return baseStone().getItemBlock().getUnlocalizedName(stack) + ".name" + " " + baseStack.getDisplayName();
+        return baseStone().getItemBlock().getUnlocalizedNameInefficiently(stack) + ".name" + " "
+            + baseStack.getDisplayName();
       }
     }
 
   }
-
 }

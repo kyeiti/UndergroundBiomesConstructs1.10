@@ -1,0 +1,51 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "uvlock": true
+  },
+  "variants": {
+    "type": {
+      "limestone": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/limestone_gravel"
+        }
+      },
+      "chalk": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/chalk_gravel"
+        }
+      },
+      "shale": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/shale_gravel"
+        }
+      },
+      "siltstone": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/siltstone_gravel"
+        }
+      },
+      "lignite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/lignite_gravel"
+        }
+      },
+      "dolomite": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/dolomite_gravel"
+        }
+      },
+      "greywacke": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/greywacke_gravel"
+        }
+      },
+      "chert": {
+        "textures": {
+          "all": "undergroundbiomes:blocks/chert_gravel"
+        }
+      }
+    }
+  }
+}

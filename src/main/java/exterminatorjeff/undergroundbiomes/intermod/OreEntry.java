@@ -1,7 +1,6 @@
 package exterminatorjeff.undergroundbiomes.intermod;
 
 import exterminatorjeff.undergroundbiomes.api.names.Entry;
-import exterminatorjeff.undergroundbiomes.api.names.ItemEntry;
 import exterminatorjeff.undergroundbiomes.client.UBOreModelResourceLocation;
 import exterminatorjeff.undergroundbiomes.common.block.UBOre;
 import net.minecraft.block.Block;
@@ -21,21 +20,21 @@ class OreEntry extends Entry<UBOre> {
   private static String name(Block baseStone, Block baseOre, int meta) {
     ResourceLocation oreResource = baseOre.getRegistryName();
     if (meta == UBOre.NO_METADATA || meta == 0) {
-      if (oreResource.getResourceDomain().equals("minecraft")) {
-        return baseStone.getRegistryName().getResourcePath() + "_" + oreResource.getResourcePath();
+      if (oreResource.getNamespace().equals("minecraft")) {
+        return baseStone.getRegistryName().getPath() + "_" + oreResource.getPath();
       }
       else {
-        return baseStone.getRegistryName().getResourcePath() + "_" + oreResource.getResourceDomain() + "_" + oreResource.getResourcePath();
+        return baseStone.getRegistryName().getPath() + "_" + oreResource.getNamespace() + "_" + oreResource.getPath();
       }
     }
     ItemStack stack = new ItemStack(baseOre, 1, meta);
-    String name = oreResource.getResourceDomain() + "_";
+    String name = oreResource.getNamespace() + "_";
     if (stack.getItem() == new ItemStack(Blocks.AIR, 1, meta).getItem()) {
-      name += oreResource.getResourcePath() + "_" + meta;
+      name += oreResource.getPath() + "_" + meta;
     } else {
-      name = stack.getUnlocalizedName();
+      name = stack.getTranslationKey();
     }
-    return baseStone.getRegistryName().getResourcePath() + "_" + name;
+    return baseStone.getRegistryName().getPath() + "_" + name;
   }
 
   public OreEntry(Block baseStone, Block baseOre, int meta) {
@@ -56,13 +55,13 @@ class OreEntry extends Entry<UBOre> {
 
   @Override
   protected void doRegisterItem(IForgeRegistry<Item> registry) {
-    getBlock().setUnlocalizedName(internalName);
+    getBlock().setTranslationKey(internalName);
     registry.register(getItem().setRegistryName(internalName));
   }
 
   @Override
   protected void doRegisterBlock(IForgeRegistry<Block> registry) {
-    getBlock().setUnlocalizedName(internalName);
+    getBlock().setTranslationKey(internalName);
     registry.register(getBlock().setRegistryName(internalName));
   }
 
